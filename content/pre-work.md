@@ -28,13 +28,18 @@ GitHub is where developers store and share code. It's also your portfolio—recr
 Cursor is a code editor with built-in AI. You describe what you want in plain English, and it writes the code.
 
 **Steps:**
-1. Go to [cursor.com](https://cursor.com)
+1. Go to [cursor.com/students](https://cursor.com/students)
 2. Click "Download" and choose your operating system (Mac, Windows, or Linux)
 3. Install the application
-4. Open Cursor and create an account using your school email
-5. Verify that your account shows "Pro" or "Student" status (this means the free tier is active)
+4. **Sign up for the student discount.** Create your Cursor account using your **valid .edu university email**—this is required. Your Cursor account email must match this .edu email, and you must use the same email when you verify your student status.
+5. Verify your status as a currently enrolled student by clicking "Verify Status" at the top of the [students page](https://cursor.com/students) and following the instructions. If you don't already have Cursor Pro, sign up for Cursor Pro in your account settings after verifying.
+6. Confirm that your account shows "Pro" or "Student" status (the free tier is active)
 
-**You're done when:** You can open Cursor and see an empty editor window.
+**Benefits:** Eligible students get one free year of Cursor Pro, including **$20 of usage per month**. That covers normal use of AI features in the editor. If you need additional model capacity beyond the included amount, you can enable usage-based pricing in your account; you'll only be charged for usage above the $20 monthly credit.
+
+**API pricing (in brief):** Cursor Pro gives you a set amount of AI usage each month (the $20 credit). When you use the AI to edit code, ask questions, or generate content, that usage counts against this amount. If you go over it, you can turn on usage-based pricing to keep using more—you pay only for the extra usage. For most students in this bootcamp, the included $20 per month is enough.
+
+**You're done when:** You can open Cursor and see an empty editor window, with your account showing Pro or Student status.
 
 **Note:** Cursor looks similar to VS Code. If you've used VS Code before, you'll feel at home. If you haven't, don't worry—we'll walk through it together.
 
@@ -47,9 +52,10 @@ Git is the tool that tracks changes to your code and lets you upload it to GitHu
 ### Mac
 
 1. Open Terminal (search for "Terminal" in Spotlight, or find it in Applications → Utilities)
-2. Type `git --version` and press Enter
-3. If Git isn't installed, you'll see a prompt to install it. Follow the instructions.
-4. After installation, run `git --version` again. You should see a version number.
+2. Type `git --version` and press Enter. If you see a version number (e.g. `git version 2.x.x`), Git is already installed—you're done.
+3. If Git is not installed, install it by running the Xcode Command Line Tools installer. In Terminal, type `xcode-select --install` and press Enter.
+4. A dialog will appear asking to install the command line developer tools. Click "Install" and wait for the installation to finish.
+5. When it's done, run `git --version` again to verify. You should see a version number.
 
 ### Windows
 
@@ -77,6 +83,21 @@ git config --global user.email "your.email@school.edu"
 This tells Git who you are, so your commits are attributed to you.
 
 **You're done when:** Running `git --version` shows a version number (or GitHub Desktop is installed and signed in).
+
+---
+
+## Configure GitHub in Cursor
+
+Connect your GitHub account to Cursor so you can push and pull code without entering credentials every time. Use the same GitHub account you created in the steps above.
+
+**Steps:**
+1. Open Cursor
+2. Open the Source Control view by clicking the branch icon in the left sidebar, or go to **View → Source Control**
+3. If you're not signed in to GitHub, click **Sign in with GitHub** (or click the account icon in the bottom-left corner and choose **Turn on Settings Sync** or **Sign in to GitHub**)
+4. Complete the sign-in in your browser when prompted. Authorize Cursor to access your GitHub account
+5. Once signed in, Cursor will use your GitHub account for cloning repos, pushing, and pulling—no need to enter your password each time
+
+**You're done when:** Your GitHub account appears in the Source Control view or in the account menu (bottom-left), and you're ready to clone and push repos from Cursor.
 
 ---
 
@@ -110,6 +131,7 @@ Before Meeting 1, make sure:
 
 - [ ] You can log in to GitHub
 - [ ] Cursor opens and shows your account as "Pro" or "Student"
+- [ ] Your GitHub account is signed in within Cursor (Source Control or account menu)
 - [ ] Running `git --version` in Terminal/Command Prompt shows a version number
 - [ ] You have a project idea ready
 

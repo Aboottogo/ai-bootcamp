@@ -26,6 +26,7 @@
               <li><a href="pre-work.html#create-a-github-account">Create a GitHub Account</a></li>
               <li><a href="pre-work.html#install-cursor">Install Cursor</a></li>
               <li><a href="pre-work.html#install-git">Install Git</a></li>
+              <li><a href="pre-work.html#configure-github-in-cursor">Configure GitHub in Cursor</a></li>
               <li><a href="pre-work.html#choose-your-project-idea">Choose Your Project Idea</a></li>
               <li><a href="pre-work.html#verify-your-setup">Verify Your Setup</a></li>
             </ul>
@@ -105,7 +106,20 @@
               <li><a href="troubleshooting.html#common-vercel-issues">Common Vercel Issues</a></li>
             </ul>
           </li>
-          <li><a href="resources.html">Resources</a></li>
+          <li class="nav-section">
+            <div class="nav-item-wrapper">
+              <a href="resources.html">Resources</a>
+              <button type="button" class="nav-toggle" aria-label="Expand">&#8250;</button>
+            </div>
+            <ul class="nav-children">
+              <li><a href="resources.html#tools-we-use">Tools We Use</a></li>
+              <li><a href="resources.html#quick-reference">Quick Reference</a></li>
+              <li><a href="resources.html#further-learning">Further Learning</a></li>
+              <li><a href="resources.html#getting-help">Getting Help</a></li>
+              <li><a href="resources.html#useful-vs-code-cursor-extensions">Useful VS Code / Cursor Extensions</a></li>
+              <li><a href="resources.html#project-inspiration">Project Inspiration</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
@@ -141,13 +155,16 @@
       <p>Cursor is a code editor with built-in AI. You describe what you want in plain English, and it writes the code.</p>
       <p><strong>Steps:</strong></p>
       <ol>
-        <li>Go to <a href="https://cursor.com">cursor.com</a></li>
+        <li>Go to <a href="https://cursor.com/students">cursor.com/students</a></li>
         <li>Click "Download" and choose your operating system (Mac, Windows, or Linux)</li>
         <li>Install the application</li>
-        <li>Open Cursor and create an account using your school email</li>
-        <li>Verify that your account shows "Pro" or "Student" status (this means the free tier is active)</li>
+        <li><strong>Sign up for the student discount.</strong> Create your Cursor account using your <strong>valid .edu university email</strong>—this is required. Your Cursor account email must match this .edu email, and you must use the same email when you verify your student status.</li>
+        <li>Verify your status as a currently enrolled student by clicking "Verify Status" at the top of the <a href="https://cursor.com/students">students page</a> and following the instructions. If you don't already have Cursor Pro, sign up for Cursor Pro in your account settings after verifying.</li>
+        <li>Confirm that your account shows "Pro" or "Student" status (the free tier is active)</li>
       </ol>
-      <p><strong>You're done when:</strong> You can open Cursor and see an empty editor window.</p>
+      <p><strong>Benefits:</strong> Eligible students get one free year of Cursor Pro, including <strong>$20 of usage per month</strong>. That covers normal use of AI features in the editor. If you need additional model capacity beyond the included amount, you can enable usage-based pricing in your account; you'll only be charged for usage above the $20 monthly credit.</p>
+      <p><strong>API pricing (in brief):</strong> Cursor Pro gives you a set amount of AI usage each month (the $20 credit). When you use the AI to edit code, ask questions, or generate content, that usage counts against this amount. If you go over it, you can turn on usage-based pricing to keep using more—you pay only for the extra usage. For most students in this bootcamp, the included $20 per month is enough.</p>
+      <p><strong>You're done when:</strong> You can open Cursor and see an empty editor window, with your account showing Pro or Student status.</p>
       <p><strong>Note:</strong> Cursor looks similar to VS Code. If you've used VS Code before, you'll feel at home. If you haven't, don't worry—we'll walk through it together.</p>
 
       <hr>
@@ -158,9 +175,10 @@
       <h3 id="mac">Mac</h3>
       <ol>
         <li>Open Terminal (search for "Terminal" in Spotlight, or find it in Applications → Utilities)</li>
-        <li>Type <code>git --version</code> and press Enter</li>
-        <li>If Git isn't installed, you'll see a prompt to install it. Follow the instructions.</li>
-        <li>After installation, run <code>git --version</code> again. You should see a version number.</li>
+        <li>Type <code>git --version</code> and press Enter. If you see a version number (e.g. <code>git version 2.x.x</code>), Git is already installed—you're done.</li>
+        <li>If Git is not installed, install it by running the Xcode Command Line Tools installer. In Terminal, type <code>xcode-select --install</code> and press Enter.</li>
+        <li>A dialog will appear asking to install the command line developer tools. Click "Install" and wait for the installation to finish.</li>
+        <li>When it's done, run <code>git --version</code> again to verify. You should see a version number.</li>
       </ol>
 
       <h3 id="windows">Windows</h3>
@@ -185,6 +203,20 @@
 git config --global user.email "your.email@school.edu"</code></pre>
       <p>This tells Git who you are, so your commits are attributed to you.</p>
       <p><strong>You're done when:</strong> Running <code>git --version</code> shows a version number (or GitHub Desktop is installed and signed in).</p>
+
+      <hr>
+
+      <h2 id="configure-github-in-cursor">Configure GitHub in Cursor</h2>
+      <p>Connect your GitHub account to Cursor so you can push and pull code without entering credentials every time. Use the same GitHub account you created in the steps above.</p>
+      <p><strong>Steps:</strong></p>
+      <ol>
+        <li>Open Cursor</li>
+        <li>Open the Source Control view by clicking the branch icon in the left sidebar, or go to <strong>View → Source Control</strong></li>
+        <li>If you're not signed in to GitHub, click <strong>Sign in with GitHub</strong> (or click the account icon in the bottom-left corner and choose <strong>Turn on Settings Sync</strong> or <strong>Sign in to GitHub</strong>)</li>
+        <li>Complete the sign-in in your browser when prompted. Authorize Cursor to access your GitHub account</li>
+        <li>Once signed in, Cursor will use your GitHub account for cloning repos, pushing, and pulling—no need to enter your password each time</li>
+      </ol>
+      <p><strong>You're done when:</strong> Your GitHub account appears in the Source Control view or in the account menu (bottom-left), and you're ready to clone and push repos from Cursor.</p>
 
       <hr>
 
@@ -214,6 +246,7 @@ git config --global user.email "your.email@school.edu"</code></pre>
       <ul>
         <li>You can log in to GitHub</li>
         <li>Cursor opens and shows your account as "Pro" or "Student"</li>
+        <li>Your GitHub account is signed in within Cursor (Source Control or account menu)</li>
         <li>Running <code>git --version</code> in Terminal/Command Prompt shows a version number</li>
         <li>You have a project idea ready</li>
       </ul>

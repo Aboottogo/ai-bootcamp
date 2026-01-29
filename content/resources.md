@@ -99,6 +99,9 @@ Ctrl+C
 - **GitHub Skills:** [skills.github.com](https://skills.github.com)
   Free interactive courses on Git and GitHub.
 
+- **GitByBit:** [gitbybit.com](https://gitbybit.com/)
+  Learn Git through practice right in your code editor (VS Code or Cursor). Bite-sized lessons with immediate feedback; the course verifies your commands and helps when something breaks.
+
 - **Oh My Git:** [ohmygit.org](https://ohmygit.org)
   A game for learning Git (really).
 
