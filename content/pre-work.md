@@ -116,12 +116,20 @@ Think about a simple tool that would be useful to you or people you know. Good p
 
 See the [Project Ideas](project-ideas.md) page for ready-to-use ideas with descriptions and feature lists.
 
-Either way, be prepared to answer:
+**Create a text file with your app idea.** Save it as `my-app-idea.txt` (or similar). Include:
 - What does your app do?
 - Who would use it?
 - What are 2-3 core features?
 
-**You're done when:** You can explain your project idea in 2-3 sentences.
+You will **attach this file** in Meeting 1 when you prompt Cursor to generate your tutorial. Keep it somewhere easy to find (e.g. in a folder you'll open in Cursor).
+
+**Example** (for a personal expense tracker):
+
+```
+Personal expense tracker. Users: me and other students who want to see where their money goes. Core features: log expenses with date, amount, and category; view a list of all expenses; see monthly totals.
+```
+
+**You're done when:** You have the text file saved and can attach it in Cursor during Meeting 1.
 
 ---
 
@@ -133,7 +141,7 @@ Before Meeting 1, make sure:
 - [ ] Cursor opens and shows your account as "Pro" or "Student"
 - [ ] Your GitHub account is signed in within Cursor (Source Control or account menu)
 - [ ] Running `git --version` in Terminal/Command Prompt shows a version number
-- [ ] You have a project idea ready
+- [ ] You have your app-idea text file ready (`my-app-idea.txt` or similar)
 
 If any of these aren't working, note what's wrong and we'll troubleshoot at the start of Meeting 1.
 
@@ -146,8 +154,9 @@ If you have extra time, try opening Cursor and playing around:
 1. Create a new folder on your computer called `test-project`
 2. Open that folder in Cursor (File → Open Folder)
 3. Press `Cmd+K` (Mac) or `Ctrl+K` (Windows) to open the AI prompt
-4. Try typing: "Create a simple HTML page that says Hello World with some nice styling"
-5. See what happens!
+4. Ask Cursor to write a poem into a text file (e.g. "Write a short poem and save it to poem.txt")
+5. Ask Cursor to create an HTML file that displays the poem with some nice styling
+6. See what happens!
 
 This isn't required, but it'll make Meeting 1 less overwhelming.
 

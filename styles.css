@@ -312,6 +312,11 @@ body.sidebar-open .sidebar-overlay {
   overflow-x: auto;
 }
 
+.main-content pre.scrollable-prompt {
+  max-height: 24rem;
+  overflow-y: auto;
+}
+
 .main-content pre code {
   padding: 0;
   background: none;
@@ -341,6 +346,44 @@ body.sidebar-open .sidebar-overlay {
 
 .main-content tbody tr:nth-child(even) {
   background: var(--table-alt);
+}
+
+/* Callout box (e.g. reminder / motivational section) */
+.main-content .callout-box {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 2px solid var(--table-border);
+  border-radius: 6px;
+  background: var(--table-alt);
+}
+
+.main-content .callout-box p {
+  margin: 0 0 1rem;
+}
+
+.main-content .callout-box p:last-of-type {
+  margin-bottom: 0;
+}
+
+.main-content .callout-box .motivational-quote {
+  margin: 1rem 0 0;
+  padding: 1rem 0 0;
+  border-left: none;
+  border-top: 1px solid var(--table-border);
+}
+
+.main-content .callout-box .motivational-quote p {
+  margin: 0;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--heading-color);
+}
+
+.main-content .callout-box .motivational-quote footer {
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #666;
 }
 
 /* Responsive: hide sidebar by default, show hamburger */

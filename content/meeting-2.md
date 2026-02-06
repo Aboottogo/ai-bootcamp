@@ -2,7 +2,7 @@
 
 **Goal:** Leave this session with a fully functional app—with user accounts and a real database—deployed on the web.
 
-Last week you built a landing page. This week you build the real thing.
+Last week you deployed a custom how-to tutorial for your app and, for homework, followed that tutorial to start building it. This week we add a backend (Supabase) and deploy the app to Vercel.
 
 ---
 
@@ -94,7 +94,7 @@ Watch as the instructor:
 
 ### Hands-On: Build Your App with Supabase
 
-Now you'll add Supabase to your app.
+Now you'll add Supabase to your app. We're assuming you have a project from following your tutorial. **If you didn't finish the tutorial, that's okay—we'll get you up to speed.**
 
 **Step 1: Install Supabase in your project**
 

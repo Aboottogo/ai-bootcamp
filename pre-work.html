@@ -17,6 +17,7 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="app-idea.html">Project Ideas</a></li>
           <li class="nav-section">
             <div class="nav-item-wrapper">
               <a href="pre-work.html">Pre-Work</a>
@@ -31,6 +32,9 @@
               <li><a href="pre-work.html#verify-your-setup">Verify Your Setup</a></li>
             </ul>
           </li>
+          <li><a href="what-is-cursor.html">What is Cursor?</a></li>
+          <li><a href="what-is-the-terminal.html">What is the Terminal?</a></li>
+          <li><a href="what-is-git.html">What is Git?</a></li>
           <li class="nav-section">
             <div class="nav-item-wrapper">
               <a href="meeting-1.html">Meeting 1: The Quick Win</a>
@@ -38,14 +42,12 @@
             </div>
             <ul class="nav-children">
               <li><span class="nav-group-label">In-Class</span></li>
-              <li><a href="meeting-1.html#what-is-cursor">What is Cursor?</a></li>
-              <li><a href="meeting-1.html#what-is-git">What is Git?</a></li>
-              <li><a href="meeting-1.html#live-demo-building-a-page">Live Demo</a></li>
-              <li><a href="meeting-1.html#hands-on-build-your-landing-page">Hands-On: Build Your Landing Page</a></li>
+              <li><a href="meeting-1.html#live-demo-generating-your-tutorial">Live Demo: Generating Your Tutorial</a></li>
+              <li><a href="meeting-1.html#hands-on-generate-your-tutorial-and-deploy">Hands-On: Generate Your Tutorial and Deploy</a></li>
               <li><a href="meeting-1.html#pushing-to-github">Pushing to GitHub</a></li>
               <li><a href="meeting-1.html#deploying-to-github-pages">Deploying to GitHub Pages</a></li>
               <li><span class="nav-group-label">Homework</span></li>
-              <li><a href="meeting-1.html#start-building-your-full-app">Start Building Your Full App</a></li>
+              <li><a href="meeting-1.html#follow-your-tutorial">Follow Your Tutorial</a></li>
             </ul>
           </li>
           <li class="nav-section">
@@ -82,16 +84,6 @@
               <li><a href="meeting-3.html#contributing-to-this-curriculum">Contributing to This Curriculum</a></li>
               <li><span class="nav-group-label">After the Bootcamp</span></li>
               <li><a href="meeting-3.html#you-did-it">You Did It</a></li>
-            </ul>
-          </li>
-          <li class="nav-section">
-            <div class="nav-item-wrapper">
-              <a href="project-ideas.html">Project Ideas</a>
-              <button type="button" class="nav-toggle" aria-label="Expand">&#8250;</button>
-            </div>
-            <ul class="nav-children">
-              <li><a href="project-ideas.html#simple-projects">Simple Projects</a></li>
-              <li><a href="project-ideas.html#ambitious-projects">Ambitious Projects</a></li>
             </ul>
           </li>
           <li class="nav-section">
@@ -230,14 +222,17 @@ git config --global user.email "your.email@school.edu"</code></pre>
         <li>Users who can create accounts and save data</li>
       </ul>
       <p><strong>Option B: Pick from our suggestions</strong></p>
-      <p>See the <a href="project-ideas.html">Project Ideas</a> page for ready-to-use ideas with descriptions and feature lists.</p>
-      <p>Either way, be prepared to answer:</p>
+      <p>See the <a href="app-idea.html">Project Ideas</a> page for guidance and ready-to-use ideas with descriptions and feature lists.</p>
+      <p><strong>Create a text file with your app idea.</strong> Save it as <code>my-app-idea.txt</code> (or similar). Include:</p>
       <ul>
         <li>What does your app do?</li>
         <li>Who would use it?</li>
         <li>What are 2-3 core features?</li>
       </ul>
-      <p><strong>You're done when:</strong> You can explain your project idea in 2-3 sentences.</p>
+      <p>You will <strong>attach this file</strong> in Meeting 1 when you prompt Cursor to generate your tutorial. Keep it somewhere easy to find (e.g. in a folder you'll open in Cursor).</p>
+      <p><strong>Example</strong> (for a personal expense tracker):</p>
+      <pre><code>Personal expense tracker. Users: me and other students who want to see where their money goes. Core features: log expenses with date, amount, and category; view a list of all expenses; see monthly totals.</code></pre>
+      <p><strong>You're done when:</strong> You have the text file saved and can attach it in Cursor during Meeting 1.</p>
 
       <hr>
 
@@ -248,7 +243,7 @@ git config --global user.email "your.email@school.edu"</code></pre>
         <li>Cursor opens and shows your account as "Pro" or "Student"</li>
         <li>Your GitHub account is signed in within Cursor (Source Control or account menu)</li>
         <li>Running <code>git --version</code> in Terminal/Command Prompt shows a version number</li>
-        <li>You have a project idea ready</li>
+        <li>You have your app-idea text file ready (<code>my-app-idea.txt</code> or similar)</li>
       </ul>
       <p>If any of these aren't working, note what's wrong and we'll troubleshoot at the start of Meeting 1.</p>
 
@@ -260,7 +255,8 @@ git config --global user.email "your.email@school.edu"</code></pre>
         <li>Create a new folder on your computer called <code>test-project</code></li>
         <li>Open that folder in Cursor (File → Open Folder)</li>
         <li>Press <code>Cmd+K</code> (Mac) or <code>Ctrl+K</code> (Windows) to open the AI prompt</li>
-        <li>Try typing: "Create a simple HTML page that says Hello World with some nice styling"</li>
+        <li>Ask Cursor to write a poem into a text file (e.g. "Write a short poem and save it to poem.txt")</li>
+        <li>Ask Cursor to create an HTML file that displays the poem with some nice styling</li>
         <li>See what happens!</li>
       </ol>
       <p>This isn't required, but it'll make Meeting 1 less overwhelming.</p>

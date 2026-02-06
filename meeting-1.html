@@ -17,6 +17,7 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="app-idea.html">Project Ideas</a></li>
           <li class="nav-section">
             <div class="nav-item-wrapper">
               <a href="pre-work.html">Pre-Work</a>
@@ -31,6 +32,9 @@
               <li><a href="pre-work.html#verify-your-setup">Verify Your Setup</a></li>
             </ul>
           </li>
+          <li><a href="what-is-cursor.html">What is Cursor?</a></li>
+          <li><a href="what-is-the-terminal.html">What is the Terminal?</a></li>
+          <li><a href="what-is-git.html">What is Git?</a></li>
           <li class="nav-section">
             <div class="nav-item-wrapper">
               <a href="meeting-1.html">Meeting 1: The Quick Win</a>
@@ -38,14 +42,12 @@
             </div>
             <ul class="nav-children">
               <li><span class="nav-group-label">In-Class</span></li>
-              <li><a href="meeting-1.html#what-is-cursor">What is Cursor?</a></li>
-              <li><a href="meeting-1.html#what-is-git">What is Git?</a></li>
-              <li><a href="meeting-1.html#live-demo-building-a-page">Live Demo</a></li>
-              <li><a href="meeting-1.html#hands-on-build-your-landing-page">Hands-On: Build Your Landing Page</a></li>
+              <li><a href="meeting-1.html#live-demo-generating-your-tutorial">Live Demo: Generating Your Tutorial</a></li>
+              <li><a href="meeting-1.html#hands-on-generate-your-tutorial-and-deploy">Hands-On: Generate Your Tutorial and Deploy</a></li>
               <li><a href="meeting-1.html#pushing-to-github">Pushing to GitHub</a></li>
               <li><a href="meeting-1.html#deploying-to-github-pages">Deploying to GitHub Pages</a></li>
               <li><span class="nav-group-label">Homework</span></li>
-              <li><a href="meeting-1.html#start-building-your-full-app">Start Building Your Full App</a></li>
+              <li><a href="meeting-1.html#follow-your-tutorial">Follow Your Tutorial</a></li>
             </ul>
           </li>
           <li class="nav-section">
@@ -86,16 +88,6 @@
           </li>
           <li class="nav-section">
             <div class="nav-item-wrapper">
-              <a href="project-ideas.html">Project Ideas</a>
-              <button type="button" class="nav-toggle" aria-label="Expand">&#8250;</button>
-            </div>
-            <ul class="nav-children">
-              <li><a href="project-ideas.html#simple-projects">Simple Projects</a></li>
-              <li><a href="project-ideas.html#ambitious-projects">Ambitious Projects</a></li>
-            </ul>
-          </li>
-          <li class="nav-section">
-            <div class="nav-item-wrapper">
               <a href="troubleshooting.html">Troubleshooting</a>
               <button type="button" class="nav-toggle" aria-label="Expand">&#8250;</button>
             </div>
@@ -128,94 +120,308 @@
     <article>
       <h1 id="meeting-1-the-quick-win">Meeting 1: The Quick Win</h1>
       <p><strong>Goal:</strong> Leave this session with a live website you can share with anyone.</p>
-      <p>By the end of today, you'll have a URL like <code>yourname.github.io/your-project</code> that works on any device. Text it to a friend. Put it in your Instagram bio. It's real, and it's yours.</p>
+      <p>By the end of today, you'll have a URL like <code>yourname.github.io/your-project</code> that works on any device. Text it to a friend. Put it in your Instagram bio. It's real, and it's yours. The site is a <strong>how-to tutorial</strong> for your app idea—customized to what you want to build—not the app itself. You'll follow that tutorial as homework before Meeting 2.</p>
 
       <hr>
 
       <h2 id="in-class">In-Class</h2>
 
-      <h3 id="what-is-cursor">What is Cursor?</h3>
-      <p>Cursor is a code editor—a program where you write and edit code. But unlike traditional editors, Cursor has AI built in. You can describe what you want in plain English, and Cursor will write the code for you.</p>
-      <p>This doesn't mean you don't need to understand anything. You still need to:</p>
-      <ul>
-        <li>Know what you're trying to build</li>
-        <li>Review what Cursor generates</li>
-        <li>Guide it when it gets things wrong</li>
-        <li>Understand enough to debug problems</li>
-      </ul>
-      <p>Think of Cursor as a very fast assistant who's good at writing code but needs clear direction.</p>
-      <p><strong>Key things to know:</strong></p>
-      <ul>
-        <li><code>Cmd+K</code> (Mac) or <code>Ctrl+K</code> (Windows) opens the AI prompt—this is how you tell Cursor what to build</li>
-        <li>Cursor generates files and code based on your description</li>
-        <li>You can always ask Cursor to modify, fix, or explain what it created</li>
-      </ul>
-
-      <h3 id="what-is-git">What is Git?</h3>
-      <p>Git is a version control system. That's a fancy way of saying it tracks every change you make to your code.</p>
-      <p>Why this matters:</p>
-      <ul>
-        <li><strong>Undo mistakes:</strong> If you break something, you can go back to a working version</li>
-        <li><strong>Track history:</strong> See what changed and when</li>
-        <li><strong>Collaboration:</strong> Multiple people can work on the same project</li>
-        <li><strong>Portfolio:</strong> Your Git history shows employers you can ship code</li>
-      </ul>
-      <p><strong>Key vocabulary:</strong></p>
-      <ul>
-        <li><strong>Repository (repo):</strong> A project folder tracked by Git</li>
-        <li><strong>Commit:</strong> A saved snapshot of your code at a point in time (like a save point in a video game)</li>
-        <li><strong>Push:</strong> Upload your commits to GitHub</li>
-        <li><strong>Pull:</strong> Download changes from GitHub to your computer</li>
-      </ul>
-      <p>Today you'll do all four: create a repo, make commits, and push to GitHub.</p>
-
-      <h3 id="live-demo-building-a-page">Live Demo: Building a Page</h3>
+      <h3 id="live-demo-generating-your-tutorial">Live Demo: Generating Your Tutorial</h3>
       <p>Watch as the instructor:</p>
       <ol>
         <li>Opens Cursor and creates a new project folder</li>
-        <li>Uses <code>Cmd+K</code> to prompt: "Create a simple landing page for a personal expense tracking app"</li>
-        <li>Reviews the generated HTML and CSS files</li>
-        <li>Opens the page in a browser to see the result</li>
-        <li>Makes a small change using another prompt</li>
+        <li>Has <code>my-app-idea.txt</code> (or equivalent) ready with an app description</li>
+        <li>Opens the <strong>Agent</strong> (Composer), switches to <strong>Plan mode</strong> (Shift+Tab in the agent input)</li>
+        <li>Pastes the exact prompt (provided below) and <strong>attaches</strong> the app-idea text file</li>
+        <li>Lets Cursor generate the tutorial site—briefly shows the plan and output</li>
+        <li>Previews the site in a browser, then pushes to GitHub and enables GitHub Pages</li>
       </ol>
-      <p>Notice how the workflow goes: describe → review → refine.</p>
+      <p>Notice: we're asking for a <strong>tutorial</strong> that teaches how to build the app, not the app itself. Describe → review → refine.</p>
 
-      <h3 id="hands-on-build-your-landing-page">Hands-On: Build Your Landing Page</h3>
-      <p>Now it's your turn. You're going to build a landing page for your project—not the app itself, just a page that describes it.</p>
+      <h3 id="hands-on-generate-your-tutorial-and-deploy">Hands-On: Generate Your Tutorial and Deploy</h3>
+      <p>Now it's your turn. You're going to ask Cursor to build a <strong>how-to tutorial</strong> for your app idea (not the app itself), then deploy that tutorial site to GitHub Pages.</p>
       <p><strong>Step 1: Create your project folder</strong></p>
       <ol>
-        <li>Create a new folder on your computer (e.g., <code>my-project</code> in your Documents folder)</li>
+        <li>Create a new folder on your computer (e.g., <code>my-app-tutorial</code> in your Documents folder)</li>
         <li>Open Cursor</li>
         <li>Go to File → Open Folder and select your new folder</li>
       </ol>
-      <p><strong>Step 2: Prompt Cursor to create your landing page</strong></p>
-      <ol>
-        <li>Press <code>Cmd+K</code> (Mac) or <code>Ctrl+K</code> (Windows)</li>
-        <li>Type a prompt describing your landing page. For example:</li>
-      </ol>
-      <blockquote>
-        Create a simple single-page HTML website (no frameworks) that describes [your project name]. Include sections for: project overview, key features (list 3-4), and about the developer. Make it visually clean with modern CSS. Use only HTML and CSS, no JavaScript frameworks.
-      </blockquote>
-      <ol start="3">
-        <li>Let Cursor generate the files</li>
-        <li>Look at what it created—you should see an <code>index.html</code> file and possibly a <code>styles.css</code> file</li>
-      </ol>
-      <p><strong>Step 3: Preview your page</strong></p>
-      <ol>
-        <li>Find the <code>index.html</code> file in Cursor's file explorer (left sidebar)</li>
-        <li>Right-click and select "Open with Live Server" or simply open the file in your web browser</li>
-        <li>See your landing page!</li>
-      </ol>
-      <p><strong>Step 4: Iterate</strong></p>
-      <p>Your first version probably isn't perfect. Use <code>Cmd+K</code> to ask for changes:</p>
+      <p><strong>Step 2: Have your app-idea file ready</strong></p>
       <ul>
-        <li>"Change the color scheme to blue and white"</li>
-        <li>"Add my name to the about section"</li>
-        <li>"Make the feature descriptions more detailed"</li>
-        <li>"Add a section for screenshots (with placeholder images for now)"</li>
+        <li>Use <code>my-app-idea.txt</code> from pre-work, or create it now (see <a href="pre-work.html#choose-your-project-idea">Pre-Work</a>). Keep it in the project folder or somewhere you can attach it from.</li>
       </ul>
-      <p>Keep refining until you're happy with it.</p>
+      <p><strong>Step 3: Open Agent and Plan mode</strong></p>
+      <ol>
+        <li>Open the <strong>Agent</strong> (Composer)—e.g. Cmd+I (Mac) or Ctrl+I (Windows), or via the UI</li>
+        <li>In the agent input, press <strong>Shift+Tab</strong> to switch to <strong>Plan mode</strong></li>
+        <li>You'll paste the prompt and attach your file here</li>
+      </ol>
+      <p><strong>Step 4: Paste the prompt and attach your app-idea file</strong></p>
+      <ol>
+        <li>Copy the exact prompt from the <a href="#prompt-to-use-in-plan-mode"><strong>Prompt to use in Plan mode</strong></a> section below</li>
+        <li>Paste it into the agent input</li>
+        <li><strong>Attach</strong> your app-idea text file (e.g. <code>my-app-idea.txt</code>) using Cursor's attach/add-file option when sending the prompt</li>
+        <li>Send the message and let Cursor generate the tutorial site</li>
+      </ol>
+      <p><strong>Step 5: Review and iterate</strong></p>
+      <ol>
+        <li>Look at what Cursor created—you should see an <code>index.html</code> and likely <code>styles.css</code></li>
+        <li>If you want changes, use follow-up prompts (e.g. "Make the steps clearer," "Add a table of contents")</li>
+        <li>Preview: right-click <code>index.html</code> → "Open with Live Server" or open in your browser</li>
+      </ol>
+      <p><strong>Step 6: Push to GitHub and deploy</strong></p>
+      <p>Continue with <a href="#pushing-to-github">Pushing to GitHub</a> and <a href="#deploying-to-github-pages">Deploying to GitHub Pages</a> below.</p>
       <p><strong>If you get stuck:</strong> First, try asking Cursor to fix the problem. If that doesn't work, ask a neighbor. If still stuck, raise your hand.</p>
+
+      <h4 id="prompt-to-use-in-plan-mode">Prompt to use in Composer</h4>
+      <ul>
+        <li><strong>Where:</strong> Open a new Composer chat (Cmd+I on Mac, Ctrl+I on Windows).</li>
+        <li><strong>What to attach:</strong> Your app idea file (<code>my-app-idea.md</code>)—click the <strong>+</strong> button or type <strong>@</strong> in the Composer to attach it.</li>
+      </ul>
+      <p><strong>Copy-paste the entire prompt below</strong> into the Composer (then attach your file and send):</p>
+      <pre class="scrollable-prompt"><code>I am a business student learning to build web apps with Cursor 2.0. I have attached my app idea file (`my-app-idea.md`) which describes the app I want to build. Please read it carefully before proceeding.
+
+Your task is to create a **personalized tutorial website** that will teach me how to build this specific app. The tutorial site itself should be a simple static HTML website that I can host on GitHub Pages.
+
+## Important Context
+
+Before building the tutorial, please fetch and read the technical requirements document at:
+```
+https://aboottogo.github.io/ai-bootcamp/preserved/app-technical-requirements.md
+```
+
+This document specifies the exact tech stack I must use for the app (not the tutorial):
+- **Framework:** Next.js with App Router
+- **Database:** InstantDB (not Firebase, not Supabase)
+- **Hosting:** Vercel (free Hobby plan)
+- **Styling:** Tailwind CSS
+
+All recommendations in the tutorial must follow these requirements.
+
+## What to Build
+
+Create a tutorial website with the following structure:
+
+```
+my-app-tutorial/
+├── index.html          # Main tutorial page
+├── styles.css          # Custom styles (minimal, Tailwind via CDN does most work)
+└── README.md           # Instructions for hosting on GitHub Pages
+```
+
+### Technical Requirements for the Tutorial Site
+
+- Use **plain HTML** with **Tailwind CSS via CDN** (no build step required)
+- The site should be clean, readable, and mobile-friendly
+- Use a simple, professional design with good typography
+- Include a table of contents with anchor links to each section
+- Each step should be clearly numbered and include code blocks where relevant
+- Code blocks should have syntax highlighting (use a CDN like Prism.js or highlight.js)
+
+### Tailwind CDN Setup
+
+Include this in the HTML `&lt;head&gt;`:
+```html
+&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+```
+
+For code syntax highlighting, include Prism.js:
+```html
+&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" /&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-jsx.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-tsx.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"&gt;&lt;/script&gt;
+```
+
+## Tutorial Content Structure
+
+The tutorial should have the following sections. Personalize each section using my specific app idea.
+
+### Section 1: Introduction
+- Welcome message
+- What we're building (summarize MY app idea)
+- What technologies we'll use and why
+- What we'll have at the end
+
+### Section 2: Prerequisites
+- Install Node.js (link to nodejs.org, recommend LTS version)
+- Create a Vercel account (link to vercel.com, sign up with GitHub)
+- Create an InstantDB account (link to instantdb.com)
+
+### Section 3: Configure Cursor for This Project
+Include this critical step:
+1. Open Cursor Settings (Cmd+, or Ctrl+,)
+2. Navigate to **Features → Docs**
+3. Click **"Add Doc"**
+4. Add the following documentation URL: `https://www.instantdb.com/docs`
+5. Wait for Cursor to index the documentation
+6. This allows Cursor to reference InstantDB's documentation when helping you code
+
+### Section 4: Create Your InstantDB App
+- Go to https://www.instantdb.com/dash
+- Click "Create App"
+- Name it after your project
+- Copy your App ID (you'll need this later)
+- Keep this tab open
+
+### Section 5: The Prompt to Build Your App
+
+This is the most important section. Include a complete, ready-to-use prompt that I can paste into Cursor to build my actual app. 
+
+Write this prompt specifically for MY app idea. The prompt should:
+- Describe exactly what app to build (based on my idea)
+- Reference the tech stack (Next.js, InstantDB, Tailwind)
+- Include the data model (entities and relationships) specific to my app
+- Include authentication requirements
+- Include the main pages/routes needed
+- Include the core features
+- Be detailed enough that Cursor can build a working first version
+
+Format this prompt in a clearly marked, copy-able code block with a "Copy" button if possible.
+
+The prompt should start with something like:
+```
+Build me a Next.js web application for [MY APP PURPOSE]. 
+
+## Tech Stack
+- Next.js 14+ with App Router
+- InstantDB for the database (use @instantdb/react)
+- Tailwind CSS for styling
+- TypeScript
+
+## App Description
+[PERSONALIZED DESCRIPTION FROM MY APP IDEA]
+
+## Data Model
+[ENTITIES AND RELATIONSHIPS SPECIFIC TO MY APP]
+
+## Authentication
+Use InstantDB's Magic Code authentication...
+
+## Pages
+[LIST OF PAGES SPECIFIC TO MY APP]
+
+## Core Features
+[FEATURES FROM MY APP IDEA]
+
+## Getting Started
+1. Create the Next.js app: npx create-next-app@latest [app-name] --tailwind --eslint --app --src-dir --import-alias "@/*"
+2. Install InstantDB: npm install @instantdb/react
+3. Create instant.schema.ts with the data model above
+4. Create instant.perms.ts with appropriate permissions
+...
+```
+
+### Section 6: Running Your App Locally
+- How to start the development server (`npm run dev`)
+- How to view it in the browser (localhost:3000)
+- How to make changes and see them update
+
+### Section 7: Setting Up InstantDB
+- How to initialize the InstantDB CLI: `npx instant-cli@latest init`
+- How to push the schema: `npx instant-cli push schema`
+- How to push permissions: `npx instant-cli push perms`
+- How to add the App ID to `.env.local`
+
+### Section 8: Deploy to Vercel
+Step-by-step instructions:
+1. Make sure your code is pushed to GitHub
+2. Go to vercel.com and sign in with GitHub
+3. Click "Add New Project"
+4. Import your GitHub repository
+5. Add the environment variable: `NEXT_PUBLIC_INSTANT_APP_ID` with your InstantDB App ID
+6. Click "Deploy"
+7. Wait for deployment to complete
+8. Click the URL to see your live app!
+
+### Section 9: Next Steps
+- Ideas for features to add
+- How to make changes (edit code, push to GitHub, Vercel auto-deploys)
+- Resources for learning more
+
+### Section 10: Troubleshooting
+Common issues and solutions:
+- "Cannot find module" → run `npm install`
+- Blank page → check browser console for errors
+- Auth not working → verify InstantDB App ID is correct
+- Changes not showing on live site → wait a minute for Vercel to rebuild
+
+---
+
+## README.md Content
+
+The README.md file should contain instructions for hosting the tutorial site on GitHub Pages:
+
+```markdown
+# [My App Name] - Tutorial Site
+
+This is a personalized tutorial for building [my app] using Next.js, InstantDB, and Vercel.
+
+## Hosting This Tutorial on GitHub Pages
+
+### Step 1: Create a GitHub Repository
+
+1. Go to [github.com](https://github.com) and sign in
+2. Click the **+** button in the top right, then **New repository**
+3. Name your repository (e.g., `my-app-tutorial`)
+4. Make sure **Public** is selected (required for free GitHub Pages)
+5. Click **Create repository**
+
+### Step 2: Upload the Tutorial Files
+
+1. On your new repository page, click **uploading an existing file**
+2. Drag and drop all files from this folder:
+   - `index.html`
+   - `styles.css` (if present)
+   - `README.md`
+3. Scroll down and click **Commit changes**
+
+### Step 3: Enable GitHub Pages
+
+1. In your repository, click the **Settings** tab
+2. In the left sidebar, click **Pages**
+3. Under **Source**, select **Deploy from a branch**
+4. Under **Branch**, select **main** and **/ (root)**
+5. Click **Save**
+
+### Step 4: Access Your Tutorial
+
+After a few minutes, your tutorial will be live at:
+```
+https://YOUR-USERNAME.github.io/REPOSITORY-NAME/
+```
+
+For example: `https://janedoe.github.io/my-app-tutorial/`
+
+You can find this URL in the **Pages** settings after deployment completes.
+
+---
+
+## Next Steps
+
+Once you can view your tutorial online:
+1. Follow the tutorial steps to build your app!
+2. Use the "Build Prompt" in Section 5 with Cursor
+3. Deploy your finished app to Vercel
+
+Good luck! 🚀
+```
+
+---
+
+## Final Notes
+
+- Make the tutorial encouraging and beginner-friendly
+- Use "you" and "your" to speak directly to me
+- Include emoji sparingly to make it feel approachable
+- Assume I have never coded before but am smart and motivated
+- If any step might be confusing, add a brief explanation of WHY we're doing it
+- Test that all links work and point to real resources
+
+Now please read my attached app idea file and create this personalized tutorial website!</code></pre>
 
       <h3 id="pushing-to-github">Pushing to GitHub</h3>
       <p>Now let's get your code on GitHub.</p>
@@ -225,7 +431,7 @@
       <p>This tells Git to start tracking this folder.</p>
       <p><strong>Step 2: Stage and commit your files</strong></p>
       <pre><code class="language-bash">git add .
-git commit -m "Initial landing page"</code></pre>
+git commit -m "Initial tutorial site"</code></pre>
       <p>The first command stages all your files (tells Git "these are the changes I want to save"). The second creates a commit with a message describing what you did.</p>
       <p><strong>Step 3: Create a repository on GitHub</strong></p>
       <ol>
@@ -266,17 +472,13 @@ git push -u origin main</code></pre>
 
       <h2 id="homework">Homework</h2>
 
-      <h3 id="start-building-your-full-app">Start Building Your Full App</h3>
-      <p>Between now and Meeting 2, start building the actual application (not just the landing page).</p>
+      <h3 id="follow-your-tutorial">Follow Your Tutorial</h3>
+      <p>Between now and Meeting 2, <strong>use the tutorial Cursor generated as your homework.</strong> Work through it step by step to build your app (or the frontend/core the tutorial covers).</p>
       <p><strong>Your task:</strong></p>
       <ol>
-        <li>Create a new folder for your app (or continue in the same folder if you prefer)</li>
-        <li>Use Cursor to build a working version of your idea</li>
+        <li>Open your tutorial site (the one you deployed to GitHub Pages) or the project folder Cursor created</li>
+        <li>Follow the tutorial's instructions to build your app before Meeting 2</li>
       </ol>
-      <p><strong>Example prompt for an expense tracker:</strong></p>
-      <blockquote>
-        Create a Next.js app for tracking personal expenses. Users should be able to add expenses with a date, amount, and category. Display a list of all expenses. For now, just store the data in the browser (we'll add a real database next week). Keep the design clean and simple.
-      </blockquote>
       <p><strong>Don't worry about:</strong></p>
       <ul>
         <li>User accounts (we'll add those next week)</li>
@@ -285,9 +487,9 @@ git push -u origin main</code></pre>
       </ul>
       <p><strong>Do focus on:</strong></p>
       <ul>
-        <li>Getting the core screens working</li>
-        <li>Being able to add and view data</li>
-        <li>Understanding what Cursor is generating</li>
+        <li>Completing the tutorial steps</li>
+        <li>Getting the core flow working</li>
+        <li>Understanding what you're building</li>
       </ul>
       <p><strong>If you get stuck:</strong></p>
       <ul>

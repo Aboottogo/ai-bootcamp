@@ -11,7 +11,7 @@ By the end, you'll have:
 
 ## How This Is Different
 
-Traditional coding bootcamps teach programming "from the bottom up"—you spend weeks learning syntax before you build anything real. This bootcamp inverts that. You'll have a live website by the end of the first session.
+Traditional coding bootcamps teach programming "from the bottom up"—you spend weeks learning syntax before you build anything real. This bootcamp inverts that. You'll have a live website by the end of the first session—a **how-to tutorial** for your app idea that you deploy to GitHub Pages. You'll follow that tutorial as homework, then build the real app in Week 2.
 
 We start with the question: *What do you want to build?* Technical concepts get introduced only when they become relevant to your project. This mirrors how many successful founders and product managers actually work.
 
@@ -31,7 +31,7 @@ All tools are free for students:
 | Week | What Happens |
 |------|--------------|
 | **Before Week 1** | Complete pre-work: install tools, create accounts, choose your project idea |
-| **Week 1** | Build a landing page, deploy it to GitHub Pages |
+| **Week 1** | Generate a how-to tutorial for your app idea, deploy it to GitHub Pages |
 | **Week 2** | Build your full app with a database, deploy to Vercel |
 | **Week 3** | Polish, document, and present your project |
 

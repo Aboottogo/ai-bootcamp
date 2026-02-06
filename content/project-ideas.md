@@ -160,6 +160,14 @@ Track items for a student org, small business, or personal collection.
 
 **The real goal:** Build something, deploy it, and be able to talk about it. A simple, polished expense tracker is better than an ambitious, broken mess.
 
+**Save your chosen idea (or adapted version) in a text file** (e.g. `my-app-idea.txt`). You'll attach that file in Meeting 1 when you prompt Cursor to generate your how-to tutorial. See [Pre-Work](pre-work.md#choose-your-project-idea) for the format.
+
+**Sample `my-app-idea.txt`** (expense tracker):
+
+```
+Personal expense tracker. Users: me and other students who want to see where their money goes. Core features: log expenses with date, amount, and category; view a list of all expenses; see monthly totals.
+```
+
 ---
 
 # Sample Prompts for Iteration

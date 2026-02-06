@@ -1,0 +1,3 @@
+# Files in this folder are excluded from Cursor's AI context and indexing.
+# Use it for markdown you want to preserve from AI edits.
+preserved/
