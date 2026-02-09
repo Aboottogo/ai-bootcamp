@@ -107,9 +107,35 @@
     });
   }
 
+  function initCopyPromptButton() {
+    var btn = document.querySelector(".copy-prompt-btn");
+    var codeEl = document.getElementById("composer-prompt-text");
+    if (!btn || !codeEl) return;
+    btn.addEventListener("click", function () {
+      var text = codeEl.textContent;
+      navigator.clipboard.writeText(text).then(
+        function () {
+          btn.textContent = "Copied!";
+          btn.classList.add("copied");
+          setTimeout(function () {
+            btn.textContent = "Copy";
+            btn.classList.remove("copied");
+          }, 2000);
+        },
+        function () {
+          btn.textContent = "Copy failed";
+          setTimeout(function () {
+            btn.textContent = "Copy";
+          }, 2000);
+        }
+      );
+    });
+  }
+
   function init() {
     initSidebar();
     initHamburger();
+    initCopyPromptButton();
   }
 
   if (document.readyState === "loading") {

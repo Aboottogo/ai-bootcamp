@@ -42,7 +42,6 @@
             </div>
             <ul class="nav-children">
               <li><span class="nav-group-label">In-Class</span></li>
-              <li><a href="meeting-1.html#live-demo-generating-your-tutorial">Live Demo: Generating Your Tutorial</a></li>
               <li><a href="meeting-1.html#hands-on-generate-your-tutorial-and-deploy">Hands-On: Generate Your Tutorial and Deploy</a></li>
               <li><a href="meeting-1.html#pushing-to-github">Pushing to GitHub</a></li>
               <li><a href="meeting-1.html#deploying-to-github-pages">Deploying to GitHub Pages</a></li>
@@ -105,6 +104,7 @@
             </div>
             <ul class="nav-children">
               <li><a href="resources.html#tools-we-use">Tools We Use</a></li>
+              <li><a href="resources.html#additional-tools">Additional Tools</a></li>
               <li><a href="resources.html#quick-reference">Quick Reference</a></li>
               <li><a href="resources.html#further-learning">Further Learning</a></li>
               <li><a href="resources.html#getting-help">Getting Help</a></li>
@@ -126,20 +126,8 @@
 
       <h2 id="in-class">In-Class</h2>
 
-      <h3 id="live-demo-generating-your-tutorial">Live Demo: Generating Your Tutorial</h3>
-      <p>Watch as the instructor:</p>
-      <ol>
-        <li>Opens Cursor and creates a new project folder</li>
-        <li>Has <code>my-app-idea.txt</code> (or equivalent) ready with an app description</li>
-        <li>Opens the <strong>Agent</strong> (Composer), switches to <strong>Plan mode</strong> (Shift+Tab in the agent input)</li>
-        <li>Pastes the exact prompt (provided below) and <strong>attaches</strong> the app-idea text file</li>
-        <li>Lets Cursor generate the tutorial site—briefly shows the plan and output</li>
-        <li>Previews the site in a browser, then pushes to GitHub and enables GitHub Pages</li>
-      </ol>
-      <p>Notice: we're asking for a <strong>tutorial</strong> that teaches how to build the app, not the app itself. Describe → review → refine.</p>
-
       <h3 id="hands-on-generate-your-tutorial-and-deploy">Hands-On: Generate Your Tutorial and Deploy</h3>
-      <p>Now it's your turn. You're going to ask Cursor to build a <strong>how-to tutorial</strong> for your app idea (not the app itself), then deploy that tutorial site to GitHub Pages.</p>
+      <p>You're going to ask Cursor to build a <strong>how-to tutorial</strong> for your app idea (not the app itself), then deploy that tutorial site to GitHub Pages.</p>
       <p><strong>Step 1: Create your project folder</strong></p>
       <ol>
         <li>Create a new folder on your computer (e.g., <code>my-app-tutorial</code> in your Documents folder)</li>
@@ -179,7 +167,9 @@
         <li><strong>What to attach:</strong> Your app idea file (<code>my-app-idea.md</code>)—click the <strong>+</strong> button or type <strong>@</strong> in the Composer to attach it.</li>
       </ul>
       <p><strong>Copy-paste the entire prompt below</strong> into the Composer (then attach your file and send):</p>
-      <pre class="scrollable-prompt"><code>I am a business student learning to build web apps with Cursor 2.0. I have attached my app idea file (`my-app-idea.md`) which describes the app I want to build. Please read it carefully before proceeding.
+      <div class="prompt-code-wrapper">
+        <button type="button" class="copy-prompt-btn" aria-label="Copy prompt to clipboard">Copy</button>
+        <pre class="scrollable-prompt"><code id="composer-prompt-text">I am a business student learning to build web apps with Cursor 2.0. I have attached my app idea file (`my-app-idea.md`) which describes the app I want to build. Please read it carefully before proceeding.
 
 Your task is to create a **personalized tutorial website** that will teach me how to build this specific app. The tutorial site itself should be a simple static HTML website that I can host on GitHub Pages.
 
@@ -422,6 +412,7 @@ Good luck! 🚀
 - Test that all links work and point to real resources
 
 Now please read my attached app idea file and create this personalized tutorial website!</code></pre>
+      </div>
 
       <p>This prompt references technical requirements in <a href="preserved/app-technical-requirements.md">app-technical-requirements.md</a>.</p>
 

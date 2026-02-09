@@ -30,12 +30,26 @@ Hosting for full-stack applications.
 - **Documentation:** [vercel.com/docs](https://vercel.com/docs)
 - **Free tier:** Generous for personal projects
 
+### InstantDB
+Real-time database and backend.
+- **Website:** [instantdb.com](https://instantdb.com)
+- **Documentation:** [instantdb.com/docs](https://instantdb.com/docs)
+
+---
+
+## Additional Tools
+
 ### Supabase
 Database and authentication.
 - **Website:** [supabase.com](https://supabase.com)
 - **Documentation:** [supabase.com/docs](https://supabase.com/docs)
 - **Dashboard:** [app.supabase.com](https://app.supabase.com)
 - **Free tier:** 500MB database, 50K monthly active users
+
+### Google Gemini
+AI assistant and chatbot.
+- **Website:** [gemini.google.com/app](https://gemini.google.com/app)
+- **Student tip:** Log in with your .edu email address for enhanced features
 
 ---
 
