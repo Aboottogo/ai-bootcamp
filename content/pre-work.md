@@ -147,19 +147,4 @@ If any of these aren't working, note what's wrong and we'll troubleshoot at the 
 
 ---
 
-## Optional: Experiment with Cursor
-
-If you have extra time, try opening Cursor and playing around:
-
-1. Create a new folder on your computer called `test-project`
-2. Open that folder in Cursor (File → Open Folder)
-3. Press `Cmd+K` (Mac) or `Ctrl+K` (Windows) to open the AI prompt
-4. Ask Cursor to write a poem into a text file (e.g. "Write a short poem and save it to poem.txt")
-5. Ask Cursor to create an HTML file that displays the poem with some nice styling
-6. See what happens!
-
-This isn't required, but it'll make Meeting 1 less overwhelming.
-
----
-
 Next: [Meeting 1: The Quick Win](meeting-1.md)

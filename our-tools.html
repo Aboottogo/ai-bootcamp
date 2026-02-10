@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What is the Terminal? | AI-Assisted App Development Bootcamp</title>
+  <title>Our Tools | AI-Assisted App Development Bootcamp</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body data-current-page="what-is-the-terminal">
+<body data-current-page="our-tools">
   <header class="site-header">
     <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
     <h1 class="site-title"><a href="index.html">AI-Assisted App Development Bootcamp</a></h1>
@@ -32,9 +32,19 @@
               <li><a href="pre-work.html#verify-your-setup">Verify Your Setup</a></li>
             </ul>
           </li>
-          <li><a href="what-is-cursor.html">What is Cursor?</a></li>
-          <li><a href="what-is-the-terminal.html">What is the Terminal?</a></li>
-          <li><a href="what-is-git.html">What is Git?</a></li>
+          <li class="nav-section">
+            <div class="nav-item-wrapper">
+              <a href="our-tools.html">Our Tools</a>
+              <button type="button" class="nav-toggle" aria-label="Expand">&#8250;</button>
+            </div>
+            <ul class="nav-children">
+              <li><a href="our-tools.html#what-is-cursor">What is Cursor?</a></li>
+              <li><a href="our-tools.html#cursor-modes">Modes</a></li>
+              <li><a href="our-tools.html#exercise-1-experiment-with-cursor">Exercise 1: Experiment with Cursor</a></li>
+              <li><a href="our-tools.html#what-is-the-terminal">What is the Terminal?</a></li>
+              <li><a href="our-tools.html#what-is-git">What is Git?</a></li>
+            </ul>
+          </li>
           <li class="nav-section">
             <div class="nav-item-wrapper">
               <a href="meeting-1.html">Meeting 1: The Quick Win</a>
@@ -119,15 +129,62 @@
   </aside>
   <main class="main-content">
     <article>
-      <h1 id="what-is-the-terminal">What is the Terminal?</h1>
+      <h1 id="our-tools">Our Tools</h1>
+
+      <h2 id="what-is-cursor">What is Cursor?</h2>
+      <p>Cursor is a code editor—a program where you write and edit code. But unlike traditional editors, Cursor has AI built in. You can describe what you want in plain English, and Cursor will write the code for you.</p>
+      <p>This doesn't mean you don't need to understand anything. You still need to:</p>
+      <ul>
+        <li>Know what you're trying to build</li>
+        <li>Review what Cursor generates</li>
+        <li>Guide it when it gets things wrong</li>
+        <li>Understand enough to debug problems</li>
+      </ul>
+      <p>Think of Cursor as a very fast assistant who's good at writing code but needs clear direction.</p>
+      <p><strong>Key things to know:</strong></p>
+      <ul>
+        <li><code>Cmd+K</code> (Mac) or <code>Ctrl+K</code> (Windows) opens the AI prompt—this is how you tell Cursor what to build</li>
+        <li>Cursor generates files and code based on your description</li>
+        <li>You can always ask Cursor to modify, fix, or explain what it created</li>
+      </ul>
+
+      <h3 id="cursor-modes">Modes</h3>
+      <p>Cursor offers different modes so you can choose how the AI helps:</p>
+      <ul>
+        <li><strong>Plan</strong> is for thinking before typing—it helps outline architecture, steps, and trade-offs without touching code. Use it when you're starting something non-trivial or want to sanity-check an approach before committing.</li>
+        <li><strong>Agent</strong> actively writes, edits, and navigates code across files to accomplish a task end-to-end. Use it when you want Cursor to "just do the work," like implementing a feature or refactoring with minimal back-and-forth.</li>
+        <li><strong>Ask</strong> answers questions about your codebase, errors, or concepts without making changes. Use it when you want explanations, guidance, or quick understanding rather than modifications.</li>
+        <li><strong>Debug</strong> focuses on diagnosing bugs by reasoning through failures, stack traces, and runtime behavior. Use it when something's broken and you want help figuring out why before (or instead of) fixing it automatically.</li>
+      </ul>
+
+      <h3 id="exercise-1-experiment-with-cursor">Exercise 1: Experiment with Cursor</h3>
+      <p>Try opening Cursor and playing around:</p>
+      <ol>
+        <li>Create a new folder on your computer called <code>test-project</code></li>
+        <li>Open that folder in Cursor (File → Open Folder)</li>
+        <li>Press <code>Cmd+K</code> (Mac) or <code>Ctrl+K</code> (Windows) to open the AI prompt</li>
+        <li>Ask Cursor to write a poem into a text file (e.g. "Write a short poem and save it to poem.txt")</li>
+        <li>Ask Cursor to create an HTML file that displays the poem with some nice styling</li>
+        <li>See what happens!</li>
+      </ol>
+      <p>This isn't required, but it'll make Meeting 1 less overwhelming.</p>
+
+      <div class="callout-box">
+        <p>You <em>will</em> get stuck sometimes—everyone does. When that happens, use the <strong>Ask</strong> feature in Cursor: describe what you're trying to do and what went wrong, and work through the problem with the AI. There's no need to struggle alone.</p>
+        <hr>
+        <blockquote class="motivational-quote">
+          <p>"The best debugger is the one who isn't afraid to ask for help—even if that help is another AI."</p>
+          <footer>— ChatGPT</footer>
+        </blockquote>
+      </div>
+
+      <h2 id="what-is-the-terminal">What is the Terminal?</h2>
       <p>The terminal (also called command line or shell) is a text-based interface where you type commands to interact with your computer. Instead of clicking buttons and menus, you type instructions that your computer executes.</p>
       <p>Think of it like a conversation with your computer: you type a command, press Enter, and the computer responds with text output.</p>
 
-      <hr>
+      <h3 id="mac-vs-windows-terminal-differences">Mac vs Windows: Terminal Differences</h3>
 
-      <h2 id="mac-vs-windows-terminal-differences">Mac vs Windows: Terminal Differences</h2>
-
-      <h3 id="mac-terminal">Mac (Terminal)</h3>
+      <h4 id="mac-terminal">Mac (Terminal)</h4>
       <p>On Mac, the terminal is called <strong>Terminal</strong>. To access it:</p>
       <ol>
         <li>Press <code>Cmd + Space</code> to open Spotlight search</li>
@@ -136,7 +193,7 @@
       </ol>
       <p>Mac uses Unix-based commands (similar to Linux). The default shell is usually <code>zsh</code> or <code>bash</code>.</p>
 
-      <h3 id="windows-command-prompt-or-powershell">Windows (Command Prompt or PowerShell)</h3>
+      <h4 id="windows-command-prompt-or-powershell">Windows (Command Prompt or PowerShell)</h4>
       <p>On Windows, you have two options:</p>
       <p><strong>Option 1: Command Prompt</strong></p>
       <ol>
@@ -151,11 +208,9 @@
       </ol>
       <p>PowerShell is more modern and powerful, similar to Unix terminals. Many commands work similarly between PowerShell and Mac/Linux terminals.</p>
 
-      <hr>
+      <h3 id="using-the-terminal-in-cursor">Using the Terminal in Cursor</h3>
 
-      <h2 id="using-the-terminal-in-cursor">Using the Terminal in Cursor</h2>
-
-      <h3 id="how-to-open-the-terminal-in-cursor">How to Open the Terminal in Cursor</h3>
+      <h4 id="how-to-open-the-terminal-in-cursor">How to Open the Terminal in Cursor</h4>
       <ol>
         <li><strong>Menu method:</strong> Go to <code>View → Terminal</code> (or <code>Terminal → New Terminal</code>)</li>
         <li><strong>Keyboard shortcut:</strong>
@@ -167,7 +222,7 @@
         <li><strong>Command Palette:</strong> Press <code>Cmd+Shift+P</code> (Mac) or <code>Ctrl+Shift+P</code> (Windows), then type "Terminal: Create New Terminal"</li>
       </ol>
 
-      <h3 id="advantages-of-using-cursors-terminal">Advantages of Using Cursor's Terminal</h3>
+      <h4 id="advantages-of-using-cursors-terminal">Advantages of Using Cursor's Terminal</h4>
       <ul>
         <li><strong>Integrated workflow:</strong> Run commands without leaving your editor</li>
         <li><strong>File context:</strong> The terminal opens in your project folder automatically</li>
@@ -175,7 +230,7 @@
         <li><strong>AI context:</strong> Terminal output can be included in Cursor's context (see below)</li>
       </ul>
 
-      <h3 id="terminal-output-and-cursors-context">Terminal Output and Cursor's Context</h3>
+      <h4 id="terminal-output-and-cursors-context">Terminal Output and Cursor's Context</h4>
       <p><strong>What is context?</strong> Context is the information Cursor uses to understand your project and help you. It includes:</p>
       <ul>
         <li>Files you've opened</li>
@@ -192,12 +247,10 @@
       </ul>
       <p><strong>Example:</strong> If you run <code>python script.py</code> and get an error, you can ask Cursor "What's wrong?" and it will see the error message and suggest a fix.</p>
 
-      <hr>
-
-      <h2 id="exercise-1-hello-world-no-installation-required">Exercise 1: Hello World (No Installation Required)</h2>
+      <h3 id="exercise-1-hello-world-no-installation-required">Exercise 1: Hello World (No Installation Required)</h3>
       <p>Let's start with something simple that works on any computer without installing anything.</p>
 
-      <h3 id="step-1-ask-cursor-to-create-a-hello-world-script">Step 1: Ask Cursor to Create a Hello World Script</h3>
+      <h4 id="step-1-ask-cursor-to-create-a-hello-world-script">Step 1: Ask Cursor to Create a Hello World Script</h4>
       <ol>
         <li>Open Cursor and create a new folder (or use an existing project folder)</li>
         <li>Open the Agent (Composer) by pressing <code>Cmd+I</code> (Mac) or <code>Ctrl+I</code> (Windows)</li>
@@ -208,7 +261,7 @@
         <li>Cursor will create a script file for you</li>
       </ol>
 
-      <h3 id="step-2-run-the-script">Step 2: Run the Script</h3>
+      <h4 id="step-2-run-the-script">Step 2: Run the Script</h4>
       <ol>
         <li>Open the terminal in Cursor (<code>Ctrl + `</code>)</li>
         <li>Run the script:
@@ -221,14 +274,12 @@
       </ol>
       <p><strong>What you learned:</strong> You can ask Cursor to create scripts, and then run them directly in Cursor's integrated terminal.</p>
 
-      <hr>
-
-      <h2 id="exercise-2-a-number-guessing-game-in-python-with-installation">Exercise 2: A Number-Guessing Game in Python (With Installation)</h2>
+      <h3 id="exercise-2-a-number-guessing-game-in-python-with-installation">Exercise 2: A Number-Guessing Game in Python (With Installation)</h3>
       <p>Now let's try something that requires installing a programming language. We'll use Python to build a simple game you can run in the terminal.</p>
       <p><strong>The game:</strong> The program randomly picks an integer between 1 and 10 and asks the user to guess. If the guess is wrong, it replies in the terminal with either "Wrong guess! Too High!" or "Wrong guess! Too Low!" and prompts the user to try again. If the guess is correct, it replies with "Correct! Good job!" and then ends.</p>
       <p><a href="examples/guess_the_number.py" download>See solution example</a> — You can download this example script to see one way the game might be written. Try building your own with Cursor first, then compare.</p>
 
-      <h3 id="step-1-ask-cursor-to-create-the-game">Step 1: Ask Cursor to Create the Game</h3>
+      <h4 id="step-1-ask-cursor-to-create-the-game">Step 1: Ask Cursor to Create the Game</h4>
       <ol>
         <li>In Cursor, ask the Agent something like:</li>
       </ol>
@@ -237,7 +288,7 @@
         <li>Cursor will create a Python script (e.g. <code>guess_the_number.py</code>) for you</li>
       </ol>
 
-      <h3 id="step-2-try-to-run-it-it-may-fail">Step 2: Try to Run It (It May Fail)</h3>
+      <h4 id="step-2-try-to-run-it-it-may-fail">Step 2: Try to Run It (It May Fail)</h4>
       <ol>
         <li>Open the terminal in Cursor</li>
         <li>Try running: <code>python guess_the_number.py</code> (or whatever filename Cursor used)</li>
@@ -245,7 +296,7 @@
       </ol>
       <p><strong>This is expected</strong> if Python isn't installed yet.</p>
 
-      <h3 id="step-3-ask-cursor-to-help-install-python">Step 3: Ask Cursor to Help Install Python</h3>
+      <h4 id="step-3-ask-cursor-to-help-install-python">Step 3: Ask Cursor to Help Install Python</h4>
       <p>Instead of searching for installation instructions, <strong>ask Cursor:</strong></p>
       <pre><code>I'm trying to run a Python script but I get an error that python is not found. Help me install Python on my [Mac/Windows] system. Provide step-by-step instructions.</code></pre>
       <p>Cursor will:</p>
@@ -255,7 +306,7 @@
         <li>Guide you through the installation process</li>
       </ul>
 
-      <h3 id="step-4-follow-cursors-instructions">Step 4: Follow Cursor's Instructions</h3>
+      <h4 id="step-4-follow-cursors-instructions">Step 4: Follow Cursor's Instructions</h4>
       <ol>
         <li>Follow the steps Cursor provides</li>
         <li>For Mac, Cursor might suggest using Homebrew or downloading from python.org</li>
@@ -263,7 +314,7 @@
         <li>After installation, verify with: <code>python --version</code></li>
       </ol>
 
-      <h3 id="step-5-run-your-game">Step 5: Run Your Game</h3>
+      <h4 id="step-5-run-your-game">Step 5: Run Your Game</h4>
       <ol>
         <li>Run your script: <code>python guess_the_number.py</code></li>
         <li>Guess numbers until you see "Correct! Good job!"</li>
@@ -276,9 +327,7 @@
         <li>Cursor can use terminal errors as context to help you fix issues</li>
       </ul>
 
-      <hr>
-
-      <h2 id="key-takeaways">Key Takeaways</h2>
+      <h3 id="terminal-key-takeaways">Key Takeaways</h3>
       <ul>
         <li><strong>Terminal = text-based interface</strong> for running commands</li>
         <li><strong>Mac uses Terminal</strong>, Windows uses <strong>Command Prompt or PowerShell</strong></li>
@@ -288,6 +337,24 @@
         <li><strong>Installation is part of development</strong>—Cursor can guide you through it</li>
       </ul>
       <p>The terminal might seem intimidating at first, but it's just another way to talk to your computer. With Cursor's help, you'll get comfortable with it quickly.</p>
+
+      <h2 id="what-is-git">What is Git?</h2>
+      <p>Git is a version control system. That's a fancy way of saying it tracks every change you make to your code.</p>
+      <p>Why this matters:</p>
+      <ul>
+        <li><strong>Undo mistakes:</strong> If you break something, you can go back to a working version</li>
+        <li><strong>Track history:</strong> See what changed and when</li>
+        <li><strong>Collaboration:</strong> Multiple people can work on the same project</li>
+        <li><strong>Portfolio:</strong> Your Git history shows employers you can ship code</li>
+      </ul>
+      <p><strong>Key vocabulary:</strong></p>
+      <ul>
+        <li><strong>Repository (repo):</strong> A project folder tracked by Git</li>
+        <li><strong>Commit:</strong> A saved snapshot of your code at a point in time (like a save point in a video game)</li>
+        <li><strong>Push:</strong> Upload your commits to GitHub</li>
+        <li><strong>Pull:</strong> Download changes from GitHub to your computer</li>
+      </ul>
+      <p>Today you'll do all four: create a repo, make commits, and push to GitHub.</p>
     </article>
   </main>
   <div class="sidebar-overlay" aria-hidden="true"></div>
