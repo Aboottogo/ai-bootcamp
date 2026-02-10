@@ -1,4 +1,4 @@
-# Meeting 1: The Quick Win
+# Meeting 1
 
 **Goal:** Leave this session with a live website you can share with anyone.
 
@@ -175,4 +175,4 @@ Between now and Meeting 2, **use the tutorial Cursor generated as your homework.
 
 ---
 
-Next: [Meeting 2: The Real Thing](meeting-2.md)
+Next: [Meeting 2](meeting-2.md)

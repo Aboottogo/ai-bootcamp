@@ -147,4 +147,4 @@ If any of these aren't working, note what's wrong and we'll troubleshoot at the 
 
 ---
 
-Next: [Meeting 1: The Quick Win](meeting-1.md)
+Next: [Meeting 1](meeting-1.md)

@@ -1,6 +1,6 @@
 /**
  * AI-Assisted App Development Bootcamp - Static docs
- * Sidebar expand/collapse, hamburger menu, current page highlight
+ * Sidebar: hamburger menu, current page highlight
  */
 (function () {
   "use strict";
@@ -31,40 +31,9 @@
 
   function initSidebar() {
     var currentPage = getCurrentPage();
-    var navSections = document.querySelectorAll(".sidebar .nav-section");
-
-    navSections.forEach(function (section) {
-      var toggle = section.querySelector(".nav-toggle");
-      var wrapper = section.querySelector(".nav-item-wrapper");
-
-      if (toggle) {
-        toggle.addEventListener("click", function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          section.classList.toggle("expanded");
-        });
-      }
-
-      var links = section.querySelectorAll("a");
-      var isCurrentSection = false;
-      links.forEach(function (link) {
-        if (isCurrentPageLink(link, currentPage)) {
-          link.classList.add("current");
-          if (wrapper) wrapper.classList.add("current");
-          isCurrentSection = true;
-        }
-      });
-
-      if (isCurrentSection) {
-        section.classList.add("expanded");
-      }
-    });
-
     document.querySelectorAll(".sidebar nav a").forEach(function (link) {
       if (isCurrentPageLink(link, currentPage)) {
         link.classList.add("current");
-        var wrapper = link.closest(".nav-item-wrapper");
-        if (wrapper) wrapper.classList.add("current");
       }
     });
   }

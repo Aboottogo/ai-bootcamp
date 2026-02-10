@@ -1,4 +1,4 @@
-# Meeting 2: The Real Thing
+# Meeting 2
 
 **Goal:** Leave this session with a fully functional app—with user accounts and a real database—deployed on the web.
 
@@ -244,4 +244,4 @@ Bring the draft to Meeting 3.
 
 ---
 
-Next: [Meeting 3: Polish & Present](meeting-3.md)
+Next: [Meeting 3](meeting-3.md)

@@ -1,4 +1,4 @@
-# Meeting 3: Polish & Present
+# Meeting 3
 
 **Goal:** Finish strong. Present your work. Leave with portfolio-ready assets.
 
