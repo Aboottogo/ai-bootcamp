@@ -16,30 +16,30 @@
       <p class="site-title"><a href="index.html">AI-Assisted App Development Bootcamp</a></p>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="app-idea.html">Project Ideas</a></li>
-          <li><a href="pre-work.html">Pre-Work</a></li>
-          <li><a href="our-tools.html">Our Tools</a></li>
-          <li><a href="meeting-1.html">Meeting 1</a></li>
-          <li><a href="meeting-2.html">Meeting 2</a></li>
-          <li><a href="meeting-3.html">Meeting 3</a></li>
-          <li><a href="troubleshooting.html">Troubleshooting</a></li>
-          <li><a href="resources.html">Resources</a></li>
+          <li><a href="index.html">1. Home</a></li>
+          <li><a href="app-idea.html">2. Project Ideas</a></li>
+          <li><a href="pre-work.html">3. Pre-Work</a></li>
+          <li><a href="our-tools.html">4. Our Tools</a></li>
+          <li><a href="meeting-1.html">5. Meeting 1</a></li>
+          <li><a href="meeting-2.html">6. Meeting 2</a></li>
+          <li><a href="meeting-3.html">7. Meeting 3</a></li>
+          <li><a href="troubleshooting.html">8. Troubleshooting</a></li>
+          <li><a href="resources.html">9. Resources</a></li>
         </ul>
       </nav>
     </div>
   </aside>
   <main class="main-content">
     <article>
-      <h1 id="meeting-2">Meeting 2</h1>
+      <h1 id="meeting-2">6. Meeting 2</h1>
       <p><strong>Goal:</strong> Leave this session with a fully functional app—with user accounts and a real database—deployed on the web.</p>
       <p>Last week you deployed a custom how-to tutorial for your app and, for homework, followed that tutorial to start building it. This week we add a backend (Supabase) and deploy the app to Vercel.</p>
 
       <hr>
 
-      <h2 id="in-class">In-Class</h2>
+      <h2 id="in-class">6.1 In-Class</h2>
 
-      <h3 id="what-is-a-backend">What is a Backend?</h3>
+      <h3 id="what-is-a-backend">6.1.1 What is a Backend?</h3>
       <p>So far, everything you've built runs in the browser. When you close the browser, any data disappears. That's because you've only built the <strong>frontend</strong>—the part users see and interact with.</p>
       <p>A <strong>backend</strong> is everything that happens on a server:</p>
       <ul>
@@ -51,7 +51,7 @@
       <p>When you log in to Instagram, the frontend is the app on your phone. The backend is Instagram's servers, which store your photos, remember who you follow, and make sure you only see your own DMs.</p>
       <p><strong>Today you'll add a backend to your app.</strong> Users will be able to create accounts, and their data will persist—even if they close the browser or use a different device.</p>
 
-      <h3 id="what-is-a-database">What is a Database?</h3>
+      <h3 id="what-is-a-database">6.1.2 What is a Database?</h3>
       <p>A database is structured storage for your app's data. Think of it like a collection of spreadsheets:</p>
       <ul>
         <li>Each "table" is like a spreadsheet</li>
@@ -118,7 +118,7 @@
       </table>
       <p>The <code>user_id</code> column links each expense to the user who created it. This is how Jane only sees her expenses, not Bob's.</p>
 
-      <h3 id="introduction-to-supabase">Introduction to Supabase</h3>
+      <h3 id="introduction-to-supabase">6.1.3 Introduction to Supabase</h3>
       <p>Supabase is a service that gives you a database and user authentication with minimal setup. It has a generous free tier that's perfect for student projects.</p>
       <p><strong>What Supabase provides:</strong></p>
       <ul>
@@ -149,7 +149,7 @@
       </ol>
       <p>You'll need both of these to connect your app to Supabase.</p>
 
-      <h3 id="live-demo-adding-authentication">Live Demo: Adding Authentication</h3>
+      <h3 id="live-demo-adding-authentication">6.1.4 Live Demo: Adding Authentication</h3>
       <p>Watch as the instructor:</p>
       <ol>
         <li>Opens a sample app in Cursor</li>
@@ -159,7 +159,7 @@
         <li>Shows the new user appearing in the Supabase dashboard</li>
       </ol>
 
-      <h3 id="hands-on-build-your-app-with-supabase">Hands-On: Build Your App with Supabase</h3>
+      <h3 id="hands-on-build-your-app-with-supabase">6.1.5 Hands-On: Build Your App with Supabase</h3>
       <p>Now you'll add Supabase to your app. We're assuming you have a project from following your tutorial. <strong>If you didn't finish the tutorial, that's okay—we'll get you up to speed.</strong></p>
       <p><strong>Step 1: Install Supabase in your project</strong></p>
       <p>Open the terminal in Cursor and run:</p>
@@ -202,7 +202,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key</code></pre>
       </ul>
       <p>Ask Cursor to help debug: "I'm getting this error: [paste error]. How do I fix it?"</p>
 
-      <h3 id="introduction-to-vercel">Introduction to Vercel</h3>
+      <h3 id="introduction-to-vercel">6.1.6 Introduction to Vercel</h3>
       <p>Vercel is a hosting platform that makes deployment simple. When you push code to GitHub, Vercel automatically builds and deploys your updated app.</p>
       <p><strong>Why Vercel instead of GitHub Pages?</strong></p>
       <ul>
@@ -218,7 +218,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key</code></pre>
         <li>Your app gets a URL like <code>your-project.vercel.app</code></li>
       </ol>
 
-      <h3 id="deploying-to-vercel">Deploying to Vercel</h3>
+      <h3 id="deploying-to-vercel">6.1.7 Deploying to Vercel</h3>
       <p><strong>Step 1: Push your code to GitHub</strong></p>
       <p>Make sure all your changes are committed and pushed:</p>
       <pre><code class="language-bash">git add .
@@ -254,9 +254,9 @@ git push</code></pre>
 
       <hr>
 
-      <h2 id="homework">Homework</h2>
+      <h2 id="homework">6.2 Homework</h2>
 
-      <h3 id="polish-your-app">Polish Your App</h3>
+      <h3 id="polish-your-app">6.2.1 Polish Your App</h3>
       <p>Between now and Meeting 3, improve your app:</p>
       <p><strong>Functionality:</strong></p>
       <ul>
@@ -277,7 +277,7 @@ git push</code></pre>
         <li>"Make this layout responsive so it works on mobile"</li>
       </ul>
 
-      <h3 id="draft-your-blog-post">Draft Your Blog Post</h3>
+      <h3 id="draft-your-blog-post">6.2.2 Draft Your Blog Post</h3>
       <p>Write a short post (300-400 words) about your project. You can use AI to help draft it.</p>
       <p><strong>Prompt template:</strong></p>
       <blockquote>

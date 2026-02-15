@@ -71,4 +71,4 @@ Each session starts with a brief introduction (10-15 minutes), then you'll spend
 
 ---
 
-Ready? Start with the [Pre-Work](pre-work.md).
+Ready? Start with [Project Ideas](project-ideas.md).

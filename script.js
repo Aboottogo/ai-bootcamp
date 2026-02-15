@@ -101,10 +101,38 @@
     });
   }
 
+  function initCodeBlockCopyButtons() {
+    document.querySelectorAll(".code-block-wrapper").forEach(function (wrapper) {
+      var pre = wrapper.querySelector("pre");
+      var btn = wrapper.querySelector(".copy-code-btn");
+      if (!pre || !btn) return;
+      btn.addEventListener("click", function () {
+        var text = pre.textContent;
+        navigator.clipboard.writeText(text).then(
+          function () {
+            btn.textContent = "Copied!";
+            btn.classList.add("copied");
+            setTimeout(function () {
+              btn.textContent = "Copy";
+              btn.classList.remove("copied");
+            }, 2000);
+          },
+          function () {
+            btn.textContent = "Copy failed";
+            setTimeout(function () {
+              btn.textContent = "Copy";
+            }, 2000);
+          }
+        );
+      });
+    });
+  }
+
   function init() {
     initSidebar();
     initHamburger();
     initCopyPromptButton();
+    initCodeBlockCopyButtons();
   }
 
   if (document.readyState === "loading") {

@@ -33,6 +33,11 @@
     <article>
       <h1 id="our-tools">4. Our Tools</h1>
       <p>This page introduces the key tools in this course through a series of exercises.</p>
+      <ol>
+        <li><strong>Cursor</strong> — the AI-powered code editor</li>
+        <li><strong>Terminal</strong> — the command-line interface</li>
+        <li><strong>GitHub</strong> — version control and collaboration</li>
+      </ol>
 
       <h2 id="what-is-cursor">4.1 What is Cursor?</h2>
       <p>Cursor is a code editor—a program where you write and edit code. But unlike traditional editors, Cursor has AI built in. You can describe what you want in plain English, and Cursor will write the code for you.</p>
@@ -51,7 +56,13 @@
           <li>Press <code>Cmd+I</code> (Mac) or <code>Ctrl+I</code> (Windows) to open the AI prompt.
             <p class="step-tip"><strong>Tip:</strong> You can change the layout by clicking the gear icon in the upper right corner and selecting the option to view just the chat window to clear up some clutter.</p>
           </li>
-          <li>Ask Cursor to write a poem and save it to <code>poem.txt</code> (e.g. "Write a short poem and save it to poem.txt")</li>
+          <li>Ask Cursor to write a poem and save it to <code>poem.txt</code>:</li>
+        </ol>
+        <div class="code-block-wrapper">
+          <pre><code>Write a short poem and save it to poem.txt</code></pre>
+          <button type="button" class="copy-code-btn">Copy</button>
+        </div>
+        <ol start="3">
           <li>See what happens!</li>
         </ol>
         <p><strong>What you learned:</strong> You can ask Cursor to create files from a simple prompt—just describe what you want and where to save it.</p>
@@ -68,15 +79,30 @@
           <li>Press <code>Cmd+I</code> (Mac) or <code>Ctrl+I</code> (Windows) to open the AI prompt.
             <p class="step-tip"><strong>Tip:</strong> You can start a new chat for each different task—click the plus (+) icon at the top of the Composer panel, or press <code>Cmd+N</code> (Mac) / <code>Ctrl+N</code> (Windows). Starting fresh keeps each conversation focused.</p>
           </li>
-          <li>Ask Cursor to create an HTML file that displays the poem with some nice styling (e.g. "Create an HTML file that displays my poem with some nice styling")</li>
-          <li>Open the HTML file to view it in your browser: go to your <code>test-project</code> folder on your computer (e.g. on your Desktop or in Documents) and double-click the HTML file</li>
-          <li>Ask Cursor to make a change—e.g. "Use a different font" or "Make the background darker"</li>
+          <li>Ask Cursor to create an HTML file that displays the poem with some nice styling:</li>
         </ol>
+        <div class="code-block-wrapper">
+          <pre><code>Create an HTML file that displays my poem with some nice styling</code></pre>
+          <button type="button" class="copy-code-btn">Copy</button>
+        </div>
+        <ol start="3">
+          <li>Open the HTML file to view it in your browser: go to your <code>test-project</code> folder on your computer (e.g. on your Desktop or in Documents) and double-click the HTML file</li>
+          <li>Ask Cursor to make a change:</li>
+        </ol>
+        <div class="code-block-wrapper">
+          <pre><code>Use a different font</code></pre>
+          <button type="button" class="copy-code-btn">Copy</button>
+        </div>
+        <p class="step-tip"><strong>Or try:</strong></p>
+        <div class="code-block-wrapper">
+          <pre><code>Make the background darker</code></pre>
+          <button type="button" class="copy-code-btn">Copy</button>
+        </div>
         <p><strong>What you learned:</strong> Cursor can turn your content into a styled webpage—and you can refine it over multiple iterations. Describe what you want, review the result, ask for changes, and repeat until it looks right.</p>
       </div>
 
       <div class="callout-box">
-        <p>Cursor offers different modes so you can choose how the AI helps:</p>
+        <p><strong>Agent Modes:</strong> Cursor offers different modes so you can choose how the AI helps:</p>
         <ul>
           <li><strong>Plan</strong> is for thinking before typing—it helps outline architecture, steps, and trade-offs without touching code. Use it when you're starting something non-trivial or want to sanity-check an approach before committing.</li>
           <li><strong>Agent</strong> actively writes, edits, and navigates code across files to accomplish a task end-to-end. Use it when you want Cursor to "just do the work," like implementing a feature or refactoring with minimal back-and-forth.</li>
@@ -93,8 +119,15 @@
           <li>Press <code>Shift+Tab</code> to switch to <strong>Plan</strong> mode.
             <p class="step-tip"><strong>Tip:</strong> Plan mode is useful when a task involves multiple files or steps—you can review the approach before Cursor writes anything. Use Agent mode for quick, single-file edits.</p>
           </li>
-          <li>Ask Cursor to create a poetry website (e.g. "Create a poetry website with a nice design that puts each poem on its own page")</li>
-          <li>Cursor might ask clarifying questions as part of its plan. If it does, tell it to build a simple HTML/CSS/JavaScript site with no build setup</li>
+          <li>Ask Cursor to create a poetry website:
+            <div class="code-block-wrapper">
+              <pre><code>Create a simple HTML/CSS/JavaScript website with multiple poems each on their own page</code></pre>
+              <button type="button" class="copy-code-btn">Copy</button>
+            </div>
+            <p class="step-tip"><strong>Tip:</strong> Cursor might ask clarifying questions as part of its plan. If it does, answer as best you can.</p>
+          </li>
+        </ol>
+        <ol start="4">
           <li>Review the plan Cursor generates. You can edit it directly—add, remove, or change steps if you like</li>
           <li>When the plan looks good, click <strong>Build</strong> to have Cursor create the files</li>
           <li>Open <code>index.html</code> to view the site: go to your <code>test-project</code> folder on your computer and double-click <code>index.html</code>.
@@ -154,12 +187,14 @@
         <ol>
           <li>Type <code>pwd</code> and press Enter. You'll see the path to your project folder.</li>
           <li>Type <code>ls</code> (Mac) or <code>dir</code> (Windows) and press Enter. You'll see the files in your folder—including <code>poem.txt</code> and any HTML files from the earlier exercises.</li>
+          <li>Type <code>echo "Hello World"</code> and press Enter. You'll see the text printed back—a simple example of command output.</li>
+          <li>Type <code>clear</code> (Mac) or <code>cls</code> (Windows) and press Enter. The terminal clears, giving you a fresh view.</li>
         </ol>
         <p><strong>What you learned:</strong> The terminal shows you where you are and what's in the folder. That's enough to get started—you can always ask Cursor what a command does or how to do something.</p>
       </div>
 
       <div class="callout-box">
-        <p>Use the terminal in Cursor. Doing so adds its output to Cursor's <strong>context</strong>. Context is the information Cursor can see to understand the project and generate output. It includes the chat history, files you opened, code you selected, and terminal output (when used in Cursor). If something goes wrong, Cursor can see the error and help you fix it.</p>
+        <p><strong>Model Context:</strong> Use the terminal in Cursor. Doing so adds its output to Cursor's <strong>context</strong>. Context is the information Cursor can see to understand the project and generate output. It includes the chat history, files you opened, code you selected, and terminal output (when used in Cursor). If something goes wrong, Cursor can see the error and help you fix it.</p>
         <p><strong>Example:</strong> If you run <code>bash script.sh</code> and get an error, you can ask Cursor "What's wrong?" and it will see the error message and suggest a fix.</p>
         <p>What is <em>not</em> in Cursor's context? Files outside your project folder, web pages you have open in your browser, and anything you haven't explicitly opened, selected, or run in Cursor.</p>
         <p>You can add files to the context using the <code>@</code> symbol. Type <code>@</code> in the chat input, then type or select a filename—Cursor will include that file in the context for your next message. This can be useful when you want Cursor to focus on a specific file that isn't already open or when you're asking about code in a file you haven't selected.</p>
@@ -232,28 +267,105 @@
         <h3 id="exercise-7-install-node-js-and-see-cursors-guardrails">4.2.7 Exercise 7: Install Node.js ✅</h3>
         <p>Node.js is a JavaScript runtime that lets you run JavaScript outside the browser. We'll use it in this bootcamp to build web apps—it powers the tools and frameworks that turn your code into a real application.</p>
         <ol>
-          <li>In Cursor, ask the Agent something like: "Install Node.js on my [Mac/Windows] system."</li>
+          <li>In Cursor, ask the Agent:</li>
+        </ol>
+        <div class="code-block-wrapper">
+          <pre><code>Install Node.js on my [Mac/Windows] system.</code></pre>
+          <button type="button" class="copy-code-btn">Copy</button>
+        </div>
+        <ol start="2">
           <li>Notice what happens: Cursor will explain what Node.js is and give you platform-specific instructions (e.g. a command to run in Homebrew on Mac, or a link to download on Windows). Cursor will <em>not</em> run the installation for you—that's a built-in guardrail. System-level installations require your direct approval.</li>
           <li>Follow Cursor's instructions. On Mac, you'll typically run a command in the terminal (e.g. <code>brew install node</code>). On Windows, you'll download the installer from nodejs.org and run it, following the setup wizard.</li>
           <li>If you're on Windows, you may need to restart Cursor (or open a new terminal) after installation so it picks up the updated PATH.</li>
-          <li>Ask Cursor to verify that Node.js was installed correctly (e.g. "Can you check if Node.js is installed?"). Cursor can run <code>node -v</code> in the terminal and confirm the version.</li>
+          <li>Ask Cursor to verify that Node.js was installed correctly:</li>
         </ol>
+        <div class="code-block-wrapper">
+          <pre><code>Can you check if Node.js is installed?</code></pre>
+          <button type="button" class="copy-code-btn">Copy</button>
+        </div>
+        <p>Cursor can run <code>node -v</code> in the terminal and confirm the version.</p>
         <p><strong>What you learned:</strong> Cursor has guardrails that limit what it can do automatically. For things like installing software on your system, it will guide you step-by-step but won't execute the command itself. You stay in control.</p>
       </div>
 
       <p>The terminal might seem intimidating at first, but it's just another way to talk to your computer. With Cursor's help, you'll get comfortable with it quickly.</p>
 
-      <h2 id="configure-github-in-cursor">4.3 Configure GitHub in Cursor</h2>
+      <h2 id="what-is-github">4.3 What is GitHub?</h2>
       <p>Connect your GitHub account to Cursor so you can push and pull code without entering credentials every time. Use the same GitHub account you created in the <a href="pre-work.html#create-a-github-account">Pre-Work</a> steps.</p>
-      <p><strong>Steps:</strong></p>
-      <ol>
-        <li>Open Cursor</li>
-        <li>Open the Source Control view by clicking the branch icon in the left sidebar, or go to <strong>View → Source Control</strong></li>
-        <li>If you're not signed in to GitHub, click <strong>Sign in with GitHub</strong> (or click the account icon in the bottom-left corner and choose <strong>Turn on Settings Sync</strong> or <strong>Sign in to GitHub</strong>)</li>
-        <li>Complete the sign-in in your browser when prompted. Authorize Cursor to access your GitHub account</li>
-        <li>Once signed in, Cursor will use your GitHub account for cloning repos, pushing, and pulling—no need to enter your password each time</li>
-      </ol>
-      <p><strong>You're done when:</strong> Your GitHub account appears in the Source Control view or in the account menu (bottom-left), and you're ready to clone and push repos from Cursor.</p>
+
+      <div class="exercise-box">
+        <h3 id="exercise-8-connect-github">4.3.1 Exercise 8: Connect GitHub to Cursor ✅</h3>
+        <ol>
+          <li>Open Cursor</li>
+          <li>Open the Source Control view by clicking the branch icon in the left sidebar, or go to <strong>View → Source Control</strong></li>
+          <li>If you're not signed in to GitHub, click <strong>Sign in with GitHub</strong> (or click the account icon in the bottom-left corner and choose <strong>Turn on Settings Sync</strong> or <strong>Sign in to GitHub</strong>)</li>
+          <li>Complete the sign-in in your browser when prompted. Authorize Cursor to access your GitHub account</li>
+          <li>Once signed in, Cursor will use your GitHub account for cloning repos, pushing, and pulling—no need to enter your password each time</li>
+        </ol>
+        <p><strong>What you learned:</strong> Once GitHub is connected to Cursor, you can clone, push, and pull repos without entering your password each time. Your account appears in the Source Control view and account menu when connected.</p>
+      </div>
+
+      <div class="exercise-box">
+        <h3 id="exercise-9-create-repo">4.3.2 Exercise 9: Create a New Repository on GitHub.com ✅</h3>
+        <p>With GitHub connected, create a new repository to host your <code>test-project</code>.</p>
+        <ol>
+          <li>Go to <a href="https://github.com/new" target="_blank" rel="noopener noreferrer">github.com/new</a></li>
+          <li>Name it (e.g. <code>test-project</code>) and click <strong>Create repository</strong></li>
+          <li>Don't initialize with a README, .gitignore, or license—your project already has files</li>
+          <li>Copy the repository URL from the page GitHub shows you (e.g. <code>https://github.com/your-username/test-project</code>)</li>
+        </ol>
+        <p><strong>What you learned:</strong> Creating a new repository on GitHub is straightforward—you name it, choose not to initialize with extra files, and get a URL you can use to push your code.</p>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>Git and GitHub:</strong> Don't get them confused:</p>
+        <ul>
+          <li><strong>Git</strong> is a free and open-source system of version control originally developed in 2005. It is now considered an industry standard and used by engineers around the world.</li>
+          <li><strong>GitHub.com</strong> is a website owned by Microsoft since 2023. It is the most popular site for engineers to share their software code online.</li>
+          <li><strong>GitHub Pages:</strong> A free hosting service built into GitHub.com that publishes a website directly from a repository. You enable it in your repository's settings.
+            <p class="step-tip" style="margin-top: 1rem;"><strong>Tip:</strong> GitHub Pages can only host very simple websites with text and images. We'll need a better hosting solution when we develop websites with more features.</p>
+          </li>
+        </ul>
+        <p>Git is typically used in the terminal. But as much as possible, we will ask Cursor to do that so we don't have to do it ourselves. For that, it can help to understand some of the basic terms:</p>
+        <ul>
+          <li><strong>Repository (or "repo"):</strong> A project folder and all its contents. You'll have a local repository on your computer and a remote repository on GitHub.</li>
+          <li><strong>Commit:</strong> A snapshot of your project at a specific moment. Think of it like a checkpoint in a video game. This can be very useful for version control.</li>
+          <li><strong>Push:</strong> This action sends your local repository (on your computer) to the remote repository (on GitHub). This uploads your work so it's backed up online and accessible from other computers. Do this whenever you're ready to publish what you've got.</li>
+        </ul>
+        <p>Check out the <a href="resources.html#git-github">resources</a> page for more information on git and version control if you are interested.</p>
+      </div>
+
+      <div class="exercise-box">
+        <h3 id="exercise-10-push-to-github">4.3.3 Exercise 10: Push Your Project to GitHub ✅</h3>
+        <p>Now instruct Cursor to push your project to the repository you created.</p>
+        <ol>
+          <li>Open Cursor's Agent (<code>Cmd+I</code> or <code>Ctrl+I</code>) and ask it to push your project to that repository:
+            <p class="step-tip"><strong>Tip:</strong> Ask Cursor to do the push for you—don't use the terminal or Source Control pane yourself. The goal is to practice letting Cursor handle Git tasks.</p>
+            <div class="code-block-wrapper">
+              <pre><code>Push this project to my GitHub repository at https://github.com/your-username/test-project</code></pre>
+              <button type="button" class="copy-code-btn">Copy</button>
+            </div>
+            <p class="step-tip"><strong>Tip:</strong> Replace the URL in the prompt with your actual repository URL from Exercise 9. Cursor will initialize Git if needed, stage your files, commit, and push—you don't need to run any commands yourself.</p>
+          </li>
+        </ol>
+        <p><strong>What you learned:</strong> You can delegate Git workflows to Cursor by describing what you want. As you build real projects, you'll often ask Cursor to push, pull, or help with merge conflicts—no need to memorize commands.</p>
+      </div>
+
+      <div class="exercise-box">
+        <h3 id="exercise-11-deploy-to-github-pages">4.3.4 Exercise 11: Deploy Your Repository to GitHub Pages ✅</h3>
+        <p>GitHub Pages lets you host static websites (HTML, CSS, JavaScript) directly from your repository—for free. Once configured, your site will be live at <code>https://&lt;your-username&gt;.github.io/&lt;repo-name&gt;/</code> and will update automatically when you push changes.</p>
+        <ol>
+          <li>Make sure your project is pushed to GitHub (see <a href="#exercise-10-push-to-github">Exercise 10</a>). Your repository should have an <code>index.html</code> at the root—GitHub Pages needs this as the entry point.</li>
+          <li>On GitHub, go to your repository and click <strong>Settings</strong> (in the top menu bar).</li>
+          <li>In the left sidebar, under <strong>Code and automation</strong>, click <strong>Pages</strong>.</li>
+          <li>Under <strong>Build and deployment</strong>, under <strong>Source</strong>, select <strong>Deploy from a branch</strong>.</li>
+          <li>Under <strong>Branch</strong>, choose your default branch (usually <code>main</code>) and select the <strong>/ (root)</strong> folder.</li>
+          <li>Click <strong>Save</strong>. GitHub will build and deploy your site.</li>
+          <li>Wait a minute or two, then visit <code>https://&lt;your-username&gt;.github.io/&lt;repo-name&gt;/</code> (replace with your GitHub username and repository name). Your site should be live!
+            <p class="step-tip"><strong>Tip:</strong> If you see a 404 at first, wait a few minutes—GitHub Pages can take 1–2 minutes to deploy. You can check the deployment status under the <strong>Actions</strong> tab in your repository.</p>
+          </li>
+        </ol>
+        <p><strong>What you learned:</strong> GitHub Pages turns your repository into a hosted website with no extra setup. For static HTML sites, "Deploy from a branch" is the simplest option—just point it at your main branch and root folder, and your site updates whenever you push.</p>
+      </div>
 
       <hr>
 

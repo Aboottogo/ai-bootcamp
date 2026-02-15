@@ -16,84 +16,57 @@
       <p class="site-title"><a href="index.html">AI-Assisted App Development Bootcamp</a></p>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="app-idea.html">Project Ideas</a></li>
-          <li><a href="pre-work.html">Pre-Work</a></li>
-          <li><a href="our-tools.html">Our Tools</a></li>
-          <li><a href="meeting-1.html">Meeting 1</a></li>
-          <li><a href="meeting-2.html">Meeting 2</a></li>
-          <li><a href="meeting-3.html">Meeting 3</a></li>
-          <li><a href="troubleshooting.html">Troubleshooting</a></li>
-          <li><a href="resources.html">Resources</a></li>
+          <li><a href="index.html">1. Home</a></li>
+          <li><a href="app-idea.html">2. Project Ideas</a></li>
+          <li><a href="pre-work.html">3. Pre-Work</a></li>
+          <li><a href="our-tools.html">4. Our Tools</a></li>
+          <li><a href="meeting-1.html">5. Meeting 1</a></li>
+          <li><a href="meeting-2.html">6. Meeting 2</a></li>
+          <li><a href="meeting-3.html">7. Meeting 3</a></li>
+          <li><a href="troubleshooting.html">8. Troubleshooting</a></li>
+          <li><a href="resources.html">9. Resources</a></li>
         </ul>
       </nav>
     </div>
   </aside>
   <main class="main-content">
     <article>
-      <h1 id="meeting-1">Meeting 1</h1>
+      <h1 id="meeting-1">5. Meeting 1</h1>
       <p><strong>Goal:</strong> Leave this session with a live website you can share with anyone.</p>
       <p>By the end of today, you'll have a URL like <code>yourname.github.io/your-project</code> that works on any device. Text it to a friend. Put it in your Instagram bio. It's real, and it's yours. The site is a <strong>how-to tutorial</strong> for your app idea—customized to what you want to build—not the app itself. You'll follow that tutorial as homework before Meeting 2.</p>
 
+      <ol>
+        <li>Ask Cursor to Plan and Build a How-To Tutorial Website</li>
+        <li>Push the project to a GitHub repository</li>
+        <li>Deploy the repository to GitHub Pages</li>
+        <li>Follow the instructions in the tutorial to build your app</li>
+      </ol>
+
       <hr>
 
-      <h2 id="in-class">In-Class</h2>
+      <h2 id="ask-cursor">5.1 Ask Cursor to Plan and Build a How-To Tutorial Website</h2>
+      <p>In <a href="our-tools.html#exercise-3-create-a-poetry-website">Our Tools</a>, you used Plan mode to build a poetry website. This time you'll use the same approach—Plan mode, review, Build—but for a different kind of project: a <strong>personalized how-to tutorial</strong> for your app idea. The tutorial teaches you how to build your app; it isn't the app itself.</p>
+      <p>You'll need <code>my-app-idea.md</code> from <a href="pre-work.html#choose-your-project-idea">Pre-Work</a> and a new project folder. The prompt below instructs Cursor to read two specification documents (<a href="https://aboottogo.github.io/ai-bootcamp/content/tutorial-site-requirements.md">tutorial-site-requirements.md</a> and <a href="https://aboottogo.github.io/ai-bootcamp/content/app-technical-requirements.md">app-technical-requirements.md</a>) before generating the tutorial.</p>
 
-      <h3 id="hands-on-generate-your-tutorial-and-deploy">Hands-On: Generate Your Tutorial and Deploy</h3>
-      <p>You're going to ask Cursor to build a <strong>how-to tutorial</strong> for your app idea (not the app itself), then deploy that tutorial site to GitHub Pages.</p>
-      <p><strong>Step 1: Create your project folder</strong></p>
-      <ol>
-        <li>Create a new folder on your computer (e.g., <code>my-app-tutorial</code> in your Documents folder)</li>
-        <li>Open Cursor</li>
-        <li>Go to File → Open Folder and select your new folder</li>
-      </ol>
-      <p><strong>Step 2: Have your app-idea file ready</strong></p>
-      <ul>
-        <li>Use <code>my-app-idea.md</code> from pre-work, or create it now (see <a href="pre-work.html#choose-your-project-idea">Pre-Work</a>). Keep it in the project folder or somewhere you can attach it from.</li>
-      </ul>
-      <p><strong>Step 3: Open Agent and Plan mode</strong></p>
-      <ol>
-        <li>Open the <strong>Agent</strong> (Composer)—e.g. Cmd+I (Mac) or Ctrl+I (Windows), or via the UI</li>
-        <li>In the agent input, press <strong>Shift+Tab</strong> to switch to <strong>Plan mode</strong></li>
-        <li>You'll paste the prompt and attach your file here</li>
-      </ol>
-      <p><strong>Step 4: Paste the prompt and attach your app-idea file</strong></p>
-      <ol>
-        <li>Copy the exact prompt from the <a href="#prompt-to-use-in-plan-mode"><strong>Prompt to use in Plan mode</strong></a> section below</li>
-        <li>Paste it into the agent input</li>
-        <li><strong>Attach</strong> your app-idea text file (e.g. <code>my-app-idea.md</code>) using Cursor's attach/add-file option when sending the prompt</li>
-        <li>Send the message and let Cursor generate the tutorial site</li>
-      </ol>
-      <p><strong>Step 5: Review and iterate</strong></p>
-      <ol>
-        <li>Look at what Cursor created—you should see an <code>index.html</code> and likely <code>styles.css</code></li>
-        <li>If you want changes, use follow-up prompts (e.g. "Make the steps clearer," "Add a table of contents")</li>
-        <li>Preview: right-click <code>index.html</code> → "Open with Live Server" or open in your browser</li>
-      </ol>
-      <p><strong>Step 6: Push to GitHub and deploy</strong></p>
-      <p>Continue with <a href="#pushing-to-github">Pushing to GitHub</a> and <a href="#deploying-to-github-pages">Deploying to GitHub Pages</a> below.</p>
-      <p><strong>If you get stuck:</strong> First, try asking Cursor to fix the problem. If that doesn't work, ask a neighbor. If still stuck, raise your hand.</p>
-
-      <h4 id="prompt-to-use-in-plan-mode">Prompt to use in Composer</h4>
-      <ul>
-        <li><strong>Where:</strong> Open a new Composer chat (Cmd+I on Mac, Ctrl+I on Windows).</li>
-        <li><strong>What to attach:</strong> Your app idea file (<code>my-app-idea.md</code>)—click the <strong>+</strong> button or type <strong>@</strong> in the Composer to attach it.</li>
-      </ul>
-      <p><strong>Copy-paste the entire prompt below</strong> into the Composer (then attach your file and send):</p>
-      <div class="prompt-code-wrapper">
-        <button type="button" class="copy-prompt-btn" aria-label="Copy prompt to clipboard">Copy</button>
-        <pre class="scrollable-prompt"><code id="composer-prompt-text">I am a business student learning to build web apps with AI assistance. I have **never written code before**. I have attached my app idea file (`my-app-idea.md`) which describes the app I want to build. Please read it carefully before proceeding.
+      <div class="exercise-box">
+        <h3 id="exercise-generate-tutorial">5.1.1 Generate Your Tutorial Website</h3>
+        <ol>
+          <li>Create a new folder on your computer (e.g. <code>my-app-tutorial</code> in Documents) and open it in Cursor (<strong>File → Open Folder</strong>).</li>
+          <li>Have <code>my-app-idea.md</code> ready—either in the project folder or somewhere you can attach it (e.g. via <code>@</code> in the Composer).</li>
+          <li>Open the Agent (Composer) with <code>Cmd+I</code> (Mac) or <code>Ctrl+I</code> (Windows), then press <code>Shift+Tab</code> to switch to <strong>Plan</strong> mode.</li>
+          <li>Copy the entire prompt below, paste it into the agent input, and attach your app-idea file (click the <strong>+</strong> button or type <code>@</code> to add <code>my-app-idea.md</code>). Send the message.
+            <p class="step-tip"><strong>Tip:</strong> Copy the prompt exactly as it is given. Do not modify or change it. Make sure your <code>my-app-idea.md</code> is attached.</p>
+            <div class="prompt-code-wrapper">
+              <button type="button" class="copy-prompt-btn" aria-label="Copy prompt to clipboard">Copy</button>
+              <pre class="scrollable-prompt"><code id="composer-prompt-text">I am a business student learning to build web apps with AI assistance. I have **never written code before**. I have attached my app idea file (`my-app-idea.md`) which describes the app I want to build. Please read it carefully before proceeding.
 
 ## Your Task
-
 Create a **personalized, multi-page tutorial website** that will teach me how to build this specific app. The tutorial site itself should be a static HTML/CSS/JS website that I can host on GitHub Pages.
 
 ## Required Reading
-
 Before you begin, you **must** fetch and read these two specification documents:
 
 ### 1. Tutorial Site Requirements
-
 ```
 https://aboottogo.github.io/ai-bootcamp/content/tutorial-site-requirements.md
 ```
@@ -108,7 +81,6 @@ This document specifies:
 - The build prompt template structure
 
 ### 2. App Technical Requirements
-
 ```
 https://aboottogo.github.io/ai-bootcamp/content/app-technical-requirements.md
 ```
@@ -168,84 +140,107 @@ README.md           # Instructions for hosting on GitHub Pages
 - The **build prompt** in the Build page must be completely customized for my specific app idea
 
 Now please read my attached app idea file and the two specification documents, then create the personalized tutorial website!</code></pre>
+            </div>
+            <p class="step-tip"><strong>Tip:</strong> Review the plan Cursor generates. You can edit it directly—add, remove, or change steps if you like.</p>
+          </li>
+          <li>When the plan looks good, click <strong>Build</strong> to have Cursor create the files.</li>
+          <li>Preview the result: double-click <code>index.html</code> in your project folder.
+            <p class="step-tip"><strong>Tip:</strong> You can continue to request changes using the chat feature—this can be especially useful to debug errors. Describe the errors to Cursor and ask for a fix. Be sure to refresh the page to see the changes update in the browser.</p>
+          </li>
+        </ol>
       </div>
 
-      <p>This prompt instructs Cursor to read <a href="https://aboottogo.github.io/ai-bootcamp/content/tutorial-site-requirements.md">tutorial-site-requirements.md</a> and <a href="https://aboottogo.github.io/ai-bootcamp/content/app-technical-requirements.md">app-technical-requirements.md</a> before generating the tutorial.</p>
+      <div class="callout-box">
+        <p><strong>Extensions:</strong> Cursor supports extensions—additional features that can be installed directly into Cursor to improve its functionality. Extensions can help with formatting, debugging, live previews, and more. They are written by users like you and made available for others to use for free through the Extensions marketplace.</p>
+        <p>One common frustration: when you preview an HTML file by double-clicking it, you must manually refresh the browser every time you make a change. One solution is to install the <strong>Live Server</strong> extension by Ritwick Dey. It starts a local server and automatically reloads the page when you save a file.</p>
+        <p><strong>To install and use Live Server:</strong></p>
+        <ol>
+          <li>Click the Extensions icon in the left sidebar (or press <code>Cmd+Shift+X</code> on Mac / <code>Ctrl+Shift+X</code> on Windows).</li>
+          <li>Search for <strong>Live Server</strong>, find the one by Ritwick Dey, and click <strong>Install</strong>.</li>
+          <li>Right-click <code>index.html</code> in the file explorer and select <strong>Open with Live Server</strong>. The page will open in your browser and refresh automatically when you save changes.</li>
+        </ol>
+      </div>
 
-      <h3 id="pushing-to-github">Pushing to GitHub</h3>
-      <p>Now let's get your code on GitHub.</p>
-      <p><strong>Step 1: Initialize Git in your project</strong></p>
-      <p>Open the terminal in Cursor (View → Terminal) and run:</p>
-      <pre><code class="language-bash">git init</code></pre>
-      <p>This tells Git to start tracking this folder.</p>
-      <p><strong>Step 2: Stage and commit your files</strong></p>
-      <pre><code class="language-bash">git add .
-git commit -m "Initial tutorial site"</code></pre>
-      <p>The first command stages all your files (tells Git "these are the changes I want to save"). The second creates a commit with a message describing what you did.</p>
-      <p><strong>Step 3: Create a repository on GitHub</strong></p>
-      <ol>
-        <li>Go to <a href="https://github.com">github.com</a> and log in</li>
-        <li>Click the "+" icon in the top right, then "New repository"</li>
-        <li>Name it the same as your project folder (e.g., <code>my-project</code>)</li>
-        <li>Keep it Public</li>
-        <li>Don't check any boxes (no README, no .gitignore)</li>
-        <li>Click "Create repository"</li>
-      </ol>
-      <p><strong>Step 4: Connect and push</strong></p>
-      <p>GitHub will show you commands to run. Copy and run the ones under "push an existing repository":</p>
-      <pre><code class="language-bash">git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
-git branch -M main
-git push -u origin main</code></pre>
-      <p>Refresh your GitHub page—your code should be there!</p>
-
-      <h3 id="deploying-to-github-pages">Deploying to GitHub Pages</h3>
-      <p>GitHub Pages turns your repository into a live website for free.</p>
-      <p><strong>Step 1: Enable GitHub Pages</strong></p>
-      <ol>
-        <li>On your repository page, click "Settings"</li>
-        <li>In the left sidebar, click "Pages"</li>
-        <li>Under "Source," select "Deploy from a branch"</li>
-        <li>Under "Branch," select "main" and "/ (root)"</li>
-        <li>Click "Save"</li>
-      </ol>
-      <p><strong>Step 2: Wait and visit</strong></p>
-      <ol>
-        <li>GitHub will build your site (this takes 1-2 minutes)</li>
-        <li>Refresh the Settings → Pages page</li>
-        <li>You'll see a message: "Your site is live at https://yourusername.github.io/your-repo-name"</li>
-        <li>Click the link!</li>
-      </ol>
-      <p><strong>Congratulations.</strong> You have a live website.</p>
+      <div class="callout-box">
+        <p><strong>Cursor Layout:</strong> You might find your Cursor workspace getting cluttered. Use the gear icon in the upper-right corner of the editor to change the workspace layout. You can switch between different arrangements—for example, to close everything but the chat window—to give yourself more room to work.</p>
+      </div>
 
       <hr>
 
-      <h2 id="homework">Homework</h2>
+      <h2 id="push-to-github">5.2 Push the Project to a GitHub Repository</h2>
+      <p>You pushed a project to GitHub in <a href="our-tools.html#exercise-8-push-to-github">Our Tools (Exercise 8)</a>. Do the same for your tutorial project. <strong>Ask Cursor to do the push for you</strong>—don't use the terminal or Source Control pane yourself. The goal is to practice letting Cursor handle Git tasks.</p>
 
-      <h3 id="follow-your-tutorial">Follow Your Tutorial</h3>
+      <div class="exercise-box">
+        <h3 id="exercise-push-to-github">5.2.1 Push Your Tutorial to GitHub</h3>
+        <ol>
+          <li>Create a new repository on GitHub:
+            <ul>
+              <li>Go to <a href="https://github.com/new" target="_blank" rel="noopener noreferrer">github.com/new</a></li>
+              <li>Name it (e.g. <code>my-app-tutorial</code>) and click <strong>Create repository</strong></li>
+              <li>Don't initialize with a README, .gitignore, or license—your project already has files</li>
+            </ul>
+          </li>
+          <li>Copy the repository URL from the page GitHub shows you (e.g. <code>https://github.com/your-username/my-app-tutorial</code>)</li>
+          <li>Open Cursor's Agent (<code>Cmd+I</code> or <code>Ctrl+I</code>) and ask it to push your project to that repository:
+            <div class="code-block-wrapper">
+              <pre><code>Push this project to my GitHub repository at https://github.com/your-username/my-app-tutorial</code></pre>
+              <button type="button" class="copy-code-btn">Copy</button>
+            </div>
+            <p class="step-tip"><strong>Tip:</strong> Replace the URL in the prompt with your actual repository URL. Cursor will initialize Git if needed, stage your files, commit, and push—you don't need to run any commands yourself.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>Asking Cursor to do the work for you:</strong> Asking to push your project to GitHub requires Cursor to submit commands to the terminal (introduced in <a href="our-tools.html#what-is-the-terminal">Our Tools</a>). As a safety feature, Cursor might either ask for your permission to run certain commands, or else insist you enter them yourself. This feature limits what Cursor can do on the operating system.</p>
+        <p>If this happens, either grant the permission in real-time, or simply copy the commands Cursor provides—they'll typically look something like <code>git add .</code>, <code>git commit -m "your message"</code>, and <code>git push origin main</code>—and paste them into your terminal one at a time. You can open the terminal in Cursor by pressing <code>Ctrl+`</code> (that's the backtick key, usually located above the Tab key). This gives you full control over what gets sent to GitHub while still letting Cursor handle the rest of your workflow automatically.</p>
+        <p>For more information about git and GitHub, refer to the <a href="resources.html#git-github">additional resources</a> on this site.</p>
+      </div>
+
+      <hr>
+
+      <h2 id="deploy-to-github-pages">5.3 Deploy the Repository to GitHub Pages</h2>
+      <p>You deployed in <a href="our-tools.html#exercise-9-deploy-to-github-pages">Our Tools (Exercise 9)</a>. Same steps for your tutorial site. GitHub Pages turns your repository into a live website—for free.</p>
+
+      <div class="exercise-box">
+        <h3 id="exercise-deploy-pages">5.3.1 Deploy Your Tutorial to GitHub Pages</h3>
+        <ol>
+          <li>Make sure your project is pushed to GitHub (see <a href="#exercise-push-to-github">Exercise above</a>). Your repository should have an <code>index.html</code> at the root—GitHub Pages needs this as the entry point.</li>
+          <li>On GitHub, go to your repository and click <strong>Settings</strong> (in the top menu bar).</li>
+          <li>In the left sidebar, under <strong>Code and automation</strong>, click <strong>Pages</strong>.</li>
+          <li>Under <strong>Build and deployment</strong>, under <strong>Source</strong>, select <strong>Deploy from a branch</strong>.</li>
+          <li>Under <strong>Branch</strong>, choose your default branch (usually <code>main</code>) and select the <strong>/ (root)</strong> folder.</li>
+          <li>Click <strong>Save</strong>. GitHub will build and deploy your site.</li>
+          <li>Wait a minute or two, then visit <code>https://&lt;your-username&gt;.github.io/&lt;repo-name&gt;/</code> (replace with your GitHub username and repository name). Your site should be live!
+            <p class="step-tip"><strong>Tip:</strong> If you see a 404 at first, wait a few minutes—GitHub Pages can take 1–2 minutes to deploy. You can check the deployment status under the <strong>Actions</strong> tab in your repository.</p>
+          </li>
+        </ol>
+      </div>
+
+      <hr>
+
+      <h2 id="follow-tutorial">5.4 Follow the Instructions in the Tutorial to Build Your App</h2>
       <p>Between now and Meeting 2, <strong>use the tutorial Cursor generated as your homework.</strong> Work through it step by step to build your app (or the frontend/core the tutorial covers).</p>
-      <p><strong>Your task:</strong></p>
-      <ol>
-        <li>Open your tutorial site (the one you deployed to GitHub Pages) or the project folder Cursor created</li>
-        <li>Follow the tutorial's instructions to build your app before Meeting 2</li>
-      </ol>
-      <p><strong>Don't worry about:</strong></p>
-      <ul>
-        <li>User accounts (we'll add those next week)</li>
-        <li>Saving data permanently (we'll add a database next week)</li>
-        <li>Making it perfect (we'll polish in Week 3)</li>
-      </ul>
-      <p><strong>Do focus on:</strong></p>
-      <ul>
-        <li>Completing the tutorial steps</li>
-        <li>Getting the core flow working</li>
-        <li>Understanding what you're building</li>
-      </ul>
-      <p><strong>If you get stuck:</strong></p>
-      <ul>
-        <li>Ask Cursor to explain what's wrong</li>
-        <li>Check the <a href="troubleshooting.html">Troubleshooting</a> page</li>
-        <li>Note your question and bring it to Meeting 2</li>
-      </ul>
+
+      <div class="exercise-box">
+        <h3 id="exercise-follow-tutorial">5.4.1 Complete the Tutorial Before Meeting 2</h3>
+        <ol>
+          <li>Open your live tutorial site (the one you deployed to GitHub Pages) or the project folder Cursor created.</li>
+          <li>Follow the tutorial's instructions to build your app before Meeting 2.</li>
+        </ol>
+        <p><strong>Focus on:</strong></p>
+        <ul>
+          <li>Completing the tutorial steps</li>
+          <li>Getting the core flow working</li>
+          <li>Understanding what you're building</li>
+        </ul>
+        <p><strong>Don't worry about:</strong></p>
+        <ul>
+          <li>User accounts (we'll add those in Meeting 2)</li>
+          <li>Saving data permanently (we'll add a database in Meeting 2)</li>
+          <li>Making it perfect (we'll polish in Meeting 3)</li>
+        </ul>
+      </div>
 
       <hr>
 

@@ -16,28 +16,46 @@
       <p class="site-title"><a href="index.html">AI-Assisted App Development Bootcamp</a></p>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="app-idea.html">Project Ideas</a></li>
-          <li><a href="pre-work.html">Pre-Work</a></li>
-          <li><a href="our-tools.html">Our Tools</a></li>
-          <li><a href="meeting-1.html">Meeting 1</a></li>
-          <li><a href="meeting-2.html">Meeting 2</a></li>
-          <li><a href="meeting-3.html">Meeting 3</a></li>
-          <li><a href="troubleshooting.html">Troubleshooting</a></li>
-          <li><a href="resources.html">Resources</a></li>
+          <li><a href="index.html">1. Home</a></li>
+          <li><a href="app-idea.html">2. Project Ideas</a></li>
+          <li><a href="pre-work.html">3. Pre-Work</a></li>
+          <li><a href="our-tools.html">4. Our Tools</a></li>
+          <li><a href="meeting-1.html">5. Meeting 1</a></li>
+          <li><a href="meeting-2.html">6. Meeting 2</a></li>
+          <li><a href="meeting-3.html">7. Meeting 3</a></li>
+          <li><a href="troubleshooting.html">8. Troubleshooting</a></li>
+          <li><a href="resources.html">9. Resources</a></li>
         </ul>
       </nav>
     </div>
   </aside>
   <main class="main-content">
     <article>
-      <h1 id="pre-work">Pre-Work</h1>
+      <h1 id="pre-work">3. Pre-Work</h1>
       <p>Complete these steps before Meeting 1.</p>
-      <p>If you get stuck, don't panic. Note where you got stuck and we'll help you at the start of Meeting 1. But please attempt everything—it makes the first session much smoother.</p>
+      <ol>
+        <li>Choose Your Project Idea</li>
+        <li>Create a GitHub Account</li>
+        <li>Install Cursor</li>
+        <li>Install Git</li>
+      </ol>
+      <p><strong>Tip:</strong> You can use an AI tool (like ChatGPT, Claude, or Cursor's built-in chat) to help you complete these steps before the first meeting. Ask it to explain unclear steps, troubleshoot errors, or walk you through the process.</p>
 
       <hr>
 
-      <h2 id="create-a-github-account">Create a GitHub Account</h2>
+      <h2 id="choose-your-project-idea">3.1 Choose Your Project Idea</h2>
+      <p>You need to arrive at Meeting 1 with a project in mind.</p>
+      <ul>
+        <li>You can either use your own idea, or pick from one of our examples.</li>
+        <li>See the <a href="app-idea.html">Project Ideas</a> page for guidance on what makes a good project for this bootcamp.</li>
+        <li>Save it as <code>my-app-idea.md</code>.</li>
+        <li>You will attach this file in Meeting 1 when you prompt Cursor to generate your tutorial. Keep it somewhere easy to find (e.g. in a folder you'll open in Cursor).</li>
+      </ul>
+      <p><strong>You're done when:</strong> You have the markdown file saved and can attach it in Cursor during Meeting 1.</p>
+
+      <hr>
+
+      <h2 id="create-a-github-account">3.2 Create a GitHub Account</h2>
       <p>GitHub is where developers store and share code. It's also your portfolio—recruiters and hiring managers look at GitHub profiles.</p>
       <p><strong>Steps:</strong></p>
       <ol>
@@ -56,7 +74,7 @@
 
       <hr>
 
-      <h2 id="install-cursor">Install Cursor</h2>
+      <h2 id="install-cursor">3.3 Install Cursor</h2>
       <p>Cursor is a code editor with built-in AI. You describe what you want in plain English, and it writes the code.</p>
       <p><strong>Steps:</strong></p>
       <ol>
@@ -67,17 +85,18 @@
         <li>Verify your status as a currently enrolled student by clicking "Verify Status" at the top of the <a href="https://cursor.com/students">students page</a> and following the instructions. If you don't already have Cursor Pro, sign up for Cursor Pro in your account settings after verifying.</li>
         <li>Confirm that your account shows "Pro" or "Student" status (the free tier is active)</li>
       </ol>
-      <p><strong>Benefits:</strong> Eligible students get one free year of Cursor Pro, including <strong>$20 of usage per month</strong>. That covers normal use of AI features in the editor. If you need additional model capacity beyond the included amount, you can enable usage-based pricing in your account; you'll only be charged for usage above the $20 monthly credit.</p>
-      <p><strong>API pricing (in brief):</strong> Cursor Pro gives you a set amount of AI usage each month (the $20 credit). When you use the AI to edit code, ask questions, or generate content, that usage counts against this amount. If you go over it, you can turn on usage-based pricing to keep using more—you pay only for the extra usage. For most students in this bootcamp, the included $20 per month is enough.</p>
+      <div class="callout-box">
+        <p>Eligible students get one free year of Cursor Pro, including $20 of usage per month. That covers normal use of AI features in the editor. If you need additional model capacity beyond the included amount, you can enable usage-based pricing in your account; you'll only be charged for usage above the $20 monthly credit.</p>
+        <p>Cursor Pro gives you a set amount of AI usage each month (the $20 credit). When you use the AI to edit code, ask questions, or generate content, that usage counts against this amount. If you go over it, you can turn on usage-based pricing to keep using more—you pay only for the extra usage. For most students in this bootcamp, the included $20 per month is enough.</p>
+      </div>
       <p><strong>You're done when:</strong> You can open Cursor and see an empty editor window, with your account showing Pro or Student status.</p>
-      <p><strong>Note:</strong> Cursor looks similar to VS Code. If you've used VS Code before, you'll feel at home. If you haven't, don't worry—we'll walk through it together.</p>
 
       <hr>
 
-      <h2 id="install-git">Install Git</h2>
+      <h2 id="install-git">3.4 Install Git</h2>
       <p>Git is the tool that tracks changes to your code and lets you upload it to GitHub. Think of it like "track changes" in Word, but for code.</p>
 
-      <h3 id="mac">Mac</h3>
+      <h3 id="mac">3.4.1 Mac</h3>
       <ol>
         <li>Open Terminal (search for "Terminal" in Spotlight, or find it in Applications → Utilities)</li>
         <li>Type <code>git --version</code> and press Enter. If you see a version number (e.g. <code>git version 2.x.x</code>), Git is already installed—you're done.</li>
@@ -86,7 +105,7 @@
         <li>When it's done, run <code>git --version</code> again to verify. You should see a version number.</li>
       </ol>
 
-      <h3 id="windows">Windows</h3>
+      <h3 id="windows">3.4.2 Windows</h3>
       <p><strong>Option A: Install Git directly</strong></p>
       <ol>
         <li>Go to <a href="https://git-scm.com">git-scm.com</a></li>
@@ -102,7 +121,7 @@
         <li>GitHub Desktop includes Git automatically</li>
       </ol>
 
-      <h3 id="configure-git">Configure Git</h3>
+      <h3 id="configure-git">3.4.3 Configure Git</h3>
       <p>After installing, open Terminal (Mac) or Command Prompt (Windows) and run these two commands, replacing with your actual name and email:</p>
       <pre><code class="language-bash">git config --global user.name "Your Name"
 git config --global user.email "your.email@school.edu"</code></pre>
@@ -111,58 +130,7 @@ git config --global user.email "your.email@school.edu"</code></pre>
 
       <hr>
 
-      <h2 id="configure-github-in-cursor">Configure GitHub in Cursor</h2>
-      <p>Connect your GitHub account to Cursor so you can push and pull code without entering credentials every time. Use the same GitHub account you created in the steps above.</p>
-      <p><strong>Steps:</strong></p>
-      <ol>
-        <li>Open Cursor</li>
-        <li>Open the Source Control view by clicking the branch icon in the left sidebar, or go to <strong>View → Source Control</strong></li>
-        <li>If you're not signed in to GitHub, click <strong>Sign in with GitHub</strong> (or click the account icon in the bottom-left corner and choose <strong>Turn on Settings Sync</strong> or <strong>Sign in to GitHub</strong>)</li>
-        <li>Complete the sign-in in your browser when prompted. Authorize Cursor to access your GitHub account</li>
-        <li>Once signed in, Cursor will use your GitHub account for cloning repos, pushing, and pulling—no need to enter your password each time</li>
-      </ol>
-      <p><strong>You're done when:</strong> Your GitHub account appears in the Source Control view or in the account menu (bottom-left), and you're ready to clone and push repos from Cursor.</p>
-
-      <hr>
-
-      <h2 id="choose-your-project-idea">Choose Your Project Idea</h2>
-      <p>You need to arrive at Meeting 1 with a project in mind. This can be:</p>
-      <p><strong>Option A: Your own idea</strong></p>
-      <p>Think about a simple tool that would be useful to you or people you know. Good projects have:</p>
-      <ul>
-        <li>A clear purpose (what problem does it solve?)</li>
-        <li>A small number of features (you can always add more later)</li>
-        <li>Users who can create accounts and save data</li>
-      </ul>
-      <p><strong>Option B: Pick from our suggestions</strong></p>
-      <p>See the <a href="app-idea.html">Project Ideas</a> page for guidance and ready-to-use ideas with descriptions and feature lists.</p>
-      <p><strong>Create a text file with your app idea.</strong> Save it as <code>my-app-idea.txt</code> (or similar). Include:</p>
-      <ul>
-        <li>What does your app do?</li>
-        <li>Who would use it?</li>
-        <li>What are 2-3 core features?</li>
-      </ul>
-      <p>You will <strong>attach this file</strong> in Meeting 1 when you prompt Cursor to generate your tutorial. Keep it somewhere easy to find (e.g. in a folder you'll open in Cursor).</p>
-      <p><strong>Example</strong> (for a personal expense tracker):</p>
-      <pre><code>Personal expense tracker. Users: me and other students who want to see where their money goes. Core features: log expenses with date, amount, and category; view a list of all expenses; see monthly totals.</code></pre>
-      <p><strong>You're done when:</strong> You have the text file saved and can attach it in Cursor during Meeting 1.</p>
-
-      <hr>
-
-      <h2 id="verify-your-setup">Verify Your Setup</h2>
-      <p>Before Meeting 1, make sure:</p>
-      <ul>
-        <li>You can log in to GitHub</li>
-        <li>Cursor opens and shows your account as "Pro" or "Student"</li>
-        <li>Your GitHub account is signed in within Cursor (Source Control or account menu)</li>
-        <li>Running <code>git --version</code> in Terminal/Command Prompt shows a version number</li>
-        <li>You have your app-idea text file ready (<code>my-app-idea.txt</code> or similar)</li>
-      </ul>
-      <p>If any of these aren't working, note what's wrong and we'll troubleshoot at the start of Meeting 1.</p>
-
-      <hr>
-
-      <p>Next: <a href="meeting-1.html">Meeting 1</a></p>
+      <p>Once you've completed the pre-work, learn about the <a href="our-tools.html">tools we'll use</a> in the bootcamp.</p>
     </article>
   </main>
   <div class="sidebar-overlay" aria-hidden="true"></div>

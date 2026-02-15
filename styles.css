@@ -212,7 +212,7 @@ body.sidebar-open .sidebar-overlay {
 }
 
 .main-content .step-tip {
-  margin: 0.75rem 0 0;
+  margin: 0.75rem 0 0.75rem;
 }
 
 .main-content blockquote {
@@ -393,6 +393,10 @@ body[data-current-page="our-tools"] .main-content pre {
 
 .main-content .callout-box p:last-of-type {
   margin-bottom: 0;
+}
+
+.main-content .callout-box p + ul {
+  margin-top: 1rem;
 }
 
 .main-content .callout-box .motivational-quote {
