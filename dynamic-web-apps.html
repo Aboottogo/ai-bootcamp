@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Web Apps | AI-Assisted App Development Bootcamp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-current-page="dynamic-web-apps">
+  <header class="site-header">
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <h1 class="site-title"><a href="index.html">AI-Assisted App Development Bootcamp</a></h1>
+  </header>
+  <aside class="sidebar">
+    <div class="nav-inner">
+      <p class="site-title"><a href="index.html">AI-Assisted App Development Bootcamp</a></p>
+      <nav>
+        <ul>
+          <li><a href="index.html">1. Home</a></li>
+          <li><a href="app-idea.html">2. Project Ideas</a></li>
+          <li><a href="pre-work.html">3. Pre-Work</a></li>
+          <li><a href="our-tools.html">4. Our Tools</a></li>
+          <li><a href="meeting-1.html">5. Meeting 1</a></li>
+          <li><a href="dynamic-web-apps.html">6. Dynamic Web Apps</a></li>
+          <li><a href="meeting-2.html">7. Meeting 2</a></li>
+          <li><a href="meeting-3.html">8. Meeting 3</a></li>
+          <li><a href="troubleshooting.html">9. Troubleshooting</a></li>
+          <li><a href="resources.html">10. Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+  <main class="main-content">
+    <article>
+      <h1 id="dynamic-web-apps">6. Dynamic Web Apps</h1>
+      <p><strong>Goal:</strong> Understand the concepts behind full-stack web development before you build your app in <a href="meeting-2.html">Meeting 2</a>.</p>
+      <p>This page introduces static vs. dynamic sites, backend and frontend architecture, and the tools we'll use to build our applications.</p>
+
+      <h2 id="from-static-to-dynamic">6.1 From Static to Dynamic</h2>
+      <p>A <strong>static website</strong> displays the same content to everyone. The pages are fixed files served to anyone who requests them. There is no memory between visits and no personalization.</p>
+      <p>A <strong>dynamic web application</strong> stores, retrieves, and responds to data. A to-do list app remembers <em>your</em> tasks. A social media feed shows <em>you</em> different posts than it shows someone else. An online store knows what's in <em>your</em> cart.</p>
+      <p>The key difference is whether users can modify data. A dynamic web application allows users to create, read, update, and delete data (often abbreviated as CRUD). You can add a new post, edit your profile, remove an item from your cart. The application responds to your actions by changing what's stored. That's what makes it "dynamic."</p>
+
+      <hr>
+
+      <h2 id="architecture-backend-and-frontend">6.2 Architecture: Backend and Frontend</h2>
+      <p>Dynamic web applications are divided into a <strong>backend</strong> and the <strong>frontend</strong>.</p>
+      <p>A <strong>backend</strong> consists of a <strong>database</strong> for storing persistent information like user accounts, passwords, posts, or anything that needs to survive beyond a single session. Users can create, replace, update, and delete data (CRUD) in the database depending on their permissions.</p>
+      <ul>
+        <li>Users never see the backend and don't access the database directly. Instead, they interact with the frontend, which communicates with the database behind the scenes.</li>
+      </ul>
+      <p>A <strong>frontend</strong> consists of everything that runs in the user's browser: buttons, forms, text, images, animations. When someone visits your web app, the frontend code is downloaded to their browser and executes on their device.</p>
+      <ul>
+        <li>The frontend communicates with the backend through an <strong>API</strong> (Application Programming Interface)—a structured protocol for sending requests and receiving responses. This requires the dynamic web application be hosted on a server that supports APIs.</li>
+      </ul>
+
+      <h3 id="system-flow-a-complete-interaction">6.2.1 System Flow: A Complete Interaction</h3>
+      <p>Consider what happens when you order food through a delivery app:</p>
+      <ol>
+        <li><strong>User opens the app:</strong> The browser downloads the frontend and renders the interface—the restaurant listings, menu items, and buttons.</li>
+        <li><strong>User logs in:</strong> The frontend sends credentials to the backend via the API. The backend checks the database to verify the email and password match, then returns the user's identity. The frontend now knows who is logged in.</li>
+        <li><strong>App loads user data:</strong> The frontend requests data from the backend: saved addresses, payment methods, order history. The backend retrieves this from the database and returns it. The frontend applies business logic (e.g., show the default address first) and displays the result.</li>
+        <li><strong>User browses restaurants and adds items to cart:</strong> The frontend may store cart contents locally, or send each addition to the backend. Either way, the frontend updates the display to show the current cart.</li>
+        <li><strong>User clicks "Submit Order":</strong> The frontend sends the order details to the backend via the API. The backend saves the order to the database, processes payment, notifies the restaurant, and sends a confirmation back through the API. The frontend displays "Order Confirmed!"</li>
+        <li><strong>User closes the app:</strong> The session may persist (staying logged in) or end. The order remains in the database—when the user reopens the app, they can see their order history.</li>
+      </ol>
+
+      <hr>
+
+      <h2 id="what-we-need-to-build">6.3 What We Need to (Ask Cursor to) Build</h2>
+      <p>For the <strong>backend</strong> we need a database to store and handle data. Building a secure database system from scratch takes weeks or months—these systems involve security vulnerabilities, scaling, data consistency, and crash recovery.</p>
+      <div class="callout-box">
+        <p><strong>Our approach:</strong> We'll use <a href="https://instantdb.com" target="_blank" rel="noopener noreferrer">InstantDB.com</a>, a free service that provides a database, authentication, and data synchronization out of the box. Rather than setting up and maintaining your own database, InstantDB handles all of this as a managed service, letting you focus on your app's unique features.</p>
+      </div>
+      <p>For the <strong>frontend</strong> we'll ask Cursor to build our website with a <strong>framework</strong>—a pre-built set of tools that enable communication with the backend through an API.</p>
+      <div class="callout-box">
+        <p><strong>Our approach:</strong> We'll ask Cursor to build our application with <strong>Next.js</strong>, a frontend framework built on React (a popular library for building user interfaces).</p>
+      </div>
+      <p>Finally, our dynamic app needs a different <strong>hosting solution</strong> to be accessed on the internet. Previously, we hosted our static sites on <strong>GitHub Pages</strong>—but GitHub Pages cannot host the API connections that a dynamic app requires.</p>
+      <div class="callout-box">
+        <p><strong>Our approach:</strong> We'll host our web application on <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel.com</a>. Since Vercel developed Next.js in 2016, their free hosting service is a natural fit. The good news is that all we have to do is give Vercel the link to our GitHub repository, and it handles the rest.</p>
+      </div>
+
+      <h3 id="tools-overview">6.3.1 Tools Overview</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Tool</th>
+            <th>Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Development Environment</td>
+            <td><strong>Cursor</strong></td>
+            <td>AI-powered code editor; generates code from natural language descriptions</td>
+          </tr>
+          <tr>
+            <td>Frontend Framework</td>
+            <td><strong>Next.js</strong></td>
+            <td>Structure and tooling for building user interfaces; built on React</td>
+          </tr>
+          <tr>
+            <td>Backend Database</td>
+            <td><strong>InstantDB</strong></td>
+            <td>Database and authentication as a service</td>
+          </tr>
+          <tr>
+            <td>Hosting Platform</td>
+            <td><strong>Vercel</strong></td>
+            <td>Deploys and serves the full-stack application; integrates with Next.js</td>
+          </tr>
+          <tr>
+            <td>Code Repository</td>
+            <td><strong>GitHub</strong></td>
+            <td>Version control and sharing code with the hosting platform</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <h2 id="key-terms">6.4 Key Terms</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Term</th>
+            <th>Definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Static website</strong></td>
+            <td>Site showing fixed content to all visitors; users cannot modify data</td>
+          </tr>
+          <tr>
+            <td><strong>Dynamic web application</strong></td>
+            <td>App that allows users to create, read, update, and delete data; stores data and provides personalized experiences</td>
+          </tr>
+          <tr>
+            <td><strong>Backend / Database</strong></td>
+            <td>Remote computers that store and manage data</td>
+          </tr>
+          <tr>
+            <td><strong>Frontend / Framework</strong></td>
+            <td>Pre-built tools for serving webpages to users</td>
+          </tr>
+          <tr>
+            <td><strong>API</strong></td>
+            <td>Application Programming Interface; protocol for frontend-backend communication</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+
+      <p>Next: <a href="meeting-2.html">Meeting 2</a></p>
+    </article>
+  </main>
+  <div class="sidebar-overlay" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>

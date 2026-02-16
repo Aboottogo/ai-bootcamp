@@ -21,10 +21,11 @@
           <li><a href="pre-work.html">3. Pre-Work</a></li>
           <li><a href="our-tools.html">4. Our Tools</a></li>
           <li><a href="meeting-1.html">5. Meeting 1</a></li>
-          <li><a href="meeting-2.html">6. Meeting 2</a></li>
-          <li><a href="meeting-3.html">7. Meeting 3</a></li>
-          <li><a href="troubleshooting.html">8. Troubleshooting</a></li>
-          <li><a href="resources.html">9. Resources</a></li>
+          <li><a href="dynamic-web-apps.html">6. Dynamic Web Apps</a></li>
+          <li><a href="meeting-2.html">7. Meeting 2</a></li>
+          <li><a href="meeting-3.html">8. Meeting 3</a></li>
+          <li><a href="troubleshooting.html">9. Troubleshooting</a></li>
+          <li><a href="resources.html">10. Resources</a></li>
         </ul>
       </nav>
     </div>
@@ -41,6 +42,13 @@
         <li>Deploy the repository to GitHub Pages</li>
         <li>Follow the instructions in the tutorial to build your app</li>
       </ol>
+
+      <div class="mermaid">
+graph LR
+    Build[**Plan** and **Build** in **Cursor**]
+        --> Push["**Push** to **Github** Repository"]
+        --> Host["**Host** on **GitHub Pages**"]
+      </div>
 
       <hr>
 
@@ -244,10 +252,12 @@ Now please read my attached app idea file and the two specification documents, t
 
       <hr>
 
-      <p>Next: <a href="meeting-2.html">Meeting 2</a></p>
+      <p>Next: <a href="dynamic-web-apps.html">Dynamic Web Apps</a></p>
     </article>
   </main>
   <div class="sidebar-overlay" aria-hidden="true"></div>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
   <script src="script.js"></script>
 </body>
 </html>
