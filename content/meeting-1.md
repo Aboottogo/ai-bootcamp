@@ -1,8 +1,8 @@
-# Meeting 1
+# Build Your Own Website
 
 **Goal:** Leave this session with a live website you can share with anyone.
 
-By the end of today, you'll have a URL like `yourname.github.io/your-project` that works on any device. Text it to a friend. Put it in your Instagram bio. It's real, and it's yours. The site is a **how-to tutorial** for your app idea—customized to what you want to build—not the app itself. You'll follow that tutorial as homework before Meeting 2.
+By the end of today, you'll have a URL like `yourname.github.io/your-project` that works on any device. Text it to a friend. Put it in your Instagram bio. It's real, and it's yours. The site is a **how-to tutorial** for your app idea—customized to what you want to build—not the app itself. You'll follow that tutorial as homework before [our second meeting](meeting-2.md).
 
 ---
 
@@ -152,11 +152,11 @@ GitHub Pages turns your repository into a live website for free.
 
 ### Follow Your Tutorial
 
-Between now and Meeting 2, **use the tutorial Cursor generated as your homework.** Work through it step by step to build your app (or the frontend/core the tutorial covers).
+Between now and [our second meeting](meeting-2.md), **use the tutorial Cursor generated as your homework.** Work through it step by step to build your app (or the frontend/core the tutorial covers).
 
 **Your task:**
 1. Open your tutorial site (the one you deployed to GitHub Pages) or the project folder Cursor created
-2. Follow the tutorial's instructions to build your app before Meeting 2
+2. Follow the tutorial's instructions to build your app before [our second meeting](meeting-2.md)
 
 **Don't worry about:**
 - User accounts (we'll add those next week)
@@ -171,8 +171,8 @@ Between now and Meeting 2, **use the tutorial Cursor generated as your homework.
 **If you get stuck:**
 - Ask Cursor to explain what's wrong
 - Check the [Troubleshooting](troubleshooting.md) page
-- Note your question and bring it to Meeting 2
+- Note your question and bring it to [our second meeting](meeting-2.md)
 
 ---
 
-Next: [Meeting 2](meeting-2.md)
+Next: [Build Your Own Web App](meeting-2.md)

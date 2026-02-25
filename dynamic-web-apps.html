@@ -17,13 +17,13 @@
       <nav>
         <ul>
           <li><a href="index.html">1. Home</a></li>
-          <li><a href="app-idea.html">2. Project Ideas</a></li>
-          <li><a href="pre-work.html">3. Pre-Work</a></li>
+          <li><a href="pre-work.html">2. Pre-Work</a></li>
+          <li><a href="app-idea.html">3. Project Ideas</a></li>
           <li><a href="our-tools.html">4. Our Tools</a></li>
-          <li><a href="meeting-1.html">5. Meeting 1</a></li>
+          <li><a href="meeting-1.html">5. Build Your Own Website</a></li>
           <li><a href="dynamic-web-apps.html">6. Dynamic Web Apps</a></li>
-          <li><a href="meeting-2.html">7. Meeting 2</a></li>
-          <li><a href="meeting-3.html">8. Meeting 3</a></li>
+          <li><a href="meeting-2.html">7. Build Your Own Web App</a></li>
+          <li><a href="meeting-3.html">8. Share And Present</a></li>
           <li><a href="troubleshooting.html">9. Troubleshooting</a></li>
           <li><a href="resources.html">10. Resources</a></li>
         </ul>
@@ -33,17 +33,15 @@
   <main class="main-content">
     <article>
       <h1 id="dynamic-web-apps">6. Dynamic Web Apps</h1>
-      <p><strong>Goal:</strong> Understand the concepts behind full-stack web development before you build your app in <a href="meeting-2.html">Meeting 2</a>.</p>
-      <p>This page introduces static vs. dynamic sites, backend and frontend architecture, and the tools we'll use to build our applications.</p>
-
-      <h2 id="from-static-to-dynamic">6.1 From Static to Dynamic</h2>
       <p>A <strong>static website</strong> displays the same content to everyone. The pages are fixed files served to anyone who requests them. There is no memory between visits and no personalization.</p>
       <p>A <strong>dynamic web application</strong> stores, retrieves, and responds to data. A to-do list app remembers <em>your</em> tasks. A social media feed shows <em>you</em> different posts than it shows someone else. An online store knows what's in <em>your</em> cart.</p>
-      <p>The key difference is whether users can modify data. A dynamic web application allows users to create, read, update, and delete data (often abbreviated as CRUD). You can add a new post, edit your profile, remove an item from your cart. The application responds to your actions by changing what's stored. That's what makes it "dynamic."</p>
+      <ul>
+        <li>The key difference is whether users can modify data. A dynamic web application allows users to create, read, update, and delete data (often abbreviated as CRUD). You can add a new post, edit your profile, remove an item from your cart. The application responds to your actions by changing what's stored. That's what makes it "dynamic."</li>
+      </ul>
 
       <hr>
 
-      <h2 id="architecture-backend-and-frontend">6.2 Architecture: Backend and Frontend</h2>
+      <h2 id="architecture-backend-and-frontend">6.1 Architecture of a Dynamic Web App: Backend and Frontend</h2>
       <p>Dynamic web applications are divided into a <strong>backend</strong> and the <strong>frontend</strong>.</p>
       <p>A <strong>backend</strong> consists of a <strong>database</strong> for storing persistent information like user accounts, passwords, posts, or anything that needs to survive beyond a single session. Users can create, replace, update, and delete data (CRUD) in the database depending on their permissions.</p>
       <ul>
@@ -54,7 +52,7 @@
         <li>The frontend communicates with the backend through an <strong>API</strong> (Application Programming Interface)—a structured protocol for sending requests and receiving responses. This requires the dynamic web application be hosted on a server that supports APIs.</li>
       </ul>
 
-      <h3 id="system-flow-a-complete-interaction">6.2.1 System Flow: A Complete Interaction</h3>
+      <h3 id="system-flow-a-complete-interaction">6.1.1 Example: A Complete Interaction</h3>
       <p>Consider what happens when you order food through a delivery app:</p>
       <ol>
         <li><strong>User opens the app:</strong> The browser downloads the frontend and renders the interface—the restaurant listings, menu items, and buttons.</li>
@@ -67,95 +65,224 @@
 
       <hr>
 
-      <h2 id="what-we-need-to-build">6.3 What We Need to (Ask Cursor to) Build</h2>
+      <h2 id="what-we-need-to-build">6.2 What We Need to (Ask Cursor to) Build</h2>
+      <p>Creating a dynamic web application with Cursor is not much more complicated than creating a static website. We just have to know what to ask for.</p>
       <p>For the <strong>backend</strong> we need a database to store and handle data. Building a secure database system from scratch takes weeks or months—these systems involve security vulnerabilities, scaling, data consistency, and crash recovery.</p>
-      <div class="callout-box">
-        <p><strong>Our approach:</strong> We'll use <a href="https://instantdb.com" target="_blank" rel="noopener noreferrer">InstantDB.com</a>, a free service that provides a database, authentication, and data synchronization out of the box. Rather than setting up and maintaining your own database, InstantDB handles all of this as a managed service, letting you focus on your app's unique features.</p>
-      </div>
+      <ul>
+        <li><strong>Our solution:</strong> We'll use <strong>InstantDB</strong>, a free service that provides a database, authentication, and data synchronization out of the box. Rather than setting up and maintaining your own database, InstantDB handles all of this as a managed service, letting you focus on your app's unique features.
+            <p class="step-tip"><strong>Tip:</strong> After we create the database at <a href="https://instantdb.com" target="_blank" rel="noopener noreferrer">InstantDB.com</a>, we will ask Cursor to read their documentation and program the connection so we don't have to do it ourselves.</p>
+        </li>
+      </ul>
       <p>For the <strong>frontend</strong> we'll ask Cursor to build our website with a <strong>framework</strong>—a pre-built set of tools that enable communication with the backend through an API.</p>
-      <div class="callout-box">
-        <p><strong>Our approach:</strong> We'll ask Cursor to build our application with <strong>Next.js</strong>, a frontend framework built on React (a popular library for building user interfaces).</p>
-      </div>
-      <p>Finally, our dynamic app needs a different <strong>hosting solution</strong> to be accessed on the internet. Previously, we hosted our static sites on <strong>GitHub Pages</strong>—but GitHub Pages cannot host the API connections that a dynamic app requires.</p>
-      <div class="callout-box">
-        <p><strong>Our approach:</strong> We'll host our web application on <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel.com</a>. Since Vercel developed Next.js in 2016, their free hosting service is a natural fit. The good news is that all we have to do is give Vercel the link to our GitHub repository, and it handles the rest.</p>
-      </div>
-
-      <h3 id="tools-overview">6.3.1 Tools Overview</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Tool</th>
-            <th>Function</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Development Environment</td>
-            <td><strong>Cursor</strong></td>
-            <td>AI-powered code editor; generates code from natural language descriptions</td>
-          </tr>
-          <tr>
-            <td>Frontend Framework</td>
-            <td><strong>Next.js</strong></td>
-            <td>Structure and tooling for building user interfaces; built on React</td>
-          </tr>
-          <tr>
-            <td>Backend Database</td>
-            <td><strong>InstantDB</strong></td>
-            <td>Database and authentication as a service</td>
-          </tr>
-          <tr>
-            <td>Hosting Platform</td>
-            <td><strong>Vercel</strong></td>
-            <td>Deploys and serves the full-stack application; integrates with Next.js</td>
-          </tr>
-          <tr>
-            <td>Code Repository</td>
-            <td><strong>GitHub</strong></td>
-            <td>Version control and sharing code with the hosting platform</td>
-          </tr>
-        </tbody>
-      </table>
+      <ul>
+        <li><strong>Our solution:</strong> We'll ask Cursor to build our application with <strong>Next.js</strong>, a frontend framework built on React (a popular software for building user interfaces).
+            <p class="step-tip"><strong>Tip:</strong> Cursor is already very familiar with Next.js and should have no problem building this from a simple prompt.</p>
+        </li>
+      </ul>
+      <p>Finally, our dynamic app needs a different <strong>hosting solution</strong> to be accessed on the internet. Previously, we hosted our static sites on <strong>GitHub Pages</strong>—but GitHub Pages cannot host the backend that a dynamic app requires.</p>
+      <ul>
+        <li><strong>Our solution:</strong> We'll host our web application on <strong>Vercel</strong>. Since Vercel developed Next.js in 2016, their free hosting service is a natural fit.
+            <p class="step-tip"><strong>Tip:</strong> The good news is that all we have to do is create a free account at <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">Vercel.com</a>, link it to our GitHub repository, and let it handle the rest.</p>
+        </li>
+      </ul>
 
       <hr>
 
-      <h2 id="key-terms">6.4 Key Terms</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Term</th>
-            <th>Definition</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Static website</strong></td>
-            <td>Site showing fixed content to all visitors; users cannot modify data</td>
-          </tr>
-          <tr>
-            <td><strong>Dynamic web application</strong></td>
-            <td>App that allows users to create, read, update, and delete data; stores data and provides personalized experiences</td>
-          </tr>
-          <tr>
-            <td><strong>Backend / Database</strong></td>
-            <td>Remote computers that store and manage data</td>
-          </tr>
-          <tr>
-            <td><strong>Frontend / Framework</strong></td>
-            <td>Pre-built tools for serving webpages to users</td>
-          </tr>
-          <tr>
-            <td><strong>API</strong></td>
-            <td>Application Programming Interface; protocol for frontend-backend communication</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="exercise-box">
+        <h3 id="exercise-1-setup-the-frontend">6.2.1 Exercise 1: Setup the Frontend: Install Node.js ✅</h3>
+        <p>Node.js is a <strong>framework</strong> Cursor can use to build the frontend of our dynamic web application. This of it as a set of tools. We don't need to know how to use the tools ourselves, but we need to install them so Cursor can use them.</p>
+        <p class="step-tip"><strong>Tip:</strong> If you already installed Node.js in <a href="our-tools.html#exercise-7-install-node-js-and-see-cursors-guardrails">Exercise 7</a> on the Our Tools page, verify it's still installed by asking Cursor: <code>Can you check if Node.js is installed?</code> — then skip to Exercise 2.</p>
+        <ol>
+          <li>Open Cursor's Agent by pressing <code>Cmd+I</code> (Mac) or <code>Ctrl+I</code> (Windows)</li>
+          <li>Ask Cursor to install Node.js:</li>
+        </ol>
+        <div class="code-block-wrapper">
+          <pre><code>Install Node.js on my computer.</code></pre>
+          <button type="button" class="copy-code-btn">Copy</button>
+        </div>
+        <ol start="3">
+          <li>Follow Cursor's instructions to complete the installation</li>
+          <li>Ask Cursor to verify the installation:</li>
+        </ol>
+        <div class="code-block-wrapper">
+          <pre><code>Can you check if Node.js is installed?</code></pre>
+          <button type="button" class="copy-code-btn">Copy</button>
+        </div>
+        <p><strong>What you learned:</strong> Node.js is required for building dynamic web applications. Cursor can guide you through installing software—and verify the installation afterward.</p>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>Manual Installation:</strong> If Cursor is unable to install Node.js for you, you can install it manually: go to <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">nodejs.org</a>, download the <strong>LTS</strong> version (the one labeled "Recommended For Most Users"), run the installer, and accept all default options. Restart Cursor after installation.</p>
+      </div>
+
+      <div class="exercise-box">
+        <h3 id="exercise-2-setup-the-backend">6.2.2 Exercise 2: Setup the Backend: Create a New App on InstantDB ✅</h3>
+        <p>InstantDB provides a database and authentication for your app—no need to build these from scratch.</p>
+        <ol>
+          <li>Go to <a href="https://instantdb.com" target="_blank" rel="noopener noreferrer">instantdb.com</a> and create an account (sign up with your email)</li>
+          <li>After signing in, go to the dashboard at <a href="https://instantdb.com/dash" target="_blank" rel="noopener noreferrer">instantdb.com/dash</a></li>
+          <li>Click <strong>"Create App"</strong></li>
+          <li>Name your app (e.g., <code>poetry-app</code>) and click <strong>Create</strong></li>
+          <li>You'll see your <strong>App ID</strong>—a long string of letters, numbers, and dashes that looks like this:
+            <pre><code>566ffee5-e773-4b68-a132-29678f8f6eea</code></pre>
+          </li>
+          <li><strong>Copy your App ID right now</strong> and save it somewhere safe—a notes app, a text file, or even a sticky note. You'll need it in Exercise 4.</li>
+        </ol>
+        <p><strong>What you learned:</strong> InstantDB gives you a backend database without building one from scratch. The App ID is how your app will connect to your specific database.</p>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>What is the App ID?</strong></p>
+        <p>Think of the App ID like a mailing address for your database. When your app wants to read or write data, it needs to know where to send the request. The App ID tells InstantDB "this request is for THIS specific app's data, not someone else's."</p>
+        <p>The App ID is <strong>public</strong>—it's safe to include in your code. It's not like a password. InstantDB uses a separate permissions system to control who can actually read or write data. Think of it like your home address: it's public information, but that doesn't mean anyone can walk into your house.</p>
+      </div>
+
+      <div class="exercise-box">
+        <h3 id="exercise-3-add-instantdb-docs">6.2.3 Exercise 3: Add InstantDB's Documentation to Cursor ✅</h3>
+        <p>Cursor's AI might not know newer tools like InstantDB well. By adding InstantDB's documentation, you give Cursor a reference to generate accurate code.</p>
+        <ol>
+          <li>Open <strong>Cursor Settings</strong>: press <code>Cmd+,</code> (Mac) or <code>Ctrl+,</code> (Windows)</li>
+          <li>In the settings search bar, type <code>Docs</code></li>
+          <li>Click on <strong>Features</strong> in the sidebar, then find the <strong>Docs</strong> section</li>
+          <li>Click <strong>"Add new doc"</strong></li>
+          <li>Enter this URL:</li>
+        </ol>
+        <div class="code-block-wrapper">
+          <pre><code>https://www.instantdb.com/docs</code></pre>
+          <button type="button" class="copy-code-btn">Copy</button>
+        </div>
+        <ol start="6">
+          <li>Press Enter and wait for Cursor to finish indexing (this may take a minute)</li>
+          <li>You should see "InstantDB" appear in your docs list</li>
+        </ol>
+        <p><strong>What you learned:</strong> You can add documentation for any tool to Cursor. This is especially useful for newer or less common tools that Cursor's AI might not know well.</p>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>When do you need to add documentation?</strong></p>
+        <ul>
+          <li>For newer or less common tools (like InstantDB)</li>
+          <li>When you're getting incorrect or outdated code suggestions</li>
+          <li>When working with a tool's newest features</li>
+        </ul>
+        <p><strong>When is it not necessary?</strong></p>
+        <ul>
+          <li>For very popular, well-established tools (like React or basic JavaScript)</li>
+          <li>For simple, standard patterns the AI has seen millions of times</li>
+        </ul>
+      </div>
+
+      <div class="exercise-box">
+        <h3 id="exercise-4-plan-and-build">6.2.4 Exercise 4: Ask Cursor to Plan and Build a Dynamic Web Application ✅</h3>
+        <p>Now let's put everything together. You'll create a simple poetry sharing website where users can create an account, log in, and share their own poems. Posted poems are visible to all users on the home page.</p>
+
+        <h4 id="step-1-create-project-folder">Step 1: Create Your Project Folder</h4>
+        <ol>
+          <li>Create a new folder on your computer named <code>dynamic-app-tutorial</code> (on your Desktop or in Documents—avoid spaces in the name)</li>
+          <li>In Cursor, go to <strong>File → Open Folder</strong> (or <code>Cmd+O</code> on Mac, <code>Ctrl+O</code> on Windows) and select the <code>dynamic-app-tutorial</code> folder</li>
+        </ol>
+
+        <h4 id="step-2-prompt-cursor">Step 2: Prompt Cursor to Plan and Build</h4>
+        <ol>
+          <li>Open the Composer: press <code>Cmd+I</code> (Mac) or <code>Ctrl+I</code> (Windows)</li>
+          <li>Switch to <strong>Plan</strong> mode: press <code>Shift+Tab</code>
+            <p class="step-tip"><strong>Tip:</strong> Plan mode lets Cursor outline its approach before writing any code. You can review and edit the plan before building—useful when a task involves multiple files or steps.</p>
+          </li>
+          <li>In the Composer input, type <code>@</code> and select <strong>InstantDB</strong> from the docs list. This tells Cursor to reference the documentation you added in Exercise 3.
+            <p class="step-tip"><strong>Tip:</strong> You won't see <code>@InstantDB</code> appear as text—it shows up as a tag in the input. That's expected.</p>
+          </li>
+          <li>Copy the prompt below and paste it into the Composer. <strong>Before sending, replace <code>YOUR_APP_ID_HERE</code> with the App ID you copied in Exercise 2.</strong></li>
+        </ol>
+        <div class="prompt-code-wrapper">
+          <button type="button" class="copy-prompt-btn" aria-label="Copy prompt to clipboard">Copy</button>
+          <pre class="scrollable-prompt"><code id="composer-prompt-text">Build a simple poetry sharing website using Next.js and Tailwind CSS.
+Use InstantDB for the database and authentication.
+
+My InstantDB App ID: YOUR_APP_ID_HERE
+
+Requirements:
+- Users can sign up and log in with magic code authentication
+- Logged-in users can post a poem (title and body)
+- The home page shows all poems from all users, newest first</code></pre>
+        </div>
+        <ol start="5">
+          <li>Review the plan Cursor generates. You can edit it directly—add, remove, or change steps if you like</li>
+          <li>When the plan looks good, click <strong>Build</strong> and let Cursor create the files
+            <p class="step-tip"><strong>Tip:</strong> Cursor may ask to run terminal commands (like <code>npx create-next-app</code>) during the build. Click <strong>Accept</strong> when prompted—these commands set up the project structure and install the required packages.</p>
+          </li>
+        </ol>
+        <p><strong>What you learned:</strong> You can describe a dynamic web application in plain language and let Cursor plan and build it. By referencing InstantDB's documentation with <code>@InstantDB</code>, you helped Cursor use the correct APIs. The App ID connects your app to the database you created in Exercise 2.</p>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>Alternatives:</strong> InstantDB and Vercel are not the only solutions. <a href="https://supabase.com" target="_blank" rel="noopener noreferrer">Supabase</a> is a popular alternative backend that provides a PostgreSQL database, authentication, and real-time features. <a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Netlify</a> is a common alternative to Vercel for hosting dynamic web applications. Both work well with Next.js, but they require more technical setup than the tools we've chosen for this bootcamp.</p>
+      </div>
+
+      <h3 id="push-to-github">6.2.5 Push Your Project to GitHub</h3>
+      <p>You pushed projects to GitHub in <a href="our-tools.html#exercise-10-push-to-github">Our Tools (Exercise 10)</a> and <a href="meeting-1.html#exercise-push-to-github">our first meeting</a>. Do the same here for your <code>dynamic-app-tutorial</code> project. <strong>Ask Cursor to do the push for you</strong>—don't use the terminal or Source Control pane yourself.</p>
+
+      <div class="exercise-box">
+        <h3 id="exercise-5-push-to-github">6.2.5 Exercise 5: Create a GitHub Repository and Push Your Project ✅</h3>
+        <ol>
+          <li>Create a new repository on GitHub:
+            <ul>
+              <li>Go to <a href="https://github.com/new" target="_blank" rel="noopener noreferrer">github.com/new</a></li>
+              <li>Name it <code>dynamic-app-tutorial</code> (or whatever you'd like to call it)</li>
+              <li>Leave it set to <strong>Public</strong></li>
+              <li>Don't initialize with a README, .gitignore, or license—your project already has files</li>
+              <li>Click <strong>Create repository</strong></li>
+            </ul>
+          </li>
+          <li>Copy the repository URL from the page GitHub shows you (e.g. <code>https://github.com/your-username/dynamic-app-tutorial</code>)</li>
+          <li>Open Cursor's Agent (<code>Cmd+I</code> or <code>Ctrl+I</code>) and ask it to push your project:
+            <div class="code-block-wrapper">
+              <pre><code>Push this project to my GitHub repository at https://github.com/your-username/dynamic-app-tutorial</code></pre>
+              <button type="button" class="copy-code-btn">Copy</button>
+            </div>
+            <p class="step-tip"><strong>Tip:</strong> Replace the URL in the prompt with your actual repository URL. Cursor will initialize Git if needed, stage your files, commit, and push—you don't need to run any commands yourself.</p>
+          </li>
+          <li>Verify the push worked: go to your repository on GitHub (the URL you copied in Step 2) and confirm your project files are there.</li>
+        </ol>
+        <p><strong>What you learned:</strong> You can push any project to GitHub by creating a repository and asking Cursor to handle the push. This is your third time doing it—it should feel familiar by now.</p>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>Asking Cursor to do the work for you:</strong> Pushing to GitHub requires Cursor to submit commands to the terminal. As a safety feature, Cursor might ask for your permission to run certain commands, or insist you enter them yourself.</p>
+        <p>If this happens, either grant the permission in real-time, or copy the commands Cursor provides—they'll typically look something like <code>git add .</code>, <code>git commit -m "your message"</code>, and <code>git push origin main</code>—and paste them into your terminal one at a time. You can open the terminal in Cursor by pressing <code>Ctrl+`</code> (that's the backtick key, usually above the Tab key).</p>
+      </div>
+
+      <h3 id="deploy-to-vercel">6.2.6 Deploy to Vercel</h3>
+      <p>GitHub Pages can host static websites, but your dynamic web application needs a hosting platform that supports backends and APIs. <strong>Vercel</strong> connects to your GitHub repository and automatically builds and deploys your app every time you push code.</p>
+
+      <div class="exercise-box">
+        <h3 id="exercise-6-deploy-to-vercel">6.2.6 Exercise 6: Create a Vercel Project and Link It to GitHub ✅</h3>
+        <ol>
+          <li>If you don't already have a Vercel account, create one:
+            <ul>
+              <li>Go to <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel.com</a> and click <strong>Sign Up</strong></li>
+              <li>Choose <strong>Continue with GitHub</strong> and authorize Vercel to access your GitHub account</li>
+              <li>When prompted, select the <strong>Hobby</strong> plan (free)</li>
+            </ul>
+          </li>
+          <li>From the Vercel dashboard, click <strong>Add New...</strong> → <strong>Project</strong></li>
+          <li>Under <strong>Import Git Repository</strong>, find and select the repository you created in Exercise 5, then click <strong>Import</strong>
+            <p class="step-tip"><strong>Tip:</strong> If you don't see your repository listed, click <strong>Adjust GitHub App Permissions</strong> to grant Vercel access to additional repositories.</p>
+          </li>
+          <li>On the <strong>Configure Project</strong> page, Vercel will auto-detect your project as a Next.js app. Review the settings—the defaults should work. If your app uses environment variables (e.g. for your InstantDB App ID), expand the <strong>Environment Variables</strong> section and add them before deploying.
+            <p class="step-tip"><strong>Tip:</strong> If your InstantDB App ID is hardcoded in your source files (as in Exercise 4's prompt), you don't need to add environment variables. If Cursor stored it in a <code>.env.local</code> file instead, add the variable name and value here so Vercel can access it.</p>
+          </li>
+          <li>Click <strong>Deploy</strong> and wait for the build to finish (typically 1–3 minutes). Vercel will show a progress log as it builds your app.</li>
+          <li>When the build succeeds, Vercel will show a congratulations page with a preview of your app. Click the preview image or the generated URL (e.g. <code>dynamic-app-tutorial.vercel.app</code>) to visit your live app.
+            <p class="step-tip"><strong>Tip:</strong> If the build fails, click <strong>View Build Logs</strong> to see what went wrong. Common issues include missing dependencies or build errors in your code. Copy the error message and paste it into Cursor's Agent to get help fixing it.</p>
+          </li>
+        </ol>
+        <p><strong>Your dynamic web app is now live on the internet.</strong> Try visiting the URL on your phone—it works on any device. Every time you push new code to GitHub, Vercel will automatically rebuild and redeploy your app.</p>
+        <p><strong>What you learned:</strong> Vercel connects to your GitHub repository and handles deployment automatically. Unlike GitHub Pages, Vercel can host dynamic web applications with backends and APIs—exactly what your Next.js + InstantDB app needs.</p>
+      </div>
 
       <hr>
 
-      <p>Next: <a href="meeting-2.html">Meeting 2</a></p>
+      <p>Next: <a href="meeting-2.html">Build Your Own Web App</a></p>
     </article>
   </main>
   <div class="sidebar-overlay" aria-hidden="true"></div>

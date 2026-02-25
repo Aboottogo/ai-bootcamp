@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
 - Show a simple mockup or description of what the finished app will look like
 - Emphasize that this is a **real app** that other people can use
 
-#### Section 1.3: Understanding Full-Stack Web Apps (DEEP EXPLANATION)
+#### Section 1.3: Understanding Dynamic Web Apps (DEEP EXPLANATION)
 
 This section must thoroughly explain:
 

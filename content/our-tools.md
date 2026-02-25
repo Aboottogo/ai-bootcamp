@@ -37,7 +37,7 @@ Try opening Cursor and playing around:
 5. Ask Cursor to create an HTML file that displays the poem with some nice styling
 6. See what happens!
 
-This isn't required, but it'll make Meeting 1 less overwhelming.
+This isn't required, but it'll make [our first meeting](meeting-1.md) less overwhelming.
 
 ---
 

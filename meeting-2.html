@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meeting 2 | AI-Assisted App Development Bootcamp</title>
+  <title>Build Your Own Web App | AI-Assisted App Development Bootcamp</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-current-page="meeting-2">
@@ -17,13 +17,13 @@
       <nav>
         <ul>
           <li><a href="index.html">1. Home</a></li>
-          <li><a href="app-idea.html">2. Project Ideas</a></li>
-          <li><a href="pre-work.html">3. Pre-Work</a></li>
+          <li><a href="pre-work.html">2. Pre-Work</a></li>
+          <li><a href="app-idea.html">3. Project Ideas</a></li>
           <li><a href="our-tools.html">4. Our Tools</a></li>
-          <li><a href="meeting-1.html">5. Meeting 1</a></li>
+          <li><a href="meeting-1.html">5. Build Your Own Website</a></li>
           <li><a href="dynamic-web-apps.html">6. Dynamic Web Apps</a></li>
-          <li><a href="meeting-2.html">7. Meeting 2</a></li>
-          <li><a href="meeting-3.html">8. Meeting 3</a></li>
+          <li><a href="meeting-2.html">7. Build Your Own Web App</a></li>
+          <li><a href="meeting-3.html">8. Share And Present</a></li>
           <li><a href="troubleshooting.html">9. Troubleshooting</a></li>
           <li><a href="resources.html">10. Resources</a></li>
         </ul>
@@ -32,267 +32,246 @@
   </aside>
   <main class="main-content">
     <article>
-      <h1 id="meeting-2">7. Meeting 2</h1>
-      <p><strong>Goal:</strong> Leave this session with a fully functional app—with user accounts and a real database—deployed on the web.</p>
-      <p>Last week you deployed a custom how-to tutorial for your app and, for homework, followed that tutorial to start building it. This week we add a backend (Supabase) and deploy the app to Vercel.</p>
+      <h1 id="meeting-2">7. Build Your Own Web App</h1>
+      <p><strong>Goal:</strong> Leave this session with a working version of your app—with user accounts and a real database—live on the internet.</p>
+      <p>In <a href="meeting-1.html">our first meeting</a>, you built a how-to tutorial for your app and deployed it to GitHub Pages. For homework, you followed that tutorial to start building the app itself. Today you'll make it real: you'll add a database and user accounts with InstantDB, then deploy the finished app to Vercel. By the end of today, you'll have a URL like <code>your-project.vercel.app</code> that anyone can visit from any device.</p>
+
+      <ol>
+        <li>Set up your backend (InstantDB)</li>
+        <li>Ask Cursor to build your dynamic app</li>
+        <li>Test your app locally</li>
+        <li>Push to GitHub and deploy to Vercel</li>
+      </ol>
+
+      <div class="mermaid">
+graph LR
+    Setup["**Set up** backend (**InstantDB**)"]
+        --> Build["**Build** app in **Cursor**"]
+        --> Test["**Test** locally"]
+        --> Push["**Push** to **GitHub**"]
+        --> Deploy["**Deploy** to **Vercel**"]
+      </div>
 
       <hr>
 
-      <h2 id="in-class">7.1 In-Class</h2>
+      <h2 id="set-up-your-backend">7.1 Set Up Your Backend</h2>
+      <p>In the first half of today's session, you built a sample poetry app using InstantDB and deployed it to Vercel. Now you'll do the same thing for your own project. You need a separate InstantDB app for your project—the one from the exercises was for the poetry demo.</p>
 
-      <h3 id="what-is-a-backend">7.1.1 What is a Backend?</h3>
-      <p>So far, everything you've built runs in the browser. When you close the browser, any data disappears. That's because you've only built the <strong>frontend</strong>—the part users see and interact with.</p>
-      <p>A <strong>backend</strong> is everything that happens on a server:</p>
-      <ul>
-        <li>Storing data in a database</li>
-        <li>Managing user accounts</li>
-        <li>Processing information</li>
-        <li>Keeping data safe and private</li>
-      </ul>
-      <p>When you log in to Instagram, the frontend is the app on your phone. The backend is Instagram's servers, which store your photos, remember who you follow, and make sure you only see your own DMs.</p>
-      <p><strong>Today you'll add a backend to your app.</strong> Users will be able to create accounts, and their data will persist—even if they close the browser or use a different device.</p>
+      <div class="exercise-box">
+        <h3 id="exercise-create-instantdb-app">7.1.1 Create an InstantDB App for Your Project</h3>
+        <p>This is the same process you followed in <a href="dynamic-web-apps.html#exercise-2-setup-the-backend">Dynamic Web Apps (Exercise 2)</a>, but for your own project.</p>
+        <ol>
+          <li>Go to the InstantDB dashboard at <a href="https://instantdb.com/dash" target="_blank" rel="noopener noreferrer">instantdb.com/dash</a></li>
+          <li>Click <strong>"Create App"</strong></li>
+          <li>Name it after your project (e.g. <code>studysync</code>, <code>potluckpal</code>, <code>chorechart</code>)</li>
+          <li>Copy your <strong>App ID</strong> and save it somewhere safe—you'll need it in the next step.
+            <p class="step-tip"><strong>Tip:</strong> If you already created an InstantDB app for your project while following your tutorial as homework, you can reuse that App ID. You don't need to create a new one.</p>
+          </li>
+        </ol>
+      </div>
 
-      <h3 id="what-is-a-database">7.1.2 What is a Database?</h3>
-      <p>A database is structured storage for your app's data. Think of it like a collection of spreadsheets:</p>
-      <ul>
-        <li>Each "table" is like a spreadsheet</li>
-        <li>Each "row" is an item (a user, an expense, a habit)</li>
-        <li>Each "column" is a property (name, amount, date)</li>
-      </ul>
-      <p>For example, an expense tracker might have:</p>
-      <p><strong>Users table:</strong></p>
-      <table>
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>email</th>
-            <th>created_at</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>jane@school.edu</td>
-            <td>2024-01-15</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>bob@school.edu</td>
-            <td>2024-01-16</td>
-          </tr>
-        </tbody>
-      </table>
-      <p><strong>Expenses table:</strong></p>
-      <table>
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>user_id</th>
-            <th>amount</th>
-            <th>category</th>
-            <th>date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>12.50</td>
-            <td>Food</td>
-            <td>2024-01-15</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>1</td>
-            <td>45.00</td>
-            <td>Books</td>
-            <td>2024-01-16</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>2</td>
-            <td>8.00</td>
-            <td>Coffee</td>
-            <td>2024-01-16</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>The <code>user_id</code> column links each expense to the user who created it. This is how Jane only sees her expenses, not Bob's.</p>
-
-      <h3 id="introduction-to-supabase">7.1.3 Introduction to Supabase</h3>
-      <p>Supabase is a service that gives you a database and user authentication with minimal setup. It has a generous free tier that's perfect for student projects.</p>
-      <p><strong>What Supabase provides:</strong></p>
-      <ul>
-        <li>A PostgreSQL database (the spreadsheet-like storage)</li>
-        <li>Authentication (sign up, log in, password reset)</li>
-        <li>A dashboard where you can see and edit your data</li>
-        <li>An API that your app uses to read and write data</li>
-      </ul>
-      <p><strong>Setting up Supabase:</strong></p>
-      <ol>
-        <li>Go to <a href="https://supabase.com">supabase.com</a> and create an account</li>
-        <li>Click "New Project"</li>
-        <li>Give it a name (e.g., "expense-tracker")</li>
-        <li>Set a database password (save this somewhere!)</li>
-        <li>Choose a region close to you</li>
-        <li>Click "Create new project" and wait for setup (1-2 minutes)</li>
-      </ol>
-      <p><strong>Finding your credentials:</strong></p>
-      <p>Once your project is created:</p>
-      <ol>
-        <li>Go to Settings → API</li>
-        <li>You'll see two important values:
-          <ul>
-            <li><strong>Project URL:</strong> Something like <code>https://abcdefg.supabase.co</code></li>
-            <li><strong>Anon/Public Key:</strong> A long string starting with <code>eyJ...</code></li>
-          </ul>
-        </li>
-      </ol>
-      <p>You'll need both of these to connect your app to Supabase.</p>
-
-      <h3 id="live-demo-adding-authentication">7.1.4 Live Demo: Adding Authentication</h3>
-      <p>Watch as the instructor:</p>
-      <ol>
-        <li>Opens a sample app in Cursor</li>
-        <li>Prompts Cursor to add Supabase authentication</li>
-        <li>Configures the Supabase credentials</li>
-        <li>Tests sign-up and login</li>
-        <li>Shows the new user appearing in the Supabase dashboard</li>
-      </ol>
-
-      <h3 id="hands-on-build-your-app-with-supabase">7.1.5 Hands-On: Build Your App with Supabase</h3>
-      <p>Now you'll add Supabase to your app. We're assuming you have a project from following your tutorial. <strong>If you didn't finish the tutorial, that's okay—we'll get you up to speed.</strong></p>
-      <p><strong>Step 1: Install Supabase in your project</strong></p>
-      <p>Open the terminal in Cursor and run:</p>
-      <pre><code class="language-bash">npm install @supabase/supabase-js</code></pre>
-      <p><strong>Step 2: Create environment variables</strong></p>
-      <p>Create a file called <code>.env.local</code> in your project root with your Supabase credentials:</p>
-      <pre><code>NEXT_PUBLIC_SUPABASE_URL=your-project-url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key</code></pre>
-      <p>Replace the values with your actual credentials from the Supabase dashboard.</p>
-      <p><strong>Step 3: Prompt Cursor to integrate Supabase</strong></p>
-      <p>Use <code>Cmd+K</code> with a prompt like:</p>
-      <blockquote>
-        Add Supabase authentication to this app. Users should be able to sign up with email and password, log in, and log out. Show different content based on whether the user is logged in. Use the Supabase credentials from environment variables.
-      </blockquote>
-      <p><strong>Step 4: Create your database table</strong></p>
-      <p>In the Supabase dashboard:</p>
-      <ol>
-        <li>Go to Table Editor</li>
-        <li>Click "New Table"</li>
-        <li>Create a table for your app's data (e.g., "expenses" with columns for amount, category, date, user_id)</li>
-        <li>Enable Row Level Security (RLS) so users only see their own data</li>
-      </ol>
-      <p><strong>Step 5: Connect your app to the database</strong></p>
-      <p>Prompt Cursor:</p>
-      <blockquote>
-        Update the app to save [expenses/habits/items] to Supabase instead of local storage. Each record should be associated with the logged-in user. Only show records belonging to the current user.
-      </blockquote>
-      <p><strong>Step 6: Test everything</strong></p>
-      <ol>
-        <li>Sign up with a test email</li>
-        <li>Add some data</li>
-        <li>Check the Supabase dashboard—you should see your data in the table</li>
-        <li>Log out and log in again—your data should still be there</li>
-      </ol>
-      <p><strong>If you hit errors:</strong> Supabase connection issues are common. Check:</p>
-      <ul>
-        <li>Are your environment variables spelled correctly?</li>
-        <li>Did you restart your development server after adding <code>.env.local</code>?</li>
-        <li>Is Row Level Security configured correctly?</li>
-      </ul>
-      <p>Ask Cursor to help debug: "I'm getting this error: [paste error]. How do I fix it?"</p>
-
-      <h3 id="introduction-to-vercel">7.1.6 Introduction to Vercel</h3>
-      <p>Vercel is a hosting platform that makes deployment simple. When you push code to GitHub, Vercel automatically builds and deploys your updated app.</p>
-      <p><strong>Why Vercel instead of GitHub Pages?</strong></p>
-      <ul>
-        <li>GitHub Pages only hosts static files (HTML, CSS, JS)</li>
-        <li>Vercel handles server-side rendering and API routes</li>
-        <li>Cursor typically generates Next.js apps, which need Vercel's capabilities</li>
-      </ul>
-      <p><strong>How it works:</strong></p>
-      <ol>
-        <li>Connect Vercel to your GitHub repository</li>
-        <li>Vercel watches for changes</li>
-        <li>When you push code, Vercel automatically rebuilds and deploys</li>
-        <li>Your app gets a URL like <code>your-project.vercel.app</code></li>
-      </ol>
-
-      <h3 id="deploying-to-vercel">7.1.7 Deploying to Vercel</h3>
-      <p><strong>Step 1: Push your code to GitHub</strong></p>
-      <p>Make sure all your changes are committed and pushed:</p>
-      <pre><code class="language-bash">git add .
-git commit -m "Add Supabase integration"
-git push</code></pre>
-      <p><strong>Step 2: Create a Vercel account</strong></p>
-      <ol>
-        <li>Go to <a href="https://vercel.com">vercel.com</a></li>
-        <li>Click "Sign Up"</li>
-        <li>Choose "Continue with GitHub"</li>
-        <li>Authorize Vercel to access your GitHub</li>
-      </ol>
-      <p><strong>Step 3: Import your project</strong></p>
-      <ol>
-        <li>Click "Add New..." → "Project"</li>
-        <li>Find and select your repository</li>
-        <li>Vercel will detect it's a Next.js project</li>
-      </ol>
-      <p><strong>Step 4: Add environment variables</strong></p>
-      <p>Before deploying, add your Supabase credentials:</p>
-      <ol>
-        <li>Expand "Environment Variables"</li>
-        <li>Add <code>NEXT_PUBLIC_SUPABASE_URL</code> with your project URL</li>
-        <li>Add <code>NEXT_PUBLIC_SUPABASE_ANON_KEY</code> with your anon key</li>
-      </ol>
-      <p><strong>Step 5: Deploy</strong></p>
-      <ol>
-        <li>Click "Deploy"</li>
-        <li>Wait for the build (1-3 minutes)</li>
-        <li>When it's done, click the preview link</li>
-      </ol>
-      <p><strong>Your app is now live.</strong> Every time you push to GitHub, Vercel will automatically redeploy.</p>
+      <div class="callout-box">
+        <p><strong>Before you continue,</strong> make sure you have these three things ready:</p>
+        <ul>
+          <li><strong>Node.js installed</strong> — If you followed along with <a href="dynamic-web-apps.html#exercise-1-setup-the-frontend">Exercise 1</a> earlier today, you're set. If not, ask Cursor: <code>Can you check if Node.js is installed?</code></li>
+          <li><strong>InstantDB docs added to Cursor</strong> — You did this in <a href="dynamic-web-apps.html#exercise-3-add-instantdb-docs">Exercise 3</a>. If you skipped it, open Cursor Settings, go to Features → Docs, click "Add new doc," and enter <code>https://www.instantdb.com/docs</code></li>
+          <li><strong>Your <code>my-app-idea.md</code> file</strong> — The same file you created in <a href="app-idea.html#describing-your-app-idea">Project Ideas</a> and used in <a href="meeting-1.html#exercise-generate-tutorial">our first meeting</a>. Have it somewhere you can attach it in Cursor.</li>
+        </ul>
+      </div>
 
       <hr>
 
-      <h2 id="homework">7.2 Homework</h2>
+      <h2 id="build-your-app">7.2 Ask Cursor to Build Your App</h2>
+      <p>In <a href="dynamic-web-apps.html#exercise-4-plan-and-build">Dynamic Web Apps (Exercise 4)</a>, you used Plan mode to build a poetry sharing app with Next.js and InstantDB. Now you'll use the same approach—Plan mode, review, Build—but for <strong>your own app idea</strong>. The prompt below tells Cursor everything it needs to build a working app from your <code>my-app-idea.md</code>.</p>
 
-      <h3 id="polish-your-app">7.2.1 Polish Your App</h3>
-      <p>Between now and Meeting 3, improve your app:</p>
-      <p><strong>Functionality:</strong></p>
-      <ul>
-        <li>Fix any bugs you noticed</li>
-        <li>Add any missing features</li>
-        <li>Make sure the core flow works smoothly</li>
-      </ul>
-      <p><strong>Design:</strong></p>
-      <ul>
-        <li>Improve the visual design</li>
-        <li>Make sure it looks good on mobile</li>
-        <li>Add helpful error messages</li>
-      </ul>
-      <p><strong>Prompts that might help:</strong></p>
-      <ul>
-        <li>"Make this page look more professional with better spacing and typography"</li>
-        <li>"Add error handling so users see a helpful message if something goes wrong"</li>
-        <li>"Make this layout responsive so it works on mobile"</li>
-      </ul>
+      <div class="exercise-box">
+        <h3 id="exercise-build-your-app">7.2.1 Build Your Dynamic App</h3>
+        <ol>
+          <li>Create a new folder on your computer for your app (e.g. <code>my-app</code> in Documents—avoid spaces in the name) and open it in Cursor (<strong>File → Open Folder</strong>).
+            <p class="step-tip"><strong>Tip:</strong> Use a fresh folder even if you started building during homework. Starting clean with a single prompt gives Cursor the best chance of producing a working app. You can always reference your homework project for ideas.</p>
+          </li>
+          <li>Have <code>my-app-idea.md</code> ready—either in the project folder or somewhere you can attach it.</li>
+          <li>Open the Agent (Composer) with <code>Cmd+I</code> (Mac) or <code>Ctrl+I</code> (Windows), then press <code>Shift+Tab</code> to switch to <strong>Plan</strong> mode.</li>
+          <li>In the Composer input, type <code>@</code> and select <strong>InstantDB</strong> from the docs list. This tells Cursor to reference the documentation you added in <a href="dynamic-web-apps.html#exercise-3-add-instantdb-docs">Exercise 3</a>.
+            <p class="step-tip"><strong>Tip:</strong> You won't see <code>@InstantDB</code> appear as text—it shows up as a tag in the input. That's expected.</p>
+          </li>
+          <li>Copy the entire prompt below, paste it into the Composer input, and attach your app-idea file (click the <strong>+</strong> button or type <code>@</code> to add <code>my-app-idea.md</code>). <strong>Before sending, replace <code>YOUR_APP_ID_HERE</code> with the App ID you copied in the previous step.</strong>
+            <div class="prompt-code-wrapper">
+              <button type="button" class="copy-prompt-btn" aria-label="Copy prompt to clipboard">Copy</button>
+              <pre class="scrollable-prompt"><code id="composer-prompt-text">I am a business student building my first web app with AI assistance. I have **never written code before**. I have attached my app idea file (`my-app-idea.md`) which describes the app I want to build. Please read it carefully before proceeding.
 
-      <h3 id="draft-your-blog-post">7.2.2 Draft Your Blog Post</h3>
-      <p>Write a short post (300-400 words) about your project. You can use AI to help draft it.</p>
-      <p><strong>Prompt template:</strong></p>
-      <blockquote>
-        Write a short blog post (300-400 words) about [project name], a web app I built using Cursor AI. The app [brief description of what it does]. During the project, I learned about [list 2-3 concepts you learned]. One challenge I faced was [describe a challenge]. Write in first person, keep it conversational, and make it appropriate for LinkedIn.
-      </blockquote>
-      <p>Review and edit whatever AI generates—make sure it sounds like you and accurately describes your experience.</p>
-      <p>Bring the draft to Meeting 3.</p>
+## Your Task
+Build a **dynamic web application** based on my app idea.
+
+## Tech Stack
+- **Next.js** with App Router
+- **InstantDB** for the database and authentication (Magic Code login)
+- **Tailwind CSS** for styling
+
+My InstantDB App ID: YOUR_APP_ID_HERE
+
+## Requirements
+- Users can sign up and log in with **magic code authentication** (email + 6-digit verification code)
+- Implement the **core features** described in my app idea file
+- Each user's data is **associated with their account**
+- The design should be **clean, modern, and mobile-responsive**
+- Use **InstantDB's `db.useQuery()`** for reading data and **`db.transact()`** for writing data
+- Use **InstantDB's `db.useAuth()`** for authentication state
+
+## Structure
+Follow this project structure:
+```
+src/
+  app/
+    layout.tsx      # Root layout with providers
+    page.tsx        # Home page
+    login/
+      page.tsx      # Login page
+    [other routes as needed]
+  components/
+    [reusable components]
+  lib/
+    db.ts           # InstantDB initialization
+instant.schema.ts   # InstantDB schema definition
+```
+
+## Important
+- Please read the **InstantDB documentation** I've attached (@InstantDB) to ensure you use the correct APIs for database queries, transactions, and authentication.
+- The app must be **deployable to Vercel** with no additional configuration beyond setting the `NEXT_PUBLIC_INSTANT_APP_ID` environment variable.
+- Keep the data model simple: **2–4 entities maximum**.
+- Make the app **encouraging and easy to use** for first-time visitors.</code></pre>
+            </div>
+            <p class="step-tip"><strong>Tip:</strong> Copy the prompt exactly as given, but make sure to replace <code>YOUR_APP_ID_HERE</code> with your actual App ID before sending.</p>
+          </li>
+          <li>Review the plan Cursor generates. You can edit it directly—add, remove, or change steps.
+            <p class="step-tip"><strong>Tip:</strong> Cursor may ask clarifying questions about your app. Answer based on your <code>my-app-idea.md</code>. If you're unsure, keep it simple—you can always add features later.</p>
+          </li>
+          <li>When the plan looks good, click <strong>Build</strong> and let Cursor create the files.
+            <p class="step-tip"><strong>Tip:</strong> Cursor may ask to run terminal commands (like <code>npx create-next-app</code> or <code>npm install</code>) during the build. Click <strong>Accept</strong> when prompted—these commands set up the project structure and install required packages.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>Already have a working project from homework?</strong> If you followed your tutorial and already have a Next.js + InstantDB app that's working, you don't need to start from scratch. Instead, open your existing project in Cursor and use this shorter prompt to verify and improve it:</p>
+        <div class="code-block-wrapper">
+          <pre><code>Review this project and make sure InstantDB authentication and database operations are working correctly. Check that users can sign up, log in, and that data is saved to InstantDB. Fix any issues you find.</code></pre>
+          <button type="button" class="copy-code-btn">Copy</button>
+        </div>
+        <p>Then skip ahead to <a href="#test-your-app">7.3 Test Your App Locally</a>.</p>
+      </div>
 
       <hr>
 
-      <p>Next: <a href="meeting-3.html">Meeting 3</a></p>
+      <h2 id="test-your-app">7.3 Test Your App Locally</h2>
+      <p>Before deploying, make sure your app works on your computer. This is your chance to catch and fix issues while you're still in the meeting with help available.</p>
+
+      <div class="exercise-box">
+        <h3 id="exercise-test-locally">7.3.1 Run and Test Your App</h3>
+        <ol>
+          <li>Start the development server. Open Cursor's Agent (<code>Cmd+I</code> or <code>Ctrl+I</code>) and ask:
+            <div class="code-block-wrapper">
+              <pre><code>Start the development server for this project.</code></pre>
+              <button type="button" class="copy-code-btn">Copy</button>
+            </div>
+            <p class="step-tip"><strong>Tip:</strong> You can also run <code>npm run dev</code> directly in the terminal (<code>Ctrl+`</code>). Either way, you should see a message like "Ready on http://localhost:3000".</p>
+          </li>
+          <li>Open <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer">http://localhost:3000</a> in your browser.</li>
+          <li><strong>Test sign-up:</strong> Enter your email address. Check your email for a 6-digit verification code and enter it. You should be logged in.</li>
+          <li><strong>Test your core features:</strong> Create some data (e.g. add an item, post a message, create an event—whatever your app does). Make sure you can view, edit, and delete it.</li>
+          <li><strong>Test persistence:</strong> Log out, then log back in. Your data should still be there.</li>
+          <li><strong>Check the InstantDB dashboard:</strong> Go to <a href="https://instantdb.com/dash" target="_blank" rel="noopener noreferrer">instantdb.com/dash</a>, select your app, and click on the <strong>Explorer</strong> tab. You should see the data you just created.
+            <p class="step-tip"><strong>Tip:</strong> If you don't see any data in the dashboard, your app may not be connected to InstantDB correctly. Double-check that your App ID is correct in the code.</p>
+          </li>
+        </ol>
+        <p><strong>You're done when:</strong> You can sign up, log in, create and view data, and see that data in the InstantDB dashboard.</p>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>Something not working?</strong> Don't worry—this is the most common place to hit issues. Try these steps:</p>
+        <ul>
+          <li><strong>Build errors or "Module not found":</strong> Run <code>npm install</code> in the terminal, then try <code>npm run dev</code> again.</li>
+          <li><strong>Page is blank or shows an error:</strong> Open the browser's developer console (<code>Cmd+Option+J</code> on Mac, <code>Ctrl+Shift+J</code> on Windows), copy the error, and paste it into Cursor's chat. Ask Cursor to fix it.</li>
+          <li><strong>Authentication not working:</strong> Verify your App ID is correct. Check that it matches the one in your InstantDB dashboard.</li>
+          <li><strong>Data not saving:</strong> Ask Cursor: <code>Data isn't being saved to InstantDB. Can you check the database queries and transactions?</code></li>
+        </ul>
+        <p>If you're stuck, paste the error message into Cursor and describe what you expected to happen. Cursor can see your code and the error, which is usually enough to diagnose the issue.</p>
+      </div>
+
+      <hr>
+
+      <h2 id="push-to-github">7.4 Push to GitHub</h2>
+      <p>You've pushed projects to GitHub multiple times now—in <a href="our-tools.html#exercise-10-push-to-github">Our Tools</a>, <a href="meeting-1.html#exercise-push-to-github">our first meeting</a>, and <a href="dynamic-web-apps.html#exercise-5-push-to-github">Dynamic Web Apps</a>. Same process here.</p>
+
+      <div class="exercise-box">
+        <h3 id="exercise-push-to-github">7.4.1 Create a GitHub Repository and Push Your Project</h3>
+        <ol>
+          <li>Create a new repository on GitHub:
+            <ul>
+              <li>Go to <a href="https://github.com/new" target="_blank" rel="noopener noreferrer">github.com/new</a></li>
+              <li>Name it after your app (e.g. <code>studysync</code>, <code>potluckpal</code>, <code>chorechart</code>)</li>
+              <li>Leave it set to <strong>Public</strong></li>
+              <li>Don't initialize with a README, .gitignore, or license—your project already has files</li>
+              <li>Click <strong>Create repository</strong></li>
+            </ul>
+          </li>
+          <li>Copy the repository URL from the page GitHub shows you (e.g. <code>https://github.com/your-username/my-app</code>)</li>
+          <li>Open Cursor's Agent (<code>Cmd+I</code> or <code>Ctrl+I</code>) and ask it to push your project:
+            <div class="code-block-wrapper">
+              <pre><code>Push this project to my GitHub repository at https://github.com/your-username/my-app</code></pre>
+              <button type="button" class="copy-code-btn">Copy</button>
+            </div>
+            <p class="step-tip"><strong>Tip:</strong> Replace the URL with your actual repository URL. Cursor will initialize Git if needed, stage your files, commit, and push.</p>
+          </li>
+          <li>Verify the push: go to your repository on GitHub and confirm your project files are there.</li>
+        </ol>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>Asking Cursor to do the work for you:</strong> Pushing to GitHub requires Cursor to submit commands to the terminal. As a safety feature, Cursor might ask for your permission to run certain commands, or insist you enter them yourself.</p>
+        <p>If this happens, either grant the permission in real-time, or copy the commands Cursor provides—they'll typically look something like <code>git add .</code>, <code>git commit -m "your message"</code>, and <code>git push origin main</code>—and paste them into your terminal one at a time. You can open the terminal in Cursor by pressing <code>Ctrl+`</code> (that's the backtick key, usually above the Tab key).</p>
+      </div>
+
+      <hr>
+
+      <h2 id="deploy-to-vercel">7.5 Deploy to Vercel</h2>
+      <p>You deployed the poetry app to Vercel in <a href="dynamic-web-apps.html#exercise-6-deploy-to-vercel">Dynamic Web Apps (Exercise 6)</a>. Same process here—connect your GitHub repository to Vercel and let it handle the rest.</p>
+
+      <div class="exercise-box">
+        <h3 id="exercise-deploy-to-vercel">7.5.1 Deploy Your App to Vercel</h3>
+        <ol>
+          <li>Go to your Vercel dashboard at <a href="https://vercel.com/dashboard" target="_blank" rel="noopener noreferrer">vercel.com</a> and click <strong>Add New...</strong> → <strong>Project</strong></li>
+          <li>Under <strong>Import Git Repository</strong>, find and select the repository you just pushed, then click <strong>Import</strong>
+            <p class="step-tip"><strong>Tip:</strong> If you don't see your repository listed, click <strong>Adjust GitHub App Permissions</strong> to grant Vercel access to the new repository.</p>
+          </li>
+          <li>On the <strong>Configure Project</strong> page, Vercel will auto-detect your project as a Next.js app. If your InstantDB App ID is stored in a <code>.env.local</code> file rather than hardcoded, expand the <strong>Environment Variables</strong> section and add:
+            <ul>
+              <li>Name: <code>NEXT_PUBLIC_INSTANT_APP_ID</code></li>
+              <li>Value: your App ID from <a href="#exercise-create-instantdb-app">Step 7.1.1</a></li>
+            </ul>
+            <p class="step-tip"><strong>Tip:</strong> If your App ID is hardcoded directly in the source files, you can skip the environment variable. If you're unsure, add it anyway—it won't cause problems.</p>
+          </li>
+          <li>Click <strong>Deploy</strong> and wait for the build to finish (typically 1–3 minutes).
+            <p class="step-tip"><strong>Tip:</strong> If the build fails, click <strong>View Build Logs</strong> to see what went wrong. Copy the error message and paste it into Cursor's Agent to get help fixing it. After fixing, push the changes to GitHub and Vercel will automatically rebuild.</p>
+          </li>
+          <li>When the build succeeds, Vercel will show a congratulations page with a preview. Click the preview image or the generated URL (e.g. <code>my-app.vercel.app</code>) to visit your live app.</li>
+          <li><strong>Test your live app:</strong> Sign up, log in, and create some data on the live URL—just like you did locally. Make sure everything works.</li>
+        </ol>
+        <p><strong>Your app is now live on the internet.</strong> Send the link to a friend. Open it on your phone. This is the URL you'll share in your <a href="meeting-3.html">Share And Present</a> presentation.</p>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>Automatic redeployment:</strong> From now on, every time you push new code to GitHub, Vercel will automatically rebuild and redeploy your app. You can keep improving your app in Cursor, push the changes, and see them go live within a couple of minutes—no manual deployment needed.</p>
+      </div>
+
+      <hr>
+
+      <p>Next: <a href="meeting-3.html">Share And Present</a></p>
     </article>
   </main>
   <div class="sidebar-overlay" aria-hidden="true"></div>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -61,7 +61,7 @@ Use a numbered scheme for headings:
 
 | Level | Format | Example |
 |-------|--------|---------|
-| H1 | `X. Page Title` | `5. Meeting 1` |
+| H1 | `X. Page Title` | `5. Build Your Own Website` |
 | H2 | `X.Y Section Title` | `5.1 Ask Cursor to Plan and Build...` |
 | H3 | `X.Y.Z Subsection Title` | `5.1.1 Generate Your Tutorial Website` |
 
@@ -95,7 +95,7 @@ Use for step-by-step exercises. Wraps an H3 (the exercise title) and an ordered 
 
 ### Callout Box
 
-Use for tips, reminders, extensions, or supplementary context. Not for primary instructions.
+Use for reminders, extensions, alternatives, or supplementary context that stands alone. Not for primary instructions. Do not use for inline tips—use Step Tip instead.
 
 ```html
 <div class="callout-box">
@@ -107,7 +107,27 @@ Use for tips, reminders, extensions, or supplementary context. Not for primary i
 </div>
 ```
 
-- Common labels: `Tip:`, `Extensions:`, `Cursor Layout:`, `Asking Cursor to do the work for you:`
+- Common labels: `Extensions:`, `Alternatives:`, `Cursor Layout:`, `Asking Cursor to do the work for you:`
+
+### Step Tip
+
+Use for inline tips that relate to a specific step or bullet point. Format:
+
+```html
+<p class="step-tip"><strong>Tip:</strong> Your tip here.</p>
+```
+
+**Placement:** When the tip relates to a bullet point, nest it **inside** the `<li>` element so it aligns with the bullet content:
+
+```html
+<ul>
+  <li>Main bullet text here.
+    <p class="step-tip"><strong>Tip:</strong> Your tip here.</p>
+  </li>
+</ul>
+```
+
+Reference: See 5.1.1 Generate Your Tutorial Website in `meeting-1.html`.
 
 ### Code Block with Copy Button
 
@@ -122,7 +142,7 @@ For short prompts or commands users should copy:
 
 ### Long Prompt (Scrollable)
 
-For multi-line prompts (e.g. the Composer prompt in Meeting 1):
+For multi-line prompts (e.g. the Composer prompt in Build Your Own Website):
 
 ```html
 <div class="prompt-code-wrapper">
@@ -133,16 +153,6 @@ For multi-line prompts (e.g. the Composer prompt in Meeting 1):
 
 - Use `scrollable-prompt` for prompts that exceed a few lines.
 - The `id` on the code element is used by the copy script.
-
-### Step Tip
-
-Inline tips within numbered steps:
-
-```html
-<p class="step-tip"><strong>Tip:</strong> Your tip here.</p>
-```
-
-Place inside an `<li>` or immediately after a step, with appropriate spacing.
 
 ---
 
@@ -219,13 +229,13 @@ After the H1, include:
 End the article with a "Next" or "Ready?" link when appropriate:
 
 ```html
-<p>Next: <a href="meeting-2.html">Meeting 2</a></p>
+<p>Next: <a href="meeting-2.html">Build Your Own Web App</a></p>
 ```
 
 or
 
 ```html
-<p>Ready? Start with <a href="app-idea.html">Project Ideas</a>.</p>
+<p>Ready? Start with <a href="pre-work.html">Pre-Work</a>.</p>
 ```
 
 ---
@@ -254,6 +264,7 @@ or
 - [ ] IDs are kebab-case
 - [ ] `<hr>` between major sections
 - [ ] Exercise boxes use `exercise-box`, callouts use `callout-box`
+- [ ] Inline tips use `step-tip`; when tied to a bullet, nest inside the `<li>`
 - [ ] Code blocks use `code-block-wrapper` with `copy-code-btn`
 - [ ] Long prompts use `prompt-code-wrapper` and `scrollable-prompt`
 - [ ] External links have `target="_blank" rel="noopener noreferrer"`

@@ -1,4 +1,4 @@
-# Meeting 2
+# Build Your Own Web App
 
 **Goal:** Leave this session with a fully functional app—with user accounts and a real database—deployed on the web.
 
@@ -213,7 +213,7 @@ Before deploying, add your Supabase credentials:
 
 ### Polish Your App
 
-Between now and Meeting 3, improve your app:
+Between now and [our third meeting](meeting-3.md), improve your app:
 
 **Functionality:**
 - Fix any bugs you noticed
@@ -240,8 +240,8 @@ Write a short post (300-400 words) about your project. You can use AI to help dr
 
 Review and edit whatever AI generates—make sure it sounds like you and accurately describes your experience.
 
-Bring the draft to Meeting 3.
+Bring the draft to [our third meeting](meeting-3.md).
 
 ---
 
-Next: [Meeting 3](meeting-3.md)
+Next: [Share And Present](meeting-3.md)

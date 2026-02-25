@@ -25,7 +25,7 @@ Version control system.
 - **Mac:** Pre-installed or install via Xcode Command Line Tools
 
 ### Vercel
-Hosting for full-stack applications.
+Hosting for dynamic web applications.
 - **Website:** [vercel.com](https://vercel.com)
 - **Documentation:** [vercel.com/docs](https://vercel.com/docs)
 - **Free tier:** Generous for personal projects

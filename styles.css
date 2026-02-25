@@ -254,8 +254,9 @@ body.sidebar-open .sidebar-overlay {
   overflow-x: auto;
 }
 
-/* Code blocks on our-tools page: wrap text, no horizontal scroll */
-body[data-current-page="our-tools"] .main-content pre {
+/* Code blocks on our-tools and dynamic-web-apps pages: wrap text, no horizontal scroll */
+body[data-current-page="our-tools"] .main-content pre,
+body[data-current-page="dynamic-web-apps"] .main-content pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-x: visible;

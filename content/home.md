@@ -61,7 +61,7 @@ Each session is 2 hours. Come with your laptop.
 - Your project idea (or pick one from our suggestions)
 
 **Expectations:**
-- Complete the pre-work before Meeting 1
+- Complete the pre-work before [our first meeting](meeting-1.md)
 - Bring questions—there are no dumb ones
 - Help your neighbors when you figure something out
 - Things will break. That's normal. We'll fix them together.
@@ -71,4 +71,4 @@ Each session starts with a brief introduction (10-15 minutes), then you'll spend
 
 ---
 
-Ready? Start with [Project Ideas](project-ideas.md).
+Ready? Start with [Pre-Work](pre-work.md).

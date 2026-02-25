@@ -1,8 +1,8 @@
 # Pre-Work
 
-Complete these steps before Meeting 1. Total time: about 30-45 minutes.
+Complete these steps before [our first meeting](meeting-1.md). Total time: about 30-45 minutes.
 
-If you get stuck, don't panic. Note where you got stuck and we'll help you at the start of Meeting 1. But please attempt everything—it makes the first session much smoother.
+If you get stuck, don't panic. Note where you got stuck and we'll help you at the start of [our first meeting](meeting-1.md). But please attempt everything—it makes the first session much smoother.
 
 ---
 
@@ -103,7 +103,7 @@ Connect your GitHub account to Cursor so you can push and pull code without ente
 
 ## Choose Your Project Idea
 
-You need to arrive at Meeting 1 with a project in mind. This can be:
+You need to arrive at [our first meeting](meeting-1.md) with a project in mind. This can be:
 
 **Option A: Your own idea**
 
@@ -121,7 +121,7 @@ See the [Project Ideas](project-ideas.md) page for ready-to-use ideas with descr
 - Who would use it?
 - What are 2-3 core features?
 
-You will **attach this file** in Meeting 1 when you prompt Cursor to generate your tutorial. Keep it somewhere easy to find (e.g. in a folder you'll open in Cursor).
+You will **attach this file** in [our first meeting](meeting-1.md) when you prompt Cursor to generate your tutorial. Keep it somewhere easy to find (e.g. in a folder you'll open in Cursor).
 
 **Example** (for a personal expense tracker):
 
@@ -129,13 +129,13 @@ You will **attach this file** in Meeting 1 when you prompt Cursor to generate yo
 Personal expense tracker. Users: me and other students who want to see where their money goes. Core features: log expenses with date, amount, and category; view a list of all expenses; see monthly totals.
 ```
 
-**You're done when:** You have the text file saved and can attach it in Cursor during Meeting 1.
+**You're done when:** You have the text file saved and can attach it in Cursor during [our first meeting](meeting-1.md).
 
 ---
 
 ## Verify Your Setup
 
-Before Meeting 1, make sure:
+Before [our first meeting](meeting-1.md), make sure:
 
 - [ ] You can log in to GitHub
 - [ ] Cursor opens and shows your account as "Pro" or "Student"
@@ -143,8 +143,8 @@ Before Meeting 1, make sure:
 - [ ] Running `git --version` in Terminal/Command Prompt shows a version number
 - [ ] You have your app-idea text file ready (`my-app-idea.txt` or similar)
 
-If any of these aren't working, note what's wrong and we'll troubleshoot at the start of Meeting 1.
+If any of these aren't working, note what's wrong and we'll troubleshoot at the start of [our first meeting](meeting-1.md).
 
 ---
 
-Next: [Meeting 1](meeting-1.md)
+Next: [Project Ideas](project-ideas.md)

@@ -1,4 +1,4 @@
-# Meeting 3
+# Share And Present
 
 **Goal:** Finish strong. Present your work. Leave with portfolio-ready assets.
 

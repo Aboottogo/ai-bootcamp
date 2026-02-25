@@ -1,4 +1,4 @@
-# Introduction to Full-Stack Web Development
+# Introduction to Dynamic Web Applications
 
 ## From Static to Dynamic
 
@@ -70,7 +70,7 @@ Finally, our dynamic app needs a different **hosting solution** to be accessed o
 | Development Environment | **Cursor** | AI-powered code editor; generates code from natural language descriptions |
 | Frontend Framework | **Next.js** | Structure and tooling for building user interfaces; built on React |
 | Backend Database | **InstantDB** | Database and authentication as a service |
-| Hosting Platform | **Vercel** | Deploys and serves the full-stack application; integrates with Next.js |
+| Hosting Platform | **Vercel** | Deploys and serves the dynamic web application; integrates with Next.js |
 | Code Repository | **GitHub** | Version control and sharing code with the hosting platform |
 
 

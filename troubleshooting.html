@@ -17,13 +17,13 @@
       <nav>
         <ul>
           <li><a href="index.html">1. Home</a></li>
-          <li><a href="app-idea.html">2. Project Ideas</a></li>
-          <li><a href="pre-work.html">3. Pre-Work</a></li>
+          <li><a href="pre-work.html">2. Pre-Work</a></li>
+          <li><a href="app-idea.html">3. Project Ideas</a></li>
           <li><a href="our-tools.html">4. Our Tools</a></li>
-          <li><a href="meeting-1.html">5. Meeting 1</a></li>
+          <li><a href="meeting-1.html">5. Build Your Own Website</a></li>
           <li><a href="dynamic-web-apps.html">6. Dynamic Web Apps</a></li>
-          <li><a href="meeting-2.html">7. Meeting 2</a></li>
-          <li><a href="meeting-3.html">8. Meeting 3</a></li>
+          <li><a href="meeting-2.html">7. Build Your Own Web App</a></li>
+          <li><a href="meeting-3.html">8. Share And Present</a></li>
           <li><a href="troubleshooting.html">9. Troubleshooting</a></li>
           <li><a href="resources.html">10. Resources</a></li>
         </ul>
@@ -33,160 +33,352 @@
   <main class="main-content">
     <article>
       <h1 id="troubleshooting">9. Troubleshooting</h1>
-      <p>This page collects solutions to common problems. It grows over time as students encounter issues and document fixes.</p>
-      <p><strong>Found a solution to something that isn't here?</strong> <a href="meeting-3.html#contributing-to-this-curriculum">Contribute to this curriculum</a> and help the next cohort.</p>
-
-      <hr>
-
-      <h2 id="general-advice">9.1 General Advice</h2>
-      <p>Before diving into specific issues:</p>
+      <p>This page is a reference for solving problems you encounter while building your project. When something breaks—a blank screen, an error message, unexpected behavior—come here for a structured approach to diagnosing and fixing it.</p>
+      <p>In this bootcamp, <strong>you are the director, not the coder.</strong> Your job is to clearly describe what is wrong and what you want to happen. Cursor's job is to find and fix the problem in the code. You should never need to read, interpret, or edit code yourself. If you find yourself staring at code trying to understand it, stop—describe the problem to Cursor instead.</p>
       <ol>
-        <li><strong>Read the error message carefully.</strong> It often tells you exactly what's wrong.</li>
-        <li><strong>Copy the full error and paste it to Cursor.</strong> Say: "I'm getting this error: [paste]. Fix it."</li>
-        <li><strong>Google the error.</strong> Someone else has probably hit the same issue.</li>
-        <li><strong>Check that your files are saved.</strong> Unsaved changes don't run.</li>
-        <li><strong>Try restarting.</strong> Close and reopen Cursor. Stop and restart your dev server (<code>Ctrl+C</code>, then <code>npm run dev</code>).</li>
+        <li><a href="#systematic-approach">A Systematic Approach to Problem Solving</a></li>
+        <li><a href="#showing-cursor-whats-wrong">How to Show Cursor What's Wrong</a></li>
+        <li><a href="#cursor-modes-and-models">Cursor Modes and Models</a></li>
+        <li><a href="#recovery">Recovery: Undo, Revert, and Start Over</a></li>
+        <li><a href="#common-problems">Common Problems</a></li>
       </ol>
 
       <hr>
 
-      <h2 id="common-cursor-issues">9.2 Common Cursor Issues</h2>
+      <h2 id="systematic-approach">9.1 A Systematic Approach to Problem Solving</h2>
+      <p>When something goes wrong, resist the urge to immediately type "fix it" into Cursor. Follow these five steps every time.</p>
 
-      <h3 id="cursor-isnt-generating-anything">9.2.1 Cursor isn't generating anything</h3>
+      <h3 id="step-1-identify-the-problem">9.1.1 Step 1: Identify the Problem</h3>
+      <p>Before you ask Cursor to fix anything, get clear on what the problem actually is. Ask yourself two questions:</p>
       <ul>
-        <li>Make sure you're in the chat panel or using Cmd+K (Mac) / Ctrl+K (Windows)</li>
-        <li>Check your internet connection</li>
-        <li>Verify you're logged in and on the student plan (Settings → Account)</li>
+        <li><strong>What did I expect to happen?</strong> (e.g., "I expected the homepage to show a list of recipes.")</li>
+        <li><strong>What actually happened?</strong> (e.g., "The page is blank," or "I see a red error message," or "The wrong data is showing up.")</li>
+      </ul>
+      <p>The gap between those two answers is the problem. Being specific about this gap is the single most important thing you can do to help the AI fix it quickly.</p>
+
+      <h3 id="step-2-capture-the-evidence">9.1.2 Step 2: Capture the Evidence</h3>
+      <p>Gather the information Cursor will need to diagnose the issue:</p>
+      <ul>
+        <li><strong>Error messages:</strong> If you see an error message anywhere—in the browser, in the <strong>terminal</strong> (the dark panel at the bottom of Cursor where commands run), or in a popup—select the entire error message text and copy it (<code>Cmd+C</code> on Mac, <code>Ctrl+C</code> on Windows). You do not need to read or understand the error yourself. The AI will interpret it for you.</li>
+        <li><strong>Screenshots:</strong> If the problem is visual (something looks wrong, a button is in the wrong place, the layout is broken), take a screenshot. You can attach screenshots directly to your Cursor prompt (see <a href="#screenshots">Section 9.2.2</a>).</li>
+        <li><strong>What you just did:</strong> Think about the last thing you asked Cursor to do before the problem appeared. This context is often the key to finding the fix.</li>
       </ul>
 
-      <h3 id="generated-code-has-errors">9.2.2 Generated code has errors</h3>
-      <p>This happens. Cursor isn't perfect. Try:</p>
-      <ul>
-        <li>Paste the error message back to Cursor and ask it to fix</li>
-        <li>Be more specific in your prompt about what you want</li>
-        <li>Ask Cursor to explain what it generated so you can understand what went wrong</li>
-      </ul>
-
-      <h3 id="cursor-generated-way-more-files-than-expected">9.2.3 Cursor generated way more files than expected</h3>
-      <p>AI sometimes over-engineers. If it created a complex folder structure when you wanted something simple, try:</p>
-      <blockquote>"Simplify this. I want a basic single-file approach, not a complex project structure."</blockquote>
-
-      <hr>
-
-      <h2 id="common-git-issues">9.3 Common Git Issues</h2>
-
-      <h3 id="fatal-not-a-git-repository">9.3.1 "fatal: not a git repository"</h3>
-      <p>You're trying to run a Git command in a folder that hasn't been initialized.</p>
-      <p><strong>Fix:</strong> Run <code>git init</code> first.</p>
-
-      <h3 id="please-tell-me-who-you-are">9.3.2 "Please tell me who you are"</h3>
-      <p>Git needs your identity for commits.</p>
-      <p><strong>Fix:</strong></p>
-      <pre><code class="language-bash">git config --global user.name "Your Name"
-git config --global user.email "your@email.com"</code></pre>
-
-      <h3 id="failed-to-push-some-refs">9.3.3 "failed to push some refs"</h3>
-      <p>Usually means your local repo is behind the remote (someone else pushed, or you made changes on GitHub directly).</p>
-      <p><strong>Fix:</strong> Pull first, then push:</p>
-      <pre><code class="language-bash">git pull origin main
-git push origin main</code></pre>
-
-      <h3 id="permission-denied-publickey">9.3.4 "Permission denied (publickey)"</h3>
-      <p>Your computer isn't authenticated with GitHub.</p>
-      <p><strong>Fix:</strong> The easiest solution is to use HTTPS instead of SSH. When cloning or adding a remote, use URLs that start with <code>https://</code> not <code>git@</code>.</p>
-      <p>Or set up SSH keys: <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">GitHub's SSH guide</a></p>
-
-      <hr>
-
-      <h2 id="common-supabase-issues">9.4 Common Supabase Issues</h2>
-
-      <h3 id="invalid-api-key-or-connection-errors">9.4.1 "Invalid API key" or connection errors</h3>
-      <ul>
-        <li>Double-check you copied the full URL and anon key from Supabase dashboard</li>
-        <li>Make sure there are no extra spaces or missing characters</li>
-        <li>Verify the environment variable names match what your code expects</li>
-      </ul>
-
-      <h3 id="data-isnt-saving">9.4.2 Data isn't saving</h3>
-      <ul>
-        <li>Check the Supabase dashboard → Table Editor. Is the table created?</li>
-        <li>Check Supabase dashboard → Logs for any errors</li>
-        <li>Make sure Row Level Security (RLS) isn't blocking inserts (for beginners, you may need to disable RLS or set up policies)</li>
-      </ul>
-
-      <h3 id="users-can-see-each-others-data">9.4.3 Users can see each other's data</h3>
-      <p>You need to filter by user ID. Ask Cursor:</p>
-      <blockquote>"Update the query to only fetch records where user_id matches the logged-in user."</blockquote>
-      <p>And make sure you're storing <code>user_id</code> when creating records.</p>
-
-      <h3 id="authentication-not-working">9.4.4 Authentication not working</h3>
-      <ul>
-        <li>Check that your Supabase URL and anon key are correct</li>
-        <li>Look at the browser console for errors (Right-click → Inspect → Console)</li>
-        <li>Verify email confirmation settings in Supabase (Authentication → Settings)</li>
-      </ul>
-
-      <hr>
-
-      <h2 id="common-vercel-issues">9.5 Common Vercel Issues</h2>
-
-      <h3 id="build-failed">9.5.1 Build failed</h3>
-      <p>Click on the failed deployment to see the error log. Common causes:</p>
-      <ul>
-        <li>Missing environment variables (add them in Vercel project settings)</li>
-        <li>Code errors that didn't show up locally</li>
-        <li>Missing dependencies (make sure <code>package.json</code> is committed)</li>
-      </ul>
-
-      <h3 id="environment-variables-not-working">9.5.2 Environment variables not working</h3>
-      <ul>
-        <li>Variable names must match exactly (case-sensitive)</li>
-        <li>For Next.js, client-side variables must start with <code>NEXT_PUBLIC_</code></li>
-        <li>After adding/changing variables, redeploy (or push a new commit)</li>
-      </ul>
-
-      <h3 id="site-shows-old-version">9.5.3 Site shows old version</h3>
-      <p>Vercel caches aggressively. Try:</p>
-      <ul>
-        <li>Hard refresh: Cmd+Shift+R (Mac) or Ctrl+Shift+R (Windows)</li>
-        <li>Clear your browser cache</li>
-        <li>Wait a few minutes for cache to expire</li>
-      </ul>
-
-      <h3 id="404-this-page-could-not-be-found">9.5.4 "404 - This page could not be found"</h3>
-      <ul>
-        <li>Check that your routes/pages are set up correctly</li>
-        <li>For Next.js App Router, make sure you have <code>page.tsx</code> files in the right folders</li>
-        <li>Check Vercel logs for build errors</li>
-      </ul>
-
-      <hr>
-
-      <h2 id="still-stuck">9.6 Still Stuck?</h2>
+      <h3 id="step-3-describe-the-problem">9.1.3 Step 3: Describe the Problem in a New Agent Session</h3>
+      <p>An <strong>agent session</strong> is a single conversation with Cursor's AI. Open a new one by pressing <code>Cmd+Shift+I</code> (Mac) or <code>Ctrl+Shift+I</code> (Windows), or by clicking the <strong>+</strong> button at the top of the agent panel. Starting fresh gives the AI a clean slate with no leftover confusion from previous conversations.</p>
+      <p>Describe the problem clearly. A good problem description includes three things:</p>
       <ol>
-        <li><strong>Ask Cursor</strong> with a detailed description of the problem</li>
-        <li><strong>Search the error message</strong> on Google or Stack Overflow</li>
-        <li><strong>Ask a classmate</strong> — they might have hit the same issue</li>
-        <li><strong>Raise your hand</strong> during in-class sessions</li>
-        <li><strong>Post in the group chat</strong> with:
-          <ul>
-            <li>What you're trying to do</li>
-            <li>What's happening instead</li>
-            <li>The full error message</li>
-            <li>What you've already tried</li>
-          </ul>
+        <li>What you were trying to do</li>
+        <li>What happened instead</li>
+        <li>The evidence (pasted error message or attached screenshot)</li>
+      </ol>
+      <p><strong>Example of a strong prompt:</strong></p>
+      <div class="code-block-wrapper">
+        <pre><code>I asked Cursor to add a login page to my app. The login page now appears, but when I click the "Submit" button, nothing happens. Here is the error message from the terminal:
+
+[paste error message here]</code></pre>
+        <button type="button" class="copy-code-btn">Copy</button>
+      </div>
+      <p><strong>Example of a weak prompt:</strong></p>
+      <div class="code-block-wrapper">
+        <pre><code>It's broken, please fix it.</code></pre>
+        <button type="button" class="copy-code-btn">Copy</button>
+      </div>
+      <p>The more specific you are, the faster the AI can solve the problem.</p>
+
+      <h3 id="step-4-evaluate-the-result">9.1.4 Step 4: Evaluate the Result</h3>
+      <p>After Cursor proposes a fix, check whether it actually solved the problem:</p>
+      <ul>
+        <li>Does the app now behave the way you originally expected?</li>
+        <li>Did the fix create any new problems?</li>
+      </ul>
+      <p>If the fix worked, move on. If it didn't, proceed to Step 5.</p>
+
+      <h3 id="step-5-undo-and-try-again">9.1.5 Step 5: If Worse, Undo and Try Again</h3>
+      <p>If Cursor's fix did not work, or if it introduced new problems, <strong>do not keep asking the same session to fix it.</strong> This often leads to a cycle where each "fix" breaks something else (see <a href="#prompt-spirals">Prompt Spirals</a>). Instead:</p>
+      <ol>
+        <li><strong>Undo</strong> the changes (see <a href="#undoing-changes">Section 9.4.1</a>)</li>
+        <li><strong>Open a new agent session</strong></li>
+        <li><strong>Rephrase</strong> the problem differently, or try a different model (see <a href="#choosing-a-model">Section 9.3.2</a>)</li>
+      </ol>
+
+      <div class="callout-box">
+        <p><strong>The Golden Rule: Ask One Thing at a Time.</strong> When you have multiple problems, it is tempting to list them all in one prompt. Don't. The AI performs significantly better when it can focus on a single, well-defined problem.</p>
+        <ul>
+          <li>Good: "The navigation bar is not showing up on the homepage."</li>
+          <li>Bad: "The navigation bar is not showing up, the fonts are wrong, the footer overlaps the content, and the login page has a bug."</li>
+        </ul>
+        <p>Fix one thing. Confirm it works. Then move to the next.</p>
+      </div>
+
+      <hr>
+
+      <h2 id="showing-cursor-whats-wrong">9.2 How to Show Cursor What's Wrong</h2>
+      <p>Cursor can only help you if it understands the problem. This section covers the specific ways to give it the information it needs.</p>
+
+      <h3 id="error-messages">9.2.1 Error Messages</h3>
+      <p>An <strong>error message</strong> is text—usually red or yellow—that appears when something goes wrong. You'll see them in the browser, in the terminal panel at the bottom of Cursor, or in popups. They look like nonsense, but they contain precise information the AI can use to locate and fix the problem.</p>
+      <p><strong>Steps:</strong></p>
+      <ol>
+        <li>Select the <strong>entire</strong> error message text. Do not try to pick out the "important" part; copy all of it.</li>
+        <li>Copy it (<code>Cmd+C</code> on Mac / <code>Ctrl+C</code> on Windows).</li>
+        <li>Paste it directly into your Cursor agent prompt (<code>Cmd+V</code> / <code>Ctrl+V</code>).</li>
+        <li>Add a sentence or two above it describing what you were doing when the error appeared.</li>
+      </ol>
+
+      <h3 id="screenshots">9.2.2 Screenshots</h3>
+      <p>If the problem is something you can <em>see</em>—a visual bug, a broken layout, an element in the wrong place—a screenshot is often worth more than a written description.</p>
+      <p><strong>To take a screenshot:</strong></p>
+      <ul>
+        <li><strong>Mac:</strong> Press <code>Cmd+Shift+4</code>, then drag to select the area.</li>
+        <li><strong>Windows:</strong> Press <code>Win+Shift+S</code> to open the snipping tool, then select the area.</li>
+      </ul>
+      <p><strong>To attach a screenshot to a Cursor prompt:</strong> Click the attachment icon (paperclip or image icon) near the text input area and select your screenshot file, or paste the screenshot directly into the chat input (<code>Cmd+V</code> / <code>Ctrl+V</code>). Add a written description alongside it, such as: "The button should be centered, but it is stuck in the top-left corner. See the attached screenshot."</p>
+
+      <h3 id="built-in-browser">9.2.3 The Built-In Browser</h3>
+      <p>Cursor has a built-in browser that allows the AI to see your running application the same way you do. This is especially useful for visual or interactive bugs because it lets the AI observe the problem directly, without you needing to describe it perfectly in words.</p>
+      <p><strong>How to use it:</strong></p>
+      <ol>
+        <li>Make sure your app is running (the preview or <code>localhost</code> URL is active in the browser).</li>
+        <li>In your agent prompt, ask Cursor to open and inspect your app. For example:</li>
+      </ol>
+      <div class="code-block-wrapper">
+        <pre><code>Open my app in the browser and check why the homepage is showing a blank white screen.</code></pre>
+        <button type="button" class="copy-code-btn">Copy</button>
+      </div>
+      <p>The AI will launch the browser, navigate to your app, and observe the result—including visual layout, console errors, and behavior.</p>
+
+      <h3 id="at-references">9.2.4 @ References</h3>
+      <p>The <code>@</code> symbol in Cursor points the AI to a specific file, folder, or piece of context in your project. This helps the AI focus on the right area instead of searching your entire project.</p>
+      <p><strong>How to use it:</strong></p>
+      <ol>
+        <li>In the agent chat input, type <code>@</code>.</li>
+        <li>A dropdown menu will appear showing files and folders in your project.</li>
+        <li>Select the file that is relevant to your problem.</li>
+      </ol>
+      <p><strong>When to use it:</strong> If you know which file or area of your project the problem relates to—usually the file Cursor most recently edited—reference it with <code>@</code> so the AI starts there. For example:</p>
+      <div class="code-block-wrapper">
+        <pre><code>The homepage is showing an error after the last edit. Please check @index.html and fix the issue. Here is the error message: [paste error]</code></pre>
+        <button type="button" class="copy-code-btn">Copy</button>
+      </div>
+      <p>You do not need to know what the file contains—you just need to know which file is relevant.</p>
+
+      <hr>
+
+      <h2 id="cursor-modes-and-models">9.3 Cursor Modes and Models</h2>
+      <p>Cursor has several tools specifically useful when debugging. This section explains what they are, when to use them, and how. For a general overview of all modes, see the callout box in <a href="our-tools.html#exercise-2-create-a-website-for-the-poem">Our Tools (Section 4.1)</a>.</p>
+
+      <h3 id="debug-mode">9.3.1 Debug Mode</h3>
+      <p><strong>Debug mode</strong> is a specialized mode in Cursor designed specifically for finding and fixing errors. When you activate it, the AI takes a more systematic, investigative approach: it reads error logs, traces the problem through your project files, tests potential fixes, and iterates until the issue is resolved—all without you needing to understand what it is doing.</p>
+      <p>Think of it this way: the normal Agent mode is like asking someone to make an edit. Debug mode is like calling in a specialist to diagnose a problem.</p>
+      <p><strong>When to use it:</strong></p>
+      <ul>
+        <li>You have an error message and the normal Agent was not able to fix it.</li>
+        <li>Something that was working before has stopped working.</li>
+        <li>The app crashes, shows a blank screen, or behaves unexpectedly.</li>
+        <li>You've tried a fix in a regular agent session and it made things worse.</li>
+      </ul>
+      <p><strong>How to activate it:</strong></p>
+      <ol>
+        <li>Open the Cursor agent panel (the chat interface on the side of the screen).</li>
+        <li>Switch the agent mode to <strong>Debug</strong> using the mode selector near the top of the panel.</li>
+        <li>Paste in the error message or describe the problem.</li>
+        <li>Press Enter. The debug agent will begin working.</li>
+      </ol>
+      <p class="step-tip"><strong>Tip:</strong> Let it run. The debug agent often needs several steps to resolve an issue. Do not interrupt it mid-process unless it seems stuck in a loop (repeating the same action over and over). If it cannot solve the problem after a full run, open a new session and try rephrasing or switching models.</p>
+
+      <h3 id="choosing-a-model">9.3.2 Choosing a Model</h3>
+      <p>When you use Cursor, the AI behind it is powered by a <strong>large language model</strong> (LLM)—a program trained on large amounts of text and code to understand and generate language. Cursor gives you access to several different models, each with different strengths. Think of them like different specialists: one might be fast and good at routine tasks, another might be slower but more thorough with difficult problems.</p>
+      <p><strong>How to switch models:</strong></p>
+      <ol>
+        <li>In the agent chat panel, find the <strong>model selector</strong>—a dropdown menu near the input area that shows the currently selected model name (e.g., "Claude Sonnet 4").</li>
+        <li>Click the dropdown and select a different model.</li>
+        <li>Start a <strong>new agent session</strong> after switching. Do not continue an existing conversation with a different model.</li>
+      </ol>
+      <p><strong>A practical rule of thumb:</strong> Start with <strong>Sonnet</strong> for most tasks. If it cannot solve the problem after one or two attempts, switch to <strong>Opus</strong> (a more thorough model). If neither is working, try running models in parallel (see below).</p>
+
+      <h3 id="running-models-in-parallel">9.3.3 Running Models in Parallel</h3>
+      <p>Instead of trying one model, waiting for the result, and then trying another, Cursor allows you to send the same prompt to multiple models at the same time. Each model works on the problem independently, and you can compare the results side by side—like getting a second and third opinion simultaneously.</p>
+      <p><strong>How to do it:</strong></p>
+      <ol>
+        <li>Open the agent panel and compose your prompt (with the error message or screenshot attached).</li>
+        <li>In the model selector dropdown, look for the option to <strong>enable multiple models</strong> or <strong>add models</strong>.</li>
+        <li>Select two or three models (e.g., Sonnet and Opus, or Sonnet and Gemini).</li>
+        <li>Submit the prompt. Each model will generate its own response.</li>
+        <li>Review the results from each model. Test each solution by running the app and checking whether the problem is fixed.</li>
+      </ol>
+      <p>If multiple solutions work, go with whichever one did not introduce new issues. If none of them work, rephrase the problem and try again in a new session.</p>
+
+      <hr>
+
+      <h2 id="recovery">9.4 Recovery: Undo, Revert, and Start Over</h2>
+      <p>Not every fix will work on the first try. This section covers how to recover when things get worse instead of better.</p>
+
+      <h3 id="undoing-changes">9.4.1 Undoing Changes</h3>
+      <p>When Cursor proposes changes to your project, you will see a <strong>diff view</strong>—a display showing what was added, removed, or modified. You can:</p>
+      <ul>
+        <li><strong>Accept</strong> the changes (apply them to your project).</li>
+        <li><strong>Reject</strong> the changes (discard them so your project stays as it was).</li>
+      </ul>
+      <p>If you already accepted changes and then realize they broke something, use <strong>Undo</strong> (<code>Cmd+Z</code> on Mac / <code>Ctrl+Z</code> on Windows) to step backward. Cursor keeps a history of changes, so you can undo multiple steps.</p>
+
+      <h3 id="starting-a-new-session">9.4.2 Starting a New Agent Session</h3>
+      <p>This is one of the most underused strategies. If the AI has been going back and forth trying to fix something and it is not converging on a solution, the conversation history itself may be confusing the model. Starting a fresh session gives the AI a clean slate.</p>
+      <p><strong>When to start a new session:</strong></p>
+      <ul>
+        <li>The AI keeps repeating the same fix that did not work.</li>
+        <li>Each "fix" is introducing new problems.</li>
+        <li>You have gone back and forth more than two or three times without progress.</li>
+      </ul>
+      <p>To open a new session: press <code>Cmd+Shift+I</code> (Mac) / <code>Ctrl+Shift+I</code> (Windows), or click the <strong>+</strong> button at the top of the agent panel.</p>
+
+      <h3 id="prompt-spirals">9.4.3 Prompt Spirals</h3>
+      <p>A <strong>prompt spiral</strong> is when you tell the AI something is broken, it tries to fix it, the fix breaks something else, you report the new problem, it tries to fix that, and the cycle continues—with the project getting worse at each step. Prompt spirals happen because the AI is building on a growing history of confused context.</p>
+      <p>The solution is always the same: <strong>stop, undo the changes, and start a new session.</strong> When you reopen, rephrase the original problem differently or try a different model. Do not copy the old conversation into the new one.</p>
+
+      <h3 id="saving-to-github">9.4.4 Saving Your Progress to GitHub</h3>
+      <p>You should regularly save working versions of your project to <strong>GitHub</strong>—the online platform where your code is stored (introduced in <a href="pre-work.html#create-a-github-account">Pre-Work</a>). Think of each save as a checkpoint in a video game. If something goes wrong later, you can always return to a checkpoint.</p>
+      <p><strong>When to save to GitHub:</strong></p>
+      <ul>
+        <li>After you successfully complete a feature or fix.</li>
+        <li>Before you ask Cursor to make a large or risky change.</li>
+        <li>At the end of every working session.</li>
+        <li>Any time you think, "This is working well and I don't want to lose it."</li>
+      </ul>
+      <p><strong>How to do it:</strong> Ask Cursor in the agent chat. For example:</p>
+      <div class="code-block-wrapper">
+        <pre><code>Please push the current version of my project to GitHub with the commit message "Homepage and login page working."</code></pre>
+        <button type="button" class="copy-code-btn">Copy</button>
+      </div>
+      <p>A <strong>commit message</strong> is a short note describing what state the project is in. Write something descriptive so you can identify which version to return to later. You do not need to learn Git commands—ask Cursor to handle the push for you.</p>
+
+      <h3 id="reverting-to-a-previous-version">9.4.5 Reverting to a Previous Version</h3>
+      <p>If your project is in a bad state and you want to go back to a version that was working, you can retrieve a previous version from GitHub.</p>
+      <p><strong>Steps:</strong></p>
+      <ol>
+        <li>Ask Cursor to show your recent commits:
+          <div class="code-block-wrapper">
+            <pre><code>Show me the recent Git commit history for this project.</code></pre>
+            <button type="button" class="copy-code-btn">Copy</button>
+          </div>
+        </li>
+        <li>Cursor will display a list of your previous saves (commits), each with the commit message you wrote and a timestamp.</li>
+        <li>Identify the version you want to return to based on the commit message and date.</li>
+        <li>Ask Cursor to revert to that version:
+          <div class="code-block-wrapper">
+            <pre><code>Please revert the project to the commit with the message "Homepage and login page working."</code></pre>
+            <button type="button" class="copy-code-btn">Copy</button>
+          </div>
         </li>
       </ol>
+      <p>Reverting will undo all changes made after that save point. If you are unsure, ask Cursor to save the current state first:</p>
+      <div class="code-block-wrapper">
+        <pre><code>Before reverting, please push the current version to GitHub with the commit message "Backup before revert — broken state."</code></pre>
+        <button type="button" class="copy-code-btn">Copy</button>
+      </div>
 
       <hr>
 
-      <h2 id="contribute">9.7 Contribute</h2>
-      <p>Hit a problem that took you forever to solve? Add it here so the next person doesn't have to struggle.</p>
-      <p>See <a href="meeting-3.html#contributing-to-this-curriculum">Contributing to This Curriculum</a> for how to submit your additions.</p>
+      <h2 id="common-problems">9.5 Common Problems</h2>
+      <p>This section covers specific issues you are likely to hit during the bootcamp, organized by topic. For each problem: the symptom, the likely cause, and how to fix it.</p>
+
+      <h3 id="setup-and-installation">9.5.1 Setup and Installation</h3>
+
+      <p><strong><code>git</code> is not recognized / command not found</strong></p>
+      <p>Git is not installed on your computer. Follow the installation instructions in <a href="pre-work.html#install-git">Pre-Work (Section 2.3)</a>. On Mac, run <code>xcode-select --install</code> in Terminal. On Windows, download the installer from <a href="https://git-scm.com" target="_blank" rel="noopener noreferrer">git-scm.com</a>. After installing, close and reopen Cursor so it picks up the new installation.</p>
+
+      <p><strong><code>node</code> is not recognized / command not found</strong></p>
+      <p>Node.js is not installed. Follow the instructions in <a href="our-tools.html#exercise-7-install-node-js-and-see-cursors-guardrails">Our Tools (Exercise 7)</a> or <a href="dynamic-web-apps.html#exercise-1-setup-the-frontend">Dynamic Web Apps (Exercise 1)</a>. After installing, close and reopen Cursor (or open a new terminal) so it picks up the updated PATH.</p>
+      <p class="step-tip"><strong>What is PATH?</strong> PATH is a list of folders your computer checks when you type a command. When you install a program like Node.js, the installer adds its folder to PATH so the computer can find it. If you just installed something and the terminal says it can't find it, restarting Cursor usually fixes this because it reloads the PATH.</p>
+
+      <p><strong>Cursor is not connected to GitHub</strong></p>
+      <p>If pushing to GitHub fails with an authentication error, your Cursor may not be signed in to GitHub. Open the Source Control view (branch icon in the left sidebar), click <strong>Sign in with GitHub</strong>, and complete the sign-in in your browser. See <a href="our-tools.html#exercise-8-connect-github">Our Tools (Exercise 8)</a>.</p>
+
+      <h3 id="running-your-app">9.5.2 Running Your App</h3>
+
+      <p><strong>Page is blank when opening an HTML file</strong></p>
+      <p>If you're working on a <strong>static website</strong> (an HTML/CSS/JavaScript project like the one built in <a href="meeting-1.html">Build Your Own Website</a>), double-click the <code>index.html</code> file in your project folder to open it in the browser. If the page is blank:</p>
+      <ul>
+        <li>Make sure the file is saved in Cursor (<code>Cmd+S</code> / <code>Ctrl+S</code>). Unsaved changes don't appear.</li>
+        <li>Check that you are opening the correct file. The file should be named <code>index.html</code> and be at the top level of your project folder.</li>
+        <li>Paste the following into Cursor and attach the file with <code>@</code>: "My index.html file is blank when I open it in the browser. Can you check what's wrong?"</li>
+      </ul>
+
+      <p><strong>"Module not found" or "Cannot find module" when running <code>npm run dev</code></strong></p>
+      <p>This means a required package is missing. Run this command in the terminal (<code>Ctrl+`</code> to open the terminal in Cursor):</p>
+      <div class="code-block-wrapper">
+        <pre><code>npm install</code></pre>
+        <button type="button" class="copy-code-btn">Copy</button>
+      </div>
+      <p>Then try <code>npm run dev</code> again. If it still fails, paste the full error message into Cursor and ask it to fix the issue.</p>
+
+      <p><strong><code>npm run dev</code> fails or the dev server won't start</strong></p>
+      <p>The <strong>dev server</strong> is a local program that runs your Next.js app on your own computer so you can test it before deploying. When it's running, you visit <code>http://localhost:3000</code> in your browser to see your app. If it won't start:</p>
+      <ul>
+        <li>Read the error message in the terminal. Copy the entire error and paste it into Cursor.</li>
+        <li>Try stopping any running server first with <code>Ctrl+C</code> in the terminal, then run <code>npm run dev</code> again.</li>
+        <li>If the error mentions a port already in use, another process is using port 3000. Stop it by pressing <code>Ctrl+C</code> in all open terminals, or ask Cursor: "Port 3000 is already in use. How do I stop the process using it?"</li>
+      </ul>
+
+      <p><strong>Changes are not showing up in the browser</strong></p>
+      <ul>
+        <li>For <strong>static HTML files</strong>: Refresh the browser (<code>Cmd+R</code> / <code>Ctrl+R</code>). The browser caches old versions of the page. If a normal refresh doesn't work, try a hard refresh: <code>Cmd+Shift+R</code> (Mac) or <code>Ctrl+Shift+R</code> (Windows).</li>
+        <li>For <strong>Next.js apps</strong>: The dev server usually auto-refreshes. If changes still don't appear, stop the server (<code>Ctrl+C</code>) and restart it (<code>npm run dev</code>).</li>
+        <li>Make sure your files are saved (<code>Cmd+S</code> / <code>Ctrl+S</code>).</li>
+      </ul>
+
+      <h3 id="deployment">9.5.3 Deployment</h3>
+
+      <p><strong>GitHub Pages shows a 404 error</strong></p>
+      <p>GitHub Pages needs a few minutes to deploy after you enable it or push changes. Wait 2–3 minutes and try again. If it still doesn't work:</p>
+      <ul>
+        <li>Go to your repository on GitHub → <strong>Settings</strong> → <strong>Pages</strong> and confirm the source is set to your <code>main</code> branch and the <code>/ (root)</code> folder.</li>
+        <li>Make sure your repository has an <code>index.html</code> file at the root level (not inside a subfolder).</li>
+        <li>Check the <strong>Actions</strong> tab in your repository for deployment errors.</li>
+      </ul>
+
+      <p><strong>Vercel build fails</strong></p>
+      <p>When Vercel tries to deploy your Next.js app, it builds the project from your GitHub repository. If the build fails:</p>
+      <ol>
+        <li>Click <strong>View Build Logs</strong> on the Vercel dashboard to see the error.</li>
+        <li>Copy the error message from the build logs.</li>
+        <li>Paste it into Cursor and ask it to fix the issue.</li>
+        <li>After Cursor fixes the code, push the changes to GitHub. Vercel will automatically try building again.</li>
+      </ol>
+      <p class="step-tip"><strong>Tip:</strong> A common cause of Vercel build failures is code that works on your computer but has issues Vercel's stricter build process catches. Always test locally with <code>npm run dev</code> before pushing, and fix any errors you see in the terminal.</p>
+
+      <p><strong>App works locally but not on Vercel</strong></p>
+      <p>If your app works at <code>localhost:3000</code> but not at your Vercel URL, the most common cause is a missing <strong>environment variable</strong>. An environment variable is a setting stored outside your code—like your InstantDB App ID—that your app needs to run. Your computer has these settings locally, but Vercel needs them configured separately.</p>
+      <ul>
+        <li>Go to your Vercel dashboard → your project → <strong>Settings</strong> → <strong>Environment Variables</strong>.</li>
+        <li>Add any variables your app needs (e.g., <code>NEXT_PUBLIC_INSTANT_APP_ID</code> with your InstantDB App ID as the value).</li>
+        <li>Redeploy: go to the <strong>Deployments</strong> tab, click the three dots on the latest deployment, and select <strong>Redeploy</strong>.</li>
+      </ul>
+
+      <h3 id="database-and-authentication">9.5.4 Database and Authentication</h3>
+
+      <p><strong>Authentication not working (no verification email or code)</strong></p>
+      <p>InstantDB's <strong>magic code authentication</strong> sends a 6-digit code to your email when you sign up or log in. If you're not receiving the code:</p>
+      <ul>
+        <li>Check your spam/junk folder.</li>
+        <li>Verify your InstantDB App ID is correct in your code. Open the <a href="https://instantdb.com/dash" target="_blank" rel="noopener noreferrer">InstantDB dashboard</a>, select your app, and compare the App ID shown there with the one in your code.</li>
+        <li>Ask Cursor: "Authentication is not sending a verification code. Can you check the InstantDB setup and make sure the App ID is correct?"</li>
+      </ul>
+
+      <p><strong>Data is not saving</strong></p>
+      <p>If you can create items in your app but they disappear when you refresh the page or log out:</p>
+      <ul>
+        <li>Check the <a href="https://instantdb.com/dash" target="_blank" rel="noopener noreferrer">InstantDB dashboard</a>. Click your app, then go to the <strong>Explorer</strong> tab. If there is no data there, the app is not writing to the database correctly.</li>
+        <li>Ask Cursor: "Data isn't being saved to InstantDB. Can you check the database queries and transactions?"</li>
+        <li>Make sure you are logged in when creating data. Some apps require authentication before allowing writes.</li>
+      </ul>
+
+      <p><strong>Wrong App ID</strong></p>
+      <p>If your app loads but shows no data, or if you see data from the poetry demo instead of your own project, you may be using the wrong InstantDB App ID. Each project needs its own App ID. Check the App ID in your code against the one in your <a href="https://instantdb.com/dash" target="_blank" rel="noopener noreferrer">InstantDB dashboard</a>.</p>
 
       <hr>
 
-      <p>See also: <a href="resources.html">Resources</a> for documentation and learning links.</p>
+      <p>See also: <a href="resources.html">Resources</a> for documentation, learning links, and quick reference commands.</p>
     </article>
   </main>
   <div class="sidebar-overlay" aria-hidden="true"></div>
