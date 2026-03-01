@@ -70,7 +70,9 @@
       </div>
 
       <div class="callout-box">
+        <p><strong>Undo All vs Accept All</strong></p>
         <p>When Cursor makes changes to your code, you'll have a chance to review them before they're finalized. You can <strong>Undo All</strong> to reject the changes, or <strong>Accept All</strong> to keep them.</p>
+        <p><strong>Accept All</strong> at moments when things are working well to create natural checkpoints—you can roll back to the last good state (for example with your editor's undo, or later with version control) if a later round of Cursor's changes doesn't work out.</p>
       </div>
 
       <div class="exercise-box">
@@ -83,7 +85,7 @@
           <li>Ask Cursor to create an HTML file that displays the poem with some nice styling:</li>
         </ol>
         <div class="code-block-wrapper">
-          <pre><code>Create an HTML file that displays my poem with some nice styling</code></pre>
+          <pre><code>Create a beautifully styled HTML page for my poem that uses a clean, modern design with a color palette inspired by a sunset—warm oranges, pinks, and deep purples -- elegant serif typography, and smooth fade-in animations for each stanza. Add a header with the poem's title, and a subtle footer with today's date. Save it as my_poem.html.</code></pre>
           <button type="button" class="copy-code-btn">Copy</button>
         </div>
         <ol start="3">
@@ -122,7 +124,7 @@
           </li>
           <li>Ask Cursor to create a poetry website:
             <div class="code-block-wrapper">
-              <pre><code>Create a simple HTML/CSS/JavaScript website with multiple poems each on their own page</code></pre>
+              <pre><code>Build an elegant poetry website using HTML, CSS, and JavaScript with a homepage that displays six new poems as clickable cards with a short preview of each, and a dedicated page for each. Give the site a colorful, sophisticated design — use a dark background, bright accent colors, and smooth hover animations on the cards. Add a JavaScript-powered "Random Poem" button on the homepage that takes the reader to a surprise poem, and include a "Back to Home" link on each poem page.</code></pre>
               <button type="button" class="copy-code-btn">Copy</button>
             </div>
             <p class="step-tip"><strong>Tip:</strong> Cursor might ask clarifying questions as part of its plan. If it does, answer as best you can.</p>
@@ -142,31 +144,31 @@
       <p>The terminal (also called command line or shell) is a text-based interface where you type commands to interact with your computer. Instead of clicking buttons and menus, you type instructions that your computer executes.</p>
       <p>Think of it like a conversation with your computer: you type a command, press Enter, and the computer responds with text output.</p>
 
-      <h3 id="mac-vs-windows-terminal-differences">4.2.1 Mac vs Windows: Terminal Differences</h3>
-
-      <h4 id="mac-terminal">Mac (Terminal)</h4>
-      <p>On Mac, the terminal is called <strong>Terminal</strong>. To access it:</p>
-      <ol>
-        <li>Press <code>Cmd + Space</code> to open Spotlight search</li>
-        <li>Type "Terminal" and press Enter</li>
-        <li>Or go to Applications → Utilities → Terminal</li>
-      </ol>
-      <p>Mac uses Unix-based commands (similar to Linux). The default shell is usually <code>zsh</code> or <code>bash</code>.</p>
-
-      <h4 id="windows-command-prompt-or-powershell">Windows (Command Prompt or PowerShell)</h4>
-      <p>On Windows, you have two options:</p>
-      <p><strong>Option 1: Command Prompt</strong></p>
-      <ol>
-        <li>Press <code>Windows + R</code> to open Run</li>
-        <li>Type <code>cmd</code> and press Enter</li>
-        <li>Or search for "Command Prompt" in the Start menu</li>
-      </ol>
-      <p><strong>Option 2: PowerShell (recommended)</strong></p>
-      <ol>
-        <li>Press <code>Windows + X</code> and select "Windows PowerShell"</li>
-        <li>Or search for "PowerShell" in the Start menu</li>
-      </ol>
-      <p>PowerShell is more modern and powerful, similar to Unix terminals. Many commands work similarly between PowerShell and Mac/Linux terminals.</p>
+      <div class="callout-box">
+        <p><strong>Optional: Finding the Terminal on Your Computer</strong></p>
+        <p>Your computer already has a terminal built into the operating system — you don't need to install anything. If you're curious, here's how to find it outside of Cursor:</p>
+        <p><strong>Mac (Terminal):</strong></p>
+        <ol>
+          <li>Press <code>Cmd + Space</code> to open Spotlight search</li>
+          <li>Type "Terminal" and press Enter</li>
+          <li>Or go to Applications → Utilities → Terminal</li>
+        </ol>
+        <p>Mac uses Unix-based commands (similar to Linux). The default shell is usually <code>zsh</code> or <code>bash</code>.</p>
+        <p><strong>Windows (Command Prompt or PowerShell):</strong></p>
+        <p>Option 1: Command Prompt</p>
+        <ol>
+          <li>Press <code>Windows + R</code> to open Run</li>
+          <li>Type <code>cmd</code> and press Enter</li>
+          <li>Or search for "Command Prompt" in the Start menu</li>
+        </ol>
+        <p>Option 2: PowerShell (recommended)</p>
+        <ol>
+          <li>Press <code>Windows + X</code> and select "Windows PowerShell"</li>
+          <li>Or search for "PowerShell" in the Start menu</li>
+        </ol>
+        <p>PowerShell is more modern and powerful, similar to Unix terminals. Many commands work similarly between PowerShell and Mac/Linux terminals.</p>
+        <p>In this bootcamp we won't use a standalone terminal. Instead, we'll access the terminal from inside Cursor so that Cursor can see our commands and their output — which makes it much better at helping us when something goes wrong. The next section shows you how.</p>
+      </div>
 
       <h3 id="using-the-terminal-in-cursor">4.2.3 Using the Terminal in Cursor</h3>
 
@@ -179,7 +181,6 @@
             <li>Windows: <code>Ctrl + `</code> (Control + backtick)</li>
           </ul>
         </li>
-        <li><strong>Command Palette:</strong> Press <code>Cmd+Shift+P</code> (Mac) or <code>Ctrl+Shift+P</code> (Windows), then type "Terminal: Create New Terminal"</li>
       </ol>
 
       <div class="exercise-box">
@@ -191,14 +192,13 @@
           <li>Type <code>echo "Hello World"</code> and press Enter. You'll see the text printed back—a simple example of command output.</li>
           <li>Type <code>clear</code> (Mac) or <code>cls</code> (Windows) and press Enter. The terminal clears, giving you a fresh view.</li>
         </ol>
+        <p class="step-tip"><strong>Tip:</strong> Don't know the right command? Press <code>Cmd+K</code> (Mac) or <code>Ctrl+K</code> (Windows) while your cursor is in the terminal and describe what you want to do in plain English — for example, "list all the files in this folder." Cursor's AI will draft the command for you. Press <code>Enter</code> to accept it, or <code>Esc</code> to cancel.</p>
         <p><strong>What you learned:</strong> The terminal shows you where you are and what's in the folder. That's enough to get started—you can always ask Cursor what a command does or how to do something.</p>
       </div>
 
       <div class="callout-box">
-        <p><strong>Model Context:</strong> Use the terminal in Cursor. Doing so adds its output to Cursor's <strong>context</strong>. Context is the information Cursor can see to understand the project and generate output. It includes the chat history, files you opened, code you selected, and terminal output (when used in Cursor). If something goes wrong, Cursor can see the error and help you fix it.</p>
-        <p><strong>Example:</strong> If you run <code>bash script.sh</code> and get an error, you can ask Cursor "What's wrong?" and it will see the error message and suggest a fix.</p>
-        <p>What is <em>not</em> in Cursor's context? Files outside your project folder, web pages you have open in your browser, and anything you haven't explicitly opened, selected, or run in Cursor.</p>
-        <p>You can add files to the context using the <code>@</code> symbol. Type <code>@</code> in the chat input, then type or select a filename—Cursor will include that file in the context for your next message. This can be useful when you want Cursor to focus on a specific file that isn't already open or when you're asking about code in a file you haven't selected.</p>
+        <p><strong>Cursor Layout</strong></p>
+        <p>You might find your Cursor workspace getting cluttered. Use the gear icon in the upper-right corner of the editor to change the workspace layout. You can switch between different arrangements—for example, to close everything but the chat window—to give yourself more room to work.</p>
       </div>
 
       <div class="exercise-box">
@@ -262,6 +262,14 @@
           <li>Guess numbers until you see "Correct! Good job!"</li>
         </ol>
         <p><strong>What you learned:</strong> You can ask Cursor to build a small program from a description. The terminal is where you run programs and see their output, and shell scripts and batch files work without installing a programming language. Cursor can use terminal errors as context to help you fix issues.</p>
+      </div>
+
+      <div class="callout-box">
+        <p><strong>Chat Context</strong></p>
+        <p>Cursor can't automatically read your terminal. So if you want it to understand your terminal output, you need show it. <strong>Context</strong> is the information Cursor can see to generate output. It includes the chat history, files you opened, code you selected, but not any files outside your project folder, web pages you have open in your browser, and anything you haven't explicitly added to the chat.</p>
+        <p>To add your terminal output to the chat, press <code>Cmd+I</code> (Mac) or <code>Ctrl+I</code> (Windows/Linux) while your cursor is in the terminal. This opens the Composer with the terminal's recent output already attached, so Cursor can see exactly what happened—including any errors—and help you from there.</p>
+        <p>You can add files to the context using the <code>@</code> symbol. Type <code>@</code> in the chat input, then type or select a filename—Cursor will include that file in the context for your next message. This can be useful when you want Cursor to focus on a specific file that isn't already open or when you're asking about code in a file you haven't selected.</p>
+        <p>Each Cursor agent chat has a limited amount of context it can hold. You can monitor how much context has been used by looking at the circular icon in the chat input box—as the ring fills up, your context is running out. For this reason, it's a good habit to start a new chat (click the <code>+</code> icon or press <code>Cmd+N</code> / <code>Ctrl+N</code>) when you move on to a different task, so each conversation stays focused and has plenty of room to work with.</p>
       </div>
 
       <div class="exercise-box">
@@ -342,7 +350,7 @@
           <li>Open Cursor's Agent (<code>Cmd+I</code> or <code>Ctrl+I</code>) and ask it to push your project to that repository:
             <p class="step-tip"><strong>Tip:</strong> Ask Cursor to do the push for you—don't use the terminal or Source Control pane yourself. The goal is to practice letting Cursor handle Git tasks.</p>
             <div class="code-block-wrapper">
-              <pre><code>Push this project to my GitHub repository at https://github.com/your-username/test-project</code></pre>
+              <pre><code>Commit all changes and push this project to my GitHub repository at https://github.com/your-username/test-project</code></pre>
               <button type="button" class="copy-code-btn">Copy</button>
             </div>
             <p class="step-tip"><strong>Tip:</strong> Replace the URL in the prompt with your actual repository URL from Exercise 9. Cursor will initialize Git if needed, stage your files, commit, and push—you don't need to run any commands yourself.</p>
@@ -351,8 +359,15 @@
         <p><strong>What you learned:</strong> You can delegate Git workflows to Cursor by describing what you want. As you build real projects, you'll often ask Cursor to push, pull, or help with merge conflicts—no need to memorize commands.</p>
       </div>
 
+      <div class="callout-box">
+        <p><strong>Asking Cursor to do the work for you</strong></p>
+        <p>Asking to push your project to GitHub requires Cursor to submit commands to the terminal (introduced in <a href="our-tools.html#what-is-the-terminal">Our Tools</a>). As a safety feature, Cursor might either ask for your permission to run certain commands, or else insist you enter them yourself. This feature limits what Cursor can do on the operating system.</p>
+        <p>If this happens, either grant the permission in real-time, or simply copy the commands Cursor provides—they'll typically look something like <code>git add .</code>, <code>git commit -m "your message"</code>, and <code>git push origin main</code>—and paste them into your terminal one at a time. You can open the terminal in Cursor by pressing <code>Ctrl+`</code> (that's the backtick key, usually located above the Tab key). This gives you full control over what gets sent to GitHub while still letting Cursor handle the rest of your workflow automatically.</p>
+        <p>For more information about git and GitHub, refer to the <a href="resources.html#git-github">additional resources</a> on this site.</p>
+      </div>
+
       <div class="exercise-box">
-        <h3 id="exercise-11-deploy-to-github-pages">4.3.4 Exercise 11: Deploy Your Repository to GitHub Pages ✅</h3>
+        <h3 id="exercise-11-deploy-to-github-pages">4.3.4 Exercise 11: Publish Your Website on GitHub Pages ✅</h3>
         <p>GitHub Pages lets you host static websites (HTML, CSS, JavaScript) directly from your repository—for free. Once configured, your site will be live at <code>https://&lt;your-username&gt;.github.io/&lt;repo-name&gt;/</code> and will update automatically when you push changes.</p>
         <ol>
           <li>Make sure your project is pushed to GitHub (see <a href="#exercise-10-push-to-github">Exercise 10</a>). Your repository should have an <code>index.html</code> at the root—GitHub Pages needs this as the entry point.</li>

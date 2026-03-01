@@ -159,24 +159,21 @@ Now please read my attached app idea file and the two specification documents, t
       </div>
 
       <div class="callout-box">
-        <p><strong>Extensions:</strong> Cursor supports extensions—additional features that can be installed directly into Cursor to improve its functionality. Extensions can help with formatting, debugging, live previews, and more. They are written by users like you and made available for others to use for free through the Extensions marketplace.</p>
+        <p><strong>Extensions</strong></p>
+        <p>Cursor supports extensions—additional features that can be installed directly into Cursor to improve its functionality. Extensions can help with formatting, debugging, live previews, and more. They are written by users like you and made available for others to use for free through the Extensions marketplace.</p>
         <p>One common frustration: when you preview an HTML file by double-clicking it, you must manually refresh the browser every time you make a change. One solution is to install the <strong>Live Server</strong> extension by Ritwick Dey. It starts a local server and automatically reloads the page when you save a file.</p>
         <p><strong>To install and use Live Server:</strong></p>
         <ol>
           <li>Click the Extensions icon in the left sidebar (or press <code>Cmd+Shift+X</code> on Mac / <code>Ctrl+Shift+X</code> on Windows).</li>
           <li>Search for <strong>Live Server</strong>, find the one by Ritwick Dey, and click <strong>Install</strong>.</li>
-          <li>Right-click <code>index.html</code> in the file explorer and select <strong>Open with Live Server</strong>. The page will open in your browser and refresh automatically when you save changes.</li>
+          <li>Right-click <code>index.html</code> in Cursor's file explorer and select <strong>Open with Live Server</strong>. The page will open in your browser and refresh automatically when you save changes.</li>
         </ol>
-      </div>
-
-      <div class="callout-box">
-        <p><strong>Cursor Layout:</strong> You might find your Cursor workspace getting cluttered. Use the gear icon in the upper-right corner of the editor to change the workspace layout. You can switch between different arrangements—for example, to close everything but the chat window—to give yourself more room to work.</p>
       </div>
 
       <hr>
 
       <h2 id="push-to-github">5.2 Push the Project to a GitHub Repository</h2>
-      <p>You pushed a project to GitHub in <a href="our-tools.html#exercise-8-push-to-github">Our Tools (Exercise 8)</a>. Do the same for your tutorial project. <strong>Ask Cursor to do the push for you</strong>—don't use the terminal or Source Control pane yourself. The goal is to practice letting Cursor handle Git tasks.</p>
+      <p>You pushed a project to GitHub in <a href="our-tools.html#exercise-10-push-to-github">Our Tools (Exercise 10)</a>. Do the same for your tutorial project. <strong>Ask Cursor to do the push for you</strong>—you don't need to use the terminal or Source Control pane yourself. The goal is to practice letting Cursor handle Git tasks.</p>
 
       <div class="exercise-box">
         <h3 id="exercise-push-to-github">5.2.1 Push Your Tutorial to GitHub</h3>
@@ -191,7 +188,7 @@ Now please read my attached app idea file and the two specification documents, t
           <li>Copy the repository URL from the page GitHub shows you (e.g. <code>https://github.com/your-username/my-app-tutorial</code>)</li>
           <li>Open Cursor's Agent (<code>Cmd+I</code> or <code>Ctrl+I</code>) and ask it to push your project to that repository:
             <div class="code-block-wrapper">
-              <pre><code>Push this project to my GitHub repository at https://github.com/your-username/my-app-tutorial</code></pre>
+              <pre><code>Commit all changes and push this project to my GitHub repository at https://github.com/your-username/my-app-tutorial</code></pre>
               <button type="button" class="copy-code-btn">Copy</button>
             </div>
             <p class="step-tip"><strong>Tip:</strong> Replace the URL in the prompt with your actual repository URL. Cursor will initialize Git if needed, stage your files, commit, and push—you don't need to run any commands yourself.</p>
@@ -199,19 +196,13 @@ Now please read my attached app idea file and the two specification documents, t
         </ol>
       </div>
 
-      <div class="callout-box">
-        <p><strong>Asking Cursor to do the work for you:</strong> Asking to push your project to GitHub requires Cursor to submit commands to the terminal (introduced in <a href="our-tools.html#what-is-the-terminal">Our Tools</a>). As a safety feature, Cursor might either ask for your permission to run certain commands, or else insist you enter them yourself. This feature limits what Cursor can do on the operating system.</p>
-        <p>If this happens, either grant the permission in real-time, or simply copy the commands Cursor provides—they'll typically look something like <code>git add .</code>, <code>git commit -m "your message"</code>, and <code>git push origin main</code>—and paste them into your terminal one at a time. You can open the terminal in Cursor by pressing <code>Ctrl+`</code> (that's the backtick key, usually located above the Tab key). This gives you full control over what gets sent to GitHub while still letting Cursor handle the rest of your workflow automatically.</p>
-        <p>For more information about git and GitHub, refer to the <a href="resources.html#git-github">additional resources</a> on this site.</p>
-      </div>
-
       <hr>
 
-      <h2 id="deploy-to-github-pages">5.3 Deploy the Repository to GitHub Pages</h2>
-      <p>You deployed in <a href="our-tools.html#exercise-9-deploy-to-github-pages">Our Tools (Exercise 9)</a>. Same steps for your tutorial site. GitHub Pages turns your repository into a live website—for free.</p>
+      <h2 id="deploy-to-github-pages">5.3 Publish Your Tutorial Website to GitHub Pages</h2>
+      <p>You deployed in <a href="our-tools.html#exercise-11-deploy-to-github-pages">Our Tools (Exercise 11)</a>. Same steps for your tutorial site. GitHub Pages turns your repository into a live website—for free.</p>
 
       <div class="exercise-box">
-        <h3 id="exercise-deploy-pages">5.3.1 Deploy Your Tutorial to GitHub Pages</h3>
+        <h3 id="exercise-deploy-pages">5.3.1 Publish Your Tutorial Website to GitHub Pages</h3>
         <ol>
           <li>Make sure your project is pushed to GitHub (see <a href="#exercise-push-to-github">Exercise above</a>). Your repository should have an <code>index.html</code> at the root—GitHub Pages needs this as the entry point.</li>
           <li>On GitHub, go to your repository and click <strong>Settings</strong> (in the top menu bar).</li>
@@ -227,11 +218,11 @@ Now please read my attached app idea file and the two specification documents, t
 
       <hr>
 
-      <h2 id="follow-tutorial">5.4 Follow the Instructions in the Tutorial to Build Your App</h2>
+      <h2 id="follow-tutorial">5.4 Follow the Tutorial to Build Your App</h2>
       <p>Between now and <a href="meeting-2.html">our second meeting</a>, <strong>use the tutorial Cursor generated as your homework.</strong> Work through it step by step to build your app (or the frontend/core the tutorial covers).</p>
 
       <div class="exercise-box">
-        <h3 id="exercise-follow-tutorial">5.4.1 Complete the Tutorial Before Our Second Meeting</h3>
+        <h3 id="exercise-follow-tutorial">5.4.1 Start the Tutorial Before Our Second Meeting</h3>
         <ol>
           <li>Open your live tutorial site (the one you deployed to GitHub Pages) or the project folder Cursor created.</li>
           <li>Follow the tutorial's instructions to build your app before <a href="meeting-2.html">our second meeting</a>.</li>
