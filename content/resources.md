@@ -10,7 +10,7 @@ Quick links to everything you need for this bootcamp, plus resources for continu
 AI-powered code editor.
 - **Website:** [cursor.com](https://cursor.com)
 - **Download:** [cursor.com/download](https://cursor.com/download)
-- **Student plan:** Free for 1 year with .edu email
+- **Cursor Pro:** Subscribe yourself using the cheapest plan (about $20/month)
 
 ### GitHub
 Code hosting and version control.

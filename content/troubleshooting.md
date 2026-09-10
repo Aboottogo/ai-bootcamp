@@ -24,7 +24,7 @@ Before diving into specific issues:
 
 - Make sure you're in the chat panel or using Cmd+K (Mac) / Ctrl+K (Windows)
 - Check your internet connection
-- Verify you're logged in and on the student plan (Settings → Account)
+- Verify you're logged in and on Cursor Pro (Settings → Account)
 
 ### Generated code has errors
 

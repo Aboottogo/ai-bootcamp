@@ -17,7 +17,7 @@ We start with the question: *What do you want to build?* Technical concepts get 
 
 ## What You'll Use
 
-All tools are free for students:
+GitHub, Vercel, and Supabase have free tiers that are enough for this bootcamp. Cursor Pro is required—subscribe yourself using the cheapest plan (about $20/month):
 
 | Tool | What It Does |
 |------|--------------|

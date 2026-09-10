@@ -28,18 +28,17 @@ GitHub is where developers store and share code. It's also your portfolio—recr
 Cursor is a code editor with built-in AI. You describe what you want in plain English, and it writes the code.
 
 **Steps:**
-1. Go to [cursor.com/students](https://cursor.com/students)
+1. Go to [cursor.com](https://cursor.com)
 2. Click "Download" and choose your operating system (Mac, Windows, or Linux)
 3. Install the application
-4. **Sign up for the student discount.** Create your Cursor account using your **valid .edu university email**—this is required. Your Cursor account email must match this .edu email, and you must use the same email when you verify your student status.
-5. Verify your status as a currently enrolled student by clicking "Verify Status" at the top of the [students page](https://cursor.com/students) and following the instructions. If you don't already have Cursor Pro, sign up for Cursor Pro in your account settings after verifying.
-6. Confirm that your account shows "Pro" or "Student" status (the free tier is active)
+4. Create your Cursor account and **subscribe to Cursor Pro**. Choose the cheapest subscription option (about $20/month).
+5. Confirm that your account shows Pro status
 
-**Benefits:** Eligible students get one free year of Cursor Pro, including **$20 of usage per month**. That covers normal use of AI features in the editor. If you need additional model capacity beyond the included amount, you can enable usage-based pricing in your account; you'll only be charged for usage above the $20 monthly credit.
+**About Cursor Pro:** This bootcamp requires Cursor Pro. Subscribe yourself using the cheapest plan (about $20/month). That covers normal use of AI features in the editor. If you need additional model capacity beyond the included amount, you can enable usage-based pricing in your account; you'll only be charged for usage above the included credit.
 
-**API pricing (in brief):** Cursor Pro gives you a set amount of AI usage each month (the $20 credit). When you use the AI to edit code, ask questions, or generate content, that usage counts against this amount. If you go over it, you can turn on usage-based pricing to keep using more—you pay only for the extra usage. For most students in this bootcamp, the included $20 per month is enough.
+**API pricing (in brief):** Cursor Pro gives you a set amount of AI usage each month. When you use the AI to edit code, ask questions, or generate content, that usage counts against this amount. If you go over it, you can turn on usage-based pricing to keep using more—you pay only for the extra usage. For most students in this bootcamp, the included monthly usage is enough.
 
-**You're done when:** You can open Cursor and see an empty editor window, with your account showing Pro or Student status.
+**You're done when:** You can open Cursor and see an empty editor window, with your account showing Pro status.
 
 **Note:** Cursor looks similar to VS Code. If you've used VS Code before, you'll feel at home. If you haven't, don't worry—we'll walk through it together.
 
@@ -138,7 +137,7 @@ Personal expense tracker. Users: me and other students who want to see where the
 Before [our first meeting](meeting-1.md), make sure:
 
 - [ ] You can log in to GitHub
-- [ ] Cursor opens and shows your account as "Pro" or "Student"
+- [ ] Cursor opens and shows your account as "Pro"
 - [ ] Your GitHub account is signed in within Cursor (Source Control or account menu)
 - [ ] Running `git --version` in Terminal/Command Prompt shows a version number
 - [ ] You have your app-idea text file ready (`my-app-idea.txt` or similar)
